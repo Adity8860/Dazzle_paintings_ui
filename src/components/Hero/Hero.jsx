@@ -1,11 +1,19 @@
 import React from "react";
 import Slider from "./Slider";
 
+var showSlider =true;
+var showVideo = false;
 
 const Hero = () => {
   return (
     <>
       <div>
+      {showSlider && (
+      <div className="relative h-[100svh]">
+        { <Slider/> }
+      </div>
+      )}
+         { showVideo && (
         <div className="relative h-[100svh]">
           {/* <Slider/> */}
         
@@ -59,6 +67,7 @@ const Hero = () => {
             </button>
           </div>
         </div>
+        )}
         <div className="bg-background dark:bg-black transition-colors duration-300">
           <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

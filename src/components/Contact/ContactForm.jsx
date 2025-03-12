@@ -1,0 +1,243 @@
+import React, { useState } from "react";
+
+const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+    phoneNo: "",
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("formData", formData);
+  };
+
+ 
+
+  return (
+    <div>
+      <div className="w-full bg-white dark:bg-gray-900 py-8 sm:py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Heading */}
+          <div className="text-center mb-8 sm:mb-12 px-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3">
+              Get in Touch
+            </h2>
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Have questions about our services? We're here to help. Contact us using the form below or through our contact information.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+            {/* Contact Form */}
+            <div className="bg-white dark:bg-gray-900/50 p-4 sm:p-6 rounded-lg shadow-lg backdrop-blur-sm order-2 lg:order-1">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                <div className="space-y-1">
+                  <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
+                  <input
+                    type="text"
+                    placeholder="Your name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    className="w-full px-4 py-2.5 text-sm sm:text-base border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-[#FF69B4] dark:bg-gray-700/50 dark:text-white transition-colors duration-200"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="email"
+                    placeholder="Email address"
+                    value={formData.email}
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF69B4] dark:bg-gray-700 dark:text-white"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="tel"
+                    placeholder="Phone Number (xxx-xxx-xxxx)"
+                    value={formData.phoneNo}
+                    onChange={(e) => setFormData({...formData, phoneNo: e.target.value})}
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    maxLength="12"
+                    className="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-[#FF69B4] dark:bg-gray-700/50 dark:text-white transition-colors duration-200"
+                  />
+                </div>
+                <div>
+                  <textarea
+                    placeholder="Message"
+                    rows="4"
+                    value={formData.message}
+                    onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF69B4] dark:bg-gray-700 dark:text-white"
+                  ></textarea>
+                </div>
+                <div className="flex items-center">
+                  <input
+                    type="checkbox"
+                    id="copy"
+                    className="rounded border-gray-300 text-[#FF69B4] focus:ring-[#FF69B4] dark:border-gray-600"
+                  />
+                  <label
+                    htmlFor="copy"
+                    className="ml-2 text-sm text-gray-600 dark:text-gray-300"
+                  >
+                    Send me a copy of this message
+                  </label>
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-[#FF69B4] text-white py-3 px-4 rounded-lg text-sm sm:text-base font-medium hover:bg-[#FF69B4]/90 transition-all duration-300 hover:shadow-lg"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+
+            {/* Contact Information */}
+            <div className="space-y-8 bg-white dark:bg-gray-900/50 p-6 rounded-lg shadow-lg backdrop-blur-sm">
+              {/* Technical Support */}
+              <div className="flex items-start space-x-4">
+                <div className="bg-[#bfdbfe] p-3 rounded-lg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-blue-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-gray-900 dark:text-white">
+                    Technical support
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    paintingdazzle@gmail.com
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    1.600.890.4567
+                  </p>
+                </div>
+              </div>
+
+              {/* Land Line */}
+              <div className="flex items-start space-x-4">
+                <div className="bg-[#bfdbfe] p-3 rounded-lg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-blue-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-gray-900 dark:text-white">
+                    Land Line
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    (0421) 431 2030
+                  </p>
+                </div>
+              </div>
+
+              {/* Address */}
+              <div className="flex items-start space-x-4">
+                <div className="bg-[#bfdbfe] p-3 rounded-lg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-blue-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-gray-900 dark:text-white">
+                    Address
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    Dazzle painting, 795 9 Ave #204, Campbell River, BC V9W 4B7,
+                    Canada
+                  </p>
+                </div>
+              </div>
+
+              {/* Mobile */}
+              <div className="flex items-start space-x-4">
+                <div className="bg-[#bfdbfe] p-3 rounded-lg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-blue-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-gray-900 dark:text-white">
+                    Mobile
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    +91 123456789
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Google Maps */}
+          <div className="mt-12 w-full h-[450px] rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-900/50">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.37981992645!2d-125.25355152357211!3d50.02297837151373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5462afdb8bb6ea29%3A0x366bd86088e11d30!2sDazzle%20painting!5e0!3m2!1sen!2sin!4v1741797079719!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Dazzle Painting Location"
+              className="rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ContactForm;

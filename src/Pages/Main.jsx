@@ -29,15 +29,17 @@ const Main = () => {
             Hello and Welcome
           </h2>
           <p className="text-sm md:text-base leading-relaxed mb-6 md:mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec magna
-            purus, malesuada at scelerisque vitae, luctus ac lorem. Aenean
-            convallis ut ligula ut placerat. Mauris a eros in velit feugiat
-            pharetra consectetur at eros. Suspendisse at massa purus. Aliquam
-            non sollicitudin enim. Maecenas arcu sapien, porta ut sem at,
-            pulvinar fringilla quam. Etiam viverra quam ut sapien condimentum.
-            Suspendisse eros ante, ultricies ac imperdiet id, inceptos
-            himenaeos. Aliquam id leo elementum, iaculis justo a, hendrerit
-            ligula.
+          We’re thrilled to have you here! At Dazzle Painting, 
+          we believe that a fresh coat of paint can do more than just change a room—it can 
+          \transform your entire space. Whether you're looking to refresh your home, 
+          add a pop of color, or create a stunning design, our expert painters are here to 
+          bring your vision to life.
+
+          With a commitment to quality, precision, and customer satisfaction, 
+          we take pride in delivering flawless finishes and exceptional service. 
+          Explore our work, get inspired, and let’s make your home shine with color and creativity!
+
+          Your dream space starts here—let’s paint something amazing together!
           </p>
           <Button className="bg-white dark:bg-gray-800 text-[#ff7d67] dark:text-[#ff9d8d] px-6 py-2 rounded-full text-sm font-medium hover:bg-opacity-90 dark:hover:bg-gray-700 transition-all self-start sm:self-auto sm:w-auto w-full md:w-auto border border-transparent dark:border-gray-700">
             VIEW MORE

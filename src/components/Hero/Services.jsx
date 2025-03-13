@@ -33,12 +33,11 @@ const Services = () => {
                 Residential Interior
               </h3>
               <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm">
-                Praesent quis turpis dolor. Vivamus pharetra ante ut ex lacinia,
-                ut luctus mi porta. Nam in ante et tortor accumsan porta.
-                Quisque sapien purus, faucibus.
+              Our exceptional interior painting services bring beauty and 
+              sophistication to your living or business space.
               </p>
               <div className="mt-4 flex items-center text-[#ff7d67] dark:text-[#ff9d8d] text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-2 transition-all duration-300">
-                Learn more <span className="ml-1">→</span>
+                Read more <span className="ml-1">→</span>
               </div>
             </div>
           </a>
@@ -61,12 +60,11 @@ const Services = () => {
                 Residential Exterior
               </h3>
               <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm">
-                Praesent quis turpis dolor. Vivamus pharetra ante ut ex lacinia,
-                ut luctus mi porta. Nam in ante et tortor accumsan porta.
-                Quisque sapien purus, faucibus.
+              We are a professional exterior painting service provider that specializes in 
+              delivering high-quality solutions for residential and commercial properties.
               </p>
               <div className="mt-4 flex items-center text-[#ff7d67] dark:text-[#ff9d8d] text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-2 transition-all duration-300">
-                Learn more <span className="ml-1">→</span>
+                Read more <span className="ml-1">→</span>
               </div>
             </div>
           </a>
@@ -89,12 +87,11 @@ const Services = () => {
                 Commercial Painting
               </h3>
               <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm">
-                Praesent quis turpis dolor. Vivamus pharetra ante ut ex lacinia,
-                ut luctus mi porta. Nam in ante et tortor accumsan porta.
-                Quisque sapien purus, faucibus.
+              Painting a commercial property in Greater Vancouver enhances 
+              its appearance, and our expert commercial painters ensure efficiency.
               </p>
               <div className="mt-4 flex items-center text-[#ff7d67] dark:text-[#ff9d8d] text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-2 transition-all duration-300">
-                Learn more <span className="ml-1">→</span>
+                Read more <span className="ml-1">→</span>
               </div>
             </div>
           </a>
@@ -129,18 +126,19 @@ const Services = () => {
             </div>
 
             <p className="text-center text-gray-700 dark:text-gray-300 text-base sm:text-lg md:text-xl italic px-4 sm:px-8 md:px-12">
-              Lorem ipsum edit button to change this text. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
-              ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum edit button
-              to change this text. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis,
-              pulvinar dapibus leo.
+            Our clients love Dazzle Painting for our professionalism, attention to detail, 
+            and high-quality results. They praise our smooth, hassle-free service, from on-time 
+            arrivals to spotless finishes. Many appreciate our transparent pricing, ensuring no hidden 
+            fees—just stunning transformations. Whether it’s a fresh coat of paint, a unique accent wall, 
+            or a full home makeover, we bring creativity and precision to every project. Our team’s reliability, 
+            efficiency, and expert craftsmanship leave homeowners thrilled with vibrant, long-lasting results. 
+            Let Dazzle Painting bring your vision to life!
             </p>
 
-            <div className="mt-4 sm:mt-8 text-center">
+            {/* <div className="mt-4 sm:mt-8 text-center">
               <h4 className="font-bold text-gray-900 dark:text-gray-100 uppercase text-sm sm:text-base">ABC</h4>
               <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Developer</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

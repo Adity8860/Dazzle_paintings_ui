@@ -34,9 +34,8 @@ const Slider = () => {
   ];
 
   return (
-    <div className="w-full bg-gray-100 dark:bg-gray-900 ">
-      <div className="max-w-9xl mx-auto px-1">
-        
+    <div className="w-full bg-gray-100 dark:bg-gray-900 py-1  ">
+      <div className="max-w-9xl mx-auto px-2 sm:px-1">
         <Swiper
           modules={[Autoplay, Pagination, EffectFade]}
           spaceBetween={0}
@@ -51,33 +50,33 @@ const Slider = () => {
             dynamicBullets: true,
           }}
           loop={true}
-          className="w-full h-[400px] sm:h-[500px] md:h-[600px]  mt-0.5 overflow-hidden  "
+          className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden rounded-lg"
         >
           {slides.map((slide) => (
             <SwiperSlide key={slide.id} className="relative">
-              <div className="grid grid-cols-1 sm:grid-cols-2 h-full">
-                <div className="relative">
+              <div className="grid grid-cols-1 sm:grid-cols-2 h-full gap-1 sm:gap-2">
+                <div className="relative h-[150px] sm:h-full">
                   <img
                     src={slide.before}
                     alt={`Before - ${slide.title}`}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute bottom-4 left-4 bg-black/50 px-3 py-1 rounded text-white text-sm">
+                  <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 bg-black/70 px-2 sm:px-3 py-1 rounded text-white text-xs sm:text-sm font-medium">
                     Before
                   </div>
                 </div>
-                <div className="relative">
+                <div className="relative h-[150px] sm:h-full">
                   <img
                     src={slide.after}
                     alt={`After - ${slide.title}`}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute bottom-4 left-4 bg-black/50 px-3 py-1 rounded text-white text-sm">
+                  <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 bg-black/70 px-2 sm:px-3 py-1 rounded text-white text-xs sm:text-sm font-medium">
                     After
                   </div>
                 </div>
               </div>
-              <div className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-black/50 px-4 py-2 rounded text-white">
+              <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 bg-black/70 px-3 sm:px-4 py-1.5 sm:py-2 rounded text-white text-sm sm:text-base font-medium">
                 {slide.title}
               </div>
             </SwiperSlide>

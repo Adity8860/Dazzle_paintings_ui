@@ -9,7 +9,7 @@ const Hero = () => {
     <>
       <div>
       {showSlider && (
-      <div className="relative h-[100svh]">
+      <div className="relative ">
         { <Slider/> }
       </div>
       )}

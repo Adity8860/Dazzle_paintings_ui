@@ -64,7 +64,7 @@ const ContactForm = () => {
             <div className="bg-white dark:bg-gray-900/50 p-4 sm:p-6 rounded-lg shadow-lg backdrop-blur-sm order-2 lg:order-1">
               <form onSubmit={handleSubmit} ref={form} className="space-y-4 sm:space-y-6">
                 <div className="space-y-1">
-                  <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
+                  {/* <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Name</label> */}
                   <input
                   name="name"
                     type="text"

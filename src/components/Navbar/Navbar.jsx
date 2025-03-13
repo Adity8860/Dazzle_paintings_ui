@@ -33,6 +33,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center">
+          <Link to="/home">
             <div className="flex items-center gap-2">
               <div className="flex">
                 <div className="w-3 h-3 rounded-full bg-[#FFA07A]"></div>
@@ -46,6 +47,7 @@ const Navbar = () => {
                 </span>
               </span>
             </div>
+            </Link>
           </div>
 
           {/* Desktop Menu */}
@@ -365,7 +367,7 @@ const Navbar = () => {
             <ModeToggle />
             <button className="inline-flex items-center px-4 py-2 border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 font-medium rounded-md hover:bg-blue-50 dark:hover:bg-blue-950">
               <Phone className="h-4 w-4 mr-2" />
-              Call Us
+              Contact Us
             </button>
           </div>
         </div>

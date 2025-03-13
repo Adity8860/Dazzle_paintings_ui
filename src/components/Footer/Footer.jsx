@@ -43,7 +43,7 @@ const Footer = () => {
               title="Our phone"
               className="transition-colors duration-300 text-[#FF69B4] hover:text-[#FF69B4]/80 dark:text-[#FF69B4] dark:hover:text-[#FF69B4]/80"
             >
-            (0421) 431 2030
+            +16477170133
             </a>
           </div>
           <div className="flex">

@@ -6,12 +6,12 @@ const ClientsAndPartners = () => {
   return (
     <div className="py-8 sm:py-16 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-3 sm:mb-4">
+        {/* <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-3 sm:mb-4">
           Our Clients & Partners
         </h2>
         <p className="text-center text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit; sed diam nonumy eirmod tempor invidunt.
-        </p>
+        </p> */}
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
           {/* Our Missions */}

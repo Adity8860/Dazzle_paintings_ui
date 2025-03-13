@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -10,10 +12,38 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("formData", formData);
-  };
+    
+    // Validate required fields
+    if (!formData.name || !formData.email || !formData.message ||!formData.phoneNo) {
+      alert("Please fill in all required fields");
+      return;
+    }
 
- 
+    // Add loading state if needed
+    emailjs
+      .sendForm(
+        'service_j86f0ic', 
+        'template_xkds0a6', 
+        form.current, 
+        'X_ptKww76Wf9icNDI'  // Use this format for the public key
+      )
+      .then(
+        (result) => {
+          console.log('SUCCESS!', result.text);
+          alert('Message sent successfully!');
+          setFormData({
+            name: "",
+            email: "",
+            message: "",
+            phoneNo: "",
+          });
+        },
+        (error) => {
+          console.error('FAILED...', error.text);
+          alert('Failed to send message. Please try again.');
+        },
+      );
+  };
 
   return (
     <div>
@@ -32,10 +62,11 @@ const ContactForm = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             {/* Contact Form */}
             <div className="bg-white dark:bg-gray-900/50 p-4 sm:p-6 rounded-lg shadow-lg backdrop-blur-sm order-2 lg:order-1">
-              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+              <form onSubmit={handleSubmit} ref={form} className="space-y-4 sm:space-y-6">
                 <div className="space-y-1">
                   <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
                   <input
+                  name="name"
                     type="text"
                     placeholder="Your name"
                     value={formData.name}
@@ -45,6 +76,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <input
+                    name="email"
                     type="email"
                     placeholder="Email address"
                     value={formData.email}
@@ -54,6 +86,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <input
+                    name="phoneNo"
                     type="tel"
                     placeholder="Phone Number (xxx-xxx-xxxx)"
                     value={formData.phoneNo}
@@ -65,6 +98,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <textarea
+                    name="message"
                     placeholder="Message"
                     rows="4"
                     value={formData.message}

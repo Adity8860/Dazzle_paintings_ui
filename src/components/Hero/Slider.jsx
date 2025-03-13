@@ -4,9 +4,11 @@ import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
+import Logo from '../../assets/OldLogo.PNG'
 
 const Slider = () => {
   const slides = [
+    
     {
       id: 1,
       before: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1000&auto=format&fit=crop',
@@ -31,6 +33,13 @@ const Slider = () => {
       after: 'https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?q=80&w=1000&auto=format&fit=crop',
       title: 'Office Space'
     },
+    {
+      id: 5,
+      before: Logo,
+      after:Logo,
+      title:"Old Logo"
+
+    }
   ];
 
   return (

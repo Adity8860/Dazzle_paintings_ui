@@ -1,3 +1,4 @@
+import config from "@/config/config";
 import React from "react";
 
 const Footer = () => {
@@ -116,7 +117,7 @@ const Footer = () => {
           © Copyright 2025 Dazzle Painting Ltd.  All rights reserved.
         </p>
         <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
-          <li>
+          {/* <li>
             <a
               href="/"
               className="text-sm text-gray-600 dark:text-gray-400 transition-colors duration-300 hover:text-[#FF69B4] dark:hover:text-[#FF69B4]"
@@ -131,13 +132,13 @@ const Footer = () => {
             >
               Privacy Policy
             </a>
-          </li>
+          </li> */}
           <li>
             <a
               href="/"
               className="text-sm text-gray-600 dark:text-gray-400  transition-colors duration-300 hover:text-deep-purple-accent-400"
             >
-              Terms &amp; Conditions
+              v{config.version}
             </a>
           </li>
         </ul>

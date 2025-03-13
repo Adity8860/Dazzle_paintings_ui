@@ -20,7 +20,8 @@ const ClientsAndPartners = () => {
               Our Missions
             </h3>
             <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4 sm:mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit; sed diam nonumy eirmod tempor invidunt.
+            At Dazzle Painting, our mission is to bring vibrant, high-quality, and professional painting services to homes across Canada. We aim to enhance interiors and exteriors with expert craftsmanship, attention to detail, and long-lasting finishes. Whether it's a fresh coat of paint, a unique design, 
+            or a full home makeover, we strive to exceed expectations and bring color to life.
             </p>
             
             <div className="space-y-3 sm:space-y-4">
@@ -35,7 +36,7 @@ const ClientsAndPartners = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
                     </svg>
                     <span className={`font-medium ${openSection === 1 ? 'text-white' : 'text-gray-900 dark:text-gray-100'}`}>
-                      Section 1
+                    Why Choose Dazzle Painting?
                     </span>
                   </div>
                   <svg xmlns="http://www.w3.org/2000/svg" className={`w-6 h-6 ${openSection === 1 ? 'text-white' : 'text-gray-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -48,7 +49,7 @@ const ClientsAndPartners = () => {
                 </button>
                 {openSection === 1 && (
                   <div className="px-4 pb-4 text-white">
-                    I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                   Our team consists of experienced painters dedicated to delivering flawless results, ensuring smooth finishes, clean edges, and precision in every stroke.
                   </div>
                 )}
               </div>
@@ -64,7 +65,7 @@ const ClientsAndPartners = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                     <span className={`font-medium ${openSection === 2 ? 'text-white' : 'text-gray-900 dark:text-gray-100'}`}>
-                      Section 2
+                    Customized Design Solutions
                     </span>
                   </div>
                   <svg xmlns="http://www.w3.org/2000/svg" className={`w-6 h-6 ${openSection === 2 ? 'text-white' : 'text-gray-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -77,7 +78,8 @@ const ClientsAndPartners = () => {
                 </button>
                 {openSection === 2 && (
                   <div className="px-4 pb-4 text-white">
-                    I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                   We offer tailored painting solutions, including custom color consultations, decorative finishes, 
+                   and modern interior design painting to match your vision.
                   </div>
                 )}
               </div>
@@ -93,7 +95,7 @@ const ClientsAndPartners = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                     <span className={`font-medium ${openSection === 3 ? 'text-white' : 'text-gray-900 dark:text-gray-100'}`}>
-                      Section 3
+                    High-Quality Materials & Eco-Friendly Options
                     </span>
                   </div>
                   <svg xmlns="http://www.w3.org/2000/svg" className={`w-6 h-6 ${openSection === 3 ? 'text-white' : 'text-gray-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -106,7 +108,8 @@ const ClientsAndPartners = () => {
                 </button>
                 {openSection === 3 && (
                   <div className="px-4 pb-4 text-white">
-                    I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                    We use premium, durable paints with eco-friendly options available, 
+                    ensuring long-lasting beauty while being safe for your family and the environment.  
                   </div>
                 )}
               </div>
@@ -122,7 +125,7 @@ const ClientsAndPartners = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                     </svg>
                     <span className={`font-medium ${openSection === 4 ? 'text-white' : 'text-gray-900 dark:text-gray-100'}`}>
-                      Section 4
+                    Fast & Reliable Service
                     </span>
                   </div>
                   <svg xmlns="http://www.w3.org/2000/svg" className={`w-6 h-6 ${openSection === 4 ? 'text-white' : 'text-gray-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -135,8 +138,9 @@ const ClientsAndPartners = () => {
                 </button>
                 {openSection === 4 && (
                   <div className="px-4 pb-4 text-white">
-                    I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-                  </div>
+                   We respect your time, providing efficient services with minimal disruption to your home, 
+                   completing projects on schedule without compromising quality.
+                   </div>
                 )}
               </div>
             </div>

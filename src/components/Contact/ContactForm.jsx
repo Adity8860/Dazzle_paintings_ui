@@ -123,7 +123,7 @@ const ContactForm = () => {
                   type="submit"
                   className="w-full bg-[#FF69B4] text-white py-3 px-4 rounded-lg text-sm sm:text-base font-medium hover:bg-[#FF69B4]/90 transition-all duration-300 hover:shadow-lg"
                 >
-                  Send Message
+                  Send Query
                 </button>
               </form>
             </div>
@@ -155,9 +155,9 @@ const ContactForm = () => {
                   <p className="text-gray-600 dark:text-gray-300">
                     paintingdazzle@gmail.com
                   </p>
-                  <p className="text-gray-600 dark:text-gray-300">
+                  {/* <p className="text-gray-600 dark:text-gray-300">
                     1.600.890.4567
-                  </p>
+                  </p> */}
                 </div>
               </div>
 

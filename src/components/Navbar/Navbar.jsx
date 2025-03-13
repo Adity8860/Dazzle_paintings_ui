@@ -51,12 +51,31 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center justify-between flex-[0.75] ml-8 lg:ml-16">
             <div className="flex items-center space-x-4 lg:space-x-8">
-              <a
-                href="#"
-                className="cursor-pointer text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] transition-colors duration-200 font-medium"
+            <Link
+                to="/home"
+                className="text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] transition-colors duration-200 font-medium"
               >
                 Home
-              </a>
+              </Link>
+
+                            {/* Services Dropdown */}
+                            <div className="relative group cursor-pointer">
+                <button className="cursor-pointer flex items-center text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] transition-colors duration-200 font-medium">
+                  Services
+                  {/* <ChevronDown className="ml-1 h-4 w-4" /> */}
+                </button>
+                <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-background dark:bg-gray-800 border border-border dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  {servicesDropdown.map((item) => (
+                    <a
+                      key={item}
+                      href="#"
+                      className="block px-4 py-2 text-sm text-foreground hover:text-[#ff7d67] dark:text-gray-300 dark:hover:text-[#ff9d8d] hover:bg-gray-50 dark:hover:bg-gray-700"
+                    >
+                      {item}
+                    </a>
+                  ))}
+                </div>
+              </div>
 
               {/* About and Services Dropdowns */}
               <div className="relative group cursor-pointer">
@@ -77,24 +96,6 @@ const Navbar = () => {
                 </div>
               </div>
 
-              {/* Services Dropdown */}
-              <div className="relative group cursor-pointer">
-                <button className="cursor-pointer flex items-center text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] transition-colors duration-200 font-medium">
-                  Services
-                  {/* <ChevronDown className="ml-1 h-4 w-4" /> */}
-                </button>
-                <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-background dark:bg-gray-800 border border-border dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  {servicesDropdown.map((item) => (
-                    <a
-                      key={item}
-                      href="#"
-                      className="block px-4 py-2 text-sm text-foreground hover:text-[#ff7d67] dark:text-gray-300 dark:hover:text-[#ff9d8d] hover:bg-gray-50 dark:hover:bg-gray-700"
-                    >
-                      {item}
-                    </a>
-                  ))}
-                </div>
-              </div>
 
               {/* <a href="#" className="cursor-pointer text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] transition-colors duration-200 font-medium">
                 Blog

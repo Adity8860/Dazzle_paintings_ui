@@ -24,13 +24,11 @@ const Footer = () => {
           </a>
           <div className="mt-6 lg:max-w-sm">
             <p className="text-sm text-gray-800 dark:text-gray-300">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam.
+            Discover a world of color and creativity with Dazzle Painting! Join our online community for inspiration, exclusive behind-the-scenes glimpses, and the latest updates on our projects. Whether you're looking for expert painting tips, design ideas, or special offers, our social channels are the place to be. 
             </p>
-            <p className="mt-4 text-sm text-gray-800 dark:text-gray-300">
-              Eaque ipsa quae ab illo inventore veritatis et quasi architecto
-              beatae vitae dicta sunt explicabo.
-            </p>
+            {/* <p className="mt-4 text-sm text-gray-800 dark:text-gray-300">
+            Connect with us on Facebook, Instagram, Twitter, and Pinterest—let’s transform your home, one brushstroke at a time!
+            </p> */}
           </div>
         </div>
         <div className="space-y-2 text-sm">
@@ -45,7 +43,7 @@ const Footer = () => {
               title="Our phone"
               className="transition-colors duration-300 text-[#FF69B4] hover:text-[#FF69B4]/80 dark:text-[#FF69B4] dark:hover:text-[#FF69B4]/80"
             >
-              850-123-5021
+            (0421) 431 2030
             </a>
           </div>
           <div className="flex">
@@ -56,7 +54,7 @@ const Footer = () => {
               title="Our email"
               className="transition-colors duration-300 text-[#FF69B4] hover:text-[#FF69B4]/80 dark:text-[#FF69B4] dark:hover:text-[#FF69B4]/80"
             >
-              info@lorem.mail
+              paintingdazzle@gmail.com
             </a>
           </div>
           <div className="flex">
@@ -69,7 +67,7 @@ const Footer = () => {
               title="Our address"
               className="transition-colors duration-300 text-[#FF69B4] hover:text-[#FF69B4]/80 dark:text-[#FF69B4] dark:hover:text-[#FF69B4]/80"
             >
-              312 Lovely Street, NY
+              Dazzle painting, 795 9 Ave #204, Campbell River, BC V9W 4B7, Canada
             </a>
           </div>
         </div>
@@ -105,14 +103,17 @@ const Footer = () => {
             </a>
           </div>
           <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
-            Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken
-            spare ribs salami.
+
+          Follow us on social media for painting inspiration, design tips, project showcases, 
+          and exclusive offers!
+
+
           </p>
         </div>
       </div>
       <div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t border-gray-200 dark:border-gray-700 lg:flex-row">
         <p className="text-sm text-gray-600 dark:text-gray-400">
-          © Copyright 2025 Lorem Inc. All rights reserved.
+          © Copyright 2025 Dazzle Painting Ltd.  All rights reserved.
         </p>
         <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
           <li>

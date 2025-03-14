@@ -10,7 +10,7 @@ const ContactForm = () => {
     phoneNo: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     // Validate required fields
@@ -43,6 +43,28 @@ const ContactForm = () => {
           alert('Failed to send message. Please try again.');
         },
       );
+
+      // Custom backend nodemailer
+    //   const response = await fetch("http://localhost:4002/send-email", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify(
+    //       {
+    //         name: formData.name,
+    //         email: formData.email,
+    //         message: formData.message,
+    //     }
+    //   ),
+    // });
+  
+    // const data = await response.json();
+    // alert(data.message);
+    // setFormData({
+    //   name: "",
+    //   email: "",
+    //   message: "",
+    //   phoneNo: "",
+    // });
   };
 
   return (

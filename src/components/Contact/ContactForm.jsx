@@ -10,7 +10,7 @@ const ContactForm = () => {
     phoneNo: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     // Validate required fields
@@ -43,6 +43,28 @@ const ContactForm = () => {
           alert('Failed to send message. Please try again.');
         },
       );
+
+      // Custom backend nodemailer
+    //   const response = await fetch("http://localhost:4002/send-email", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify(
+    //       {
+    //         name: formData.name,
+    //         email: formData.email,
+    //         message: formData.message,
+    //     }
+    //   ),
+    // });
+  
+    // const data = await response.json();
+    // alert(data.message);
+    // setFormData({
+    //   name: "",
+    //   email: "",
+    //   message: "",
+    //   phoneNo: "",
+    // });
   };
 
   return (
@@ -64,7 +86,7 @@ const ContactForm = () => {
             <div className="bg-white dark:bg-gray-900/50 p-4 sm:p-6 rounded-lg shadow-lg backdrop-blur-sm order-2 lg:order-1">
               <form onSubmit={handleSubmit} ref={form} className="space-y-4 sm:space-y-6">
                 <div className="space-y-1">
-                  {/* <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Name</label> */}
+                  <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
                   <input
                   name="name"
                     type="text"

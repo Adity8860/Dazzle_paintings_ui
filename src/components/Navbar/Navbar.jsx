@@ -11,12 +11,12 @@ const Navbar = () => {
     setOpenDropdown(openDropdown === dropdown ? null : dropdown);
   };
 
-  const aboutDropdown = [
-    "Our Story",
-    "Our Team",
-    // 'Why Choose Us',
-    // 'Testimonials'
-  ];
+  // const aboutDropdown = [
+  //   "Our Story",
+  //   "Our Team",
+  //   // 'Why Choose Us',
+  //   // 'Testimonials'
+  // ];
 
   const servicesDropdown = [
     "Interior Painting",
@@ -33,35 +33,35 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center">
-          <Link to="/home">
-            <div className="flex items-center gap-2">
-              <div className="flex">
-                <div className="w-3 h-3 rounded-full bg-[#FFA07A]"></div>
-                <div className="w-3 h-3 rounded-full bg-[#8B4513] -ml-1"></div>
-                <div className="w-3 h-3 rounded-full bg-[#FF69B4] -ml-1"></div>
-              </div>
-              <span className="text-xl font-semibold text-gray-900 dark:text-white">
-                Dazzle{" "}
-                <span className="text-[#FF69B4] dark:text-[#FF69B4]">
-                  paintings
+            <Link to="/home">
+              <div className="flex items-center gap-2">
+                <div className="flex">
+                  <div className="w-3 h-3 rounded-full bg-[#FFA07A]"></div>
+                  <div className="w-3 h-3 rounded-full bg-[#8B4513] -ml-1"></div>
+                  <div className="w-3 h-3 rounded-full bg-[#FF69B4] -ml-1"></div>
+                </div>
+                <span className="text-xl font-semibold text-gray-900 dark:text-white">
+                  Dazzle{" "}
+                  <span className="text-[#FF69B4] dark:text-[#FF69B4]">
+                    paintings
+                  </span>
                 </span>
-              </span>
-            </div>
+              </div>
             </Link>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center justify-between flex-[0.75] ml-8 lg:ml-16">
             <div className="flex items-center space-x-4 lg:space-x-8">
-            <Link
+              <Link
                 to="/home"
                 className="text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] transition-colors duration-200 font-medium"
               >
                 Home
               </Link>
 
-                            {/* Services Dropdown */}
-                            <div className="relative group cursor-pointer">
+              {/* Services Dropdown */}
+              <div className="relative group cursor-pointer">
                 <button className="cursor-pointer flex items-center text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] transition-colors duration-200 font-medium">
                   Services
                   {/* <ChevronDown className="ml-1 h-4 w-4" /> */}
@@ -81,11 +81,12 @@ const Navbar = () => {
 
               {/* About and Services Dropdowns */}
               <div className="relative group cursor-pointer">
-                <button className="cursor-pointer flex items-center text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] transition-colors duration-200 font-medium">
+                <Link to="/about"> <button className="cursor-pointer flex items-center text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] transition-colors duration-200 font-medium">
                   About Us
                   {/* <ChevronDown className="ml-1 h-4 w-4" /> */}
-                </button>
-                <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-background dark:bg-gray-800 border border-border dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                </button></Link>
+               
+                {/* <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-background dark:bg-gray-800 border border-border dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                   {aboutDropdown.map((item) => (
                     <a
                       key={item}
@@ -95,9 +96,8 @@ const Navbar = () => {
                       {item}
                     </a>
                   ))}
-                </div>
+                </div> */}
               </div>
-
 
               {/* <a href="#" className="cursor-pointer text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] transition-colors duration-200 font-medium">
                 Blog

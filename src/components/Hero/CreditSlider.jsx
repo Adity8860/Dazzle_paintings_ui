@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const CreditSlider = () => {
   // Array of slide data (image URLs and labels)
   const slides = [
-    { image: 'image1-after.jpg', label: 'After' },
-    { image: 'image2-staining.jpg', label: 'Staining' },
-    { image: 'image3-offices.jpg', label: 'Offices' },
-    { image: 'image4-before.jpg', label: 'Before' },
-    { image: 'image5-after.jpg', label: 'After' },
-    { image: 'image6-before.jpg', label: 'Before' },
-    { image: 'image7-after.jpg', label: 'After' },
-    { image: 'image8-before.jpg', label: 'Before' },
-    { image: 'image9-after.jpg', label: 'After' },
+    { image: "image1-after.jpg", label: "After" },
+    { image: "image2-staining.jpg", label: "Staining" },
+    { image: "image3-offices.jpg", label: "Offices" },
+    { image: "image4-before.jpg", label: "Before" },
+    { image: "image5-after.jpg", label: "After" },
+    { image: "image6-before.jpg", label: "Before" },
+    { image: "image7-after.jpg", label: "After" },
+    { image: "image8-before.jpg", label: "Before" },
+    { image: "image9-after.jpg", label: "After" },
   ];
 
   // State to track the current slide
@@ -30,11 +30,20 @@ const CreditSlider = () => {
   return (
     <div className="relative w-full max-w-7xl mx-auto overflow-hidden">
       {/* Slider Container */}
-      <div className="flex transition-transform duration-300 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+      <div
+        className="flex transition-transform duration-300 ease-in-out"
+        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+      >
         {slides.map((slide, index) => (
           <div key={index} className="w-full flex-shrink-0">
-            <img src={slide.image} alt={slide.label} className="w-full h-auto object-cover" />
-            <div className="text-center text-white bg-gray-700 bg-opacity-75 py-2">{slide.label}</div>
+            <img
+              src={slide.image}
+              alt={slide.label}
+              className="w-full h-auto object-cover"
+            />
+            <div className="text-center text-white bg-gray-700 bg-opacity-75 py-2">
+              {slide.label}
+            </div>
           </div>
         ))}
       </div>
@@ -59,7 +68,9 @@ const CreditSlider = () => {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full ${currentSlide === index ? 'bg-blue-500' : 'bg-gray-400'}`}
+            className={`w-3 h-3 rounded-full ${
+              currentSlide === index ? "bg-blue-500" : "bg-gray-400"
+            }`}
           ></button>
         ))}
       </div>

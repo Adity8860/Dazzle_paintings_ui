@@ -6,6 +6,7 @@ import Main from './Pages/Main'
 import Footer from './components/Footer/Footer'
 import ContactForm from './components/Contact/ContactForm'
 import ScrollToTop from './components/Scrolltotop'
+import About from './components/About/About.jsx'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/home" element={<Main />} />
           <Route path="/contact" element={<ContactForm />} />
+          <Route path="/about" element={<About />} />
           {/* <Route path="/ho" element={<Main />} /> */}
           {/* <Route path="/About" element={<ContactForm />} /> */}
           <Route path="/" element={<Main />} />

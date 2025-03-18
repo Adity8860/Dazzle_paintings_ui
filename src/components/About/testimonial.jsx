@@ -97,7 +97,7 @@ const Testimonial = () => {
             </div>
 
             {/* Dots indicator */}
-            <div className="flex justify-center mt-8 gap-2 lg:hidden">
+            <div className="hidden justify-center mt-8 gap-2  ">
               {testimonials.map((_, index) => (
                 <button
                   key={index}

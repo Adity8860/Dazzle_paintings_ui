@@ -36,31 +36,17 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/home">
               <div className="flex items-center gap-2">
-                <div className="flex items-center gap-2 group relative">
-                  {/* Default Logo (Dots) and Name */}
-                  <div className="flex items-center gap-2 group-hover:opacity-0 group-hover:invisible group-hover:translate-y-2 transform transition-all duration-300 ease-in-out">
-                    <div className="flex">
-                      <div className="w-3 h-3 rounded-full bg-[#FFA07A] group-hover:scale-90"></div>
-                      <div className="w-3 h-3 rounded-full bg-[#8B4513] -ml-1 group-hover:scale-90"></div>
-                      <div className="w-3 h-3 rounded-full bg-[#FF69B4] -ml-1 group-hover:scale-90"></div>
-                    </div>
-                    <span className="text-xl font-semibold text-gray-900 dark:text-white group-hover:translate-x-2">
-                      Dazzle{" "}
-                      <span className="text-[#FF69B4] dark:text-[#FF69B4]">
-                        paintings
-                      </span>
-                    </span>
-                  </div>
-
-                  {/* SVG Logo (Shows on Hover) */}
-                  <div className="absolute left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:scale-105 transform transition-all duration-300 ease-in-out hover:rotate-2">
-                    <img
-                      src={OldLogo}
-                      alt="Dazzle Painting Logo"
-                      className="h-27 w-auto"
-                    />
-                  </div>
+                <div className="flex">
+                  <div className="w-3 h-3 rounded-full bg-[#FFA07A]"></div>
+                  <div className="w-3 h-3 rounded-full bg-[#8B4513] -ml-1"></div>
+                  <div className="w-3 h-3 rounded-full bg-[#FF69B4] -ml-1"></div>
                 </div>
+                <span className="text-xl font-semibold text-gray-900 dark:text-white">
+                  Dazzle{" "}
+                  <span className="text-[#FF69B4] dark:text-[#FF69B4]">
+                    paintings
+                  </span>
+                </span>
               </div>
             </Link>
           </div>

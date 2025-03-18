@@ -313,9 +313,45 @@ const ContactForm = () => {
 
                 {/* Message */}
                 <div className="space-y-1">
+<<<<<<< HEAD
                   <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
                     Message
                   </label>
+=======
+                  {/* <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Name</label> */}
+                  <input
+                  name="name"
+                    type="text"
+                    placeholder="Your name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    className="w-full px-4 py-2.5 text-sm sm:text-base border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-[#FF69B4] dark:bg-gray-700/50 dark:text-white transition-colors duration-200"
+                  />
+                </div>
+                <div>
+                  <input
+                    name="email"
+                    type="email"
+                    placeholder="Email address"
+                    value={formData.email}
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF69B4] dark:bg-gray-700 dark:text-white"
+                  />
+                </div>
+                <div>
+                  <input
+                    name="phoneNo"
+                    type="tel"
+                    placeholder="Phone Number (xxx-xxx-xxxx)"
+                    value={formData.phoneNo}
+                    onChange={(e) => setFormData({...formData, phoneNo: e.target.value})}
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    maxLength="12"
+                    className="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-[#FF69B4] dark:bg-gray-700/50 dark:text-white transition-colors duration-200"
+                  />
+                </div>
+                <div>
+>>>>>>> 939cb53b9544825c8ef3c0bf707276624a9e605d
                   <textarea
                     name="message"
                     placeholder="Your message"

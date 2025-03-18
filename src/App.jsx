@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar.jsx'
 import Main from './Pages/Main'
 import Footer from './components/Footer/Footer'
 import ContactForm from './components/Contact/ContactForm'
+import ScrollToTop from './components/ScrollToTop'
 import About from './components/About/About.jsx'
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <ThemeProvider>
       <Router>
         <Navbar />
+        <ScrollToTop/>
         <Routes>
           <Route path="/home" element={<Main />} />
           <Route path="/contact" element={<ContactForm />} />

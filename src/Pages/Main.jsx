@@ -3,8 +3,6 @@ import Hero from "../components/Hero/Hero";
 import CoverImg from "../assets/cover.jpeg";
 import Services from "../components/Hero/Services";
 import { Button } from "../components/ui/button";
-import Slider from "@/components/Hero/Slider";
-import CreditSlider from "@/components/Hero/creditSlider";
 import ClientsAndPartners from "@/components/Hero/ClientsAndPartners";
 
 const Main = () => {

@@ -21,6 +21,18 @@ export default defineConfig(({ mode }) => {
       react(), 
       tailwindcss()
     ],
-    assetsInclude: ['**/*.PNG']
+    assetsInclude: ['**/*.PNG'],
+    build: {
+      chunkSizeWarningLimit: 1000,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            vendor: ['react', 'react-dom', 'react-router-dom'],
+            ui: ['@emailjs/browser', 'lucide-react'],
+            utils: ['@radix-ui/react-slot', '@radix-ui/react-dropdown-menu']
+          }
+        }
+      }
+    }
   };
 });

@@ -12,32 +12,29 @@ const About = () => {
       </style>
       <div className="bg-white dark:bg-gray-900">
         {/* Hero Section */}
-        <div className="relative h-[200px] sm:h-[250px] md:h-[300px]">
+        <div className="relative h-[120px] sm:h-[150px] md:h-[200px] lg:h-[300px]">
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat brightness-225"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat brightness-525"
             style={{
               backgroundImage: "url('/src/assets/titlebar.jpg')",
               fontFamily: "'DM Sans', sans-serif",
             }}
           >
-            <div className="absolute inset-0 bg-black/60 dark:bg-black/75 flex items-center justify-center">
-              <h1
-                className="text-3xl sm:text-4xl md:text-5xl text-white font-bold"
-                style={{ fontFamily: "'DM Sans', sans-serif" }}
-              >
+            <div className="absolute inset-0 bg-black/60 dark:bg-black/75 flex items-center justify-center px-2 sm:px-4">
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl text-white font-bold text-center">
                 About us
               </h1>
             </div>
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
           {/* Philosophy Section */}
-          <div className="text-center py-12 md:py-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+          <div className="text-center py-6 sm:py-8 md:py-12 lg:py-16">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
               Our Philosophy
             </h2>
-            <div className="max-w-3xl mx-auto text-gray-600 dark:text-gray-300 text-sm sm:text-base">
+            <div className="max-w-3xl mx-auto text-gray-600 dark:text-gray-300 text-sm sm:text-base px-2 sm:px-4">
               At Dazzle Painting, our mission is to bring vibrant, high-quality,
               and professional painting services to homes across Canada. We aim
               to enhance interiors and exteriors with expert craftsmanship,
@@ -45,20 +42,16 @@ const About = () => {
             </div>
           </div>
 
-          <div className="flex  lg:flex-row gap-8 pb-12 md:pb-16">
+          <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 pb-8 sm:pb-12 md:pb-16">
             <div className="w-full lg:w-1/2">
-              <div className="space-y-4">
-                <div
-                  className={`rounded-2xl overflow-hidden transition-all duration-300 ${
-                    openSection === 1
-                      ? "bg-[#00A3FF]"
-                      : "bg-white dark:bg-gray-800 border dark:border-gray-700"
-                  }`}
-                >
-                  <button
-                    className="flex items-center justify-between w-full p-4"
-                    onClick={() => setOpenSection(openSection === 1 ? null : 1)}
-                  >
+              <div className="space-y-2 sm:space-y-3 md:space-y-4">
+                {/* Accordion sections - update button and content padding */}
+                <div className={`rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-300 ${
+                  openSection === 1
+                    ? "bg-[#00A3FF]"
+                    : "bg-white dark:bg-gray-800 border dark:border-gray-700"
+                }`}>
+                  <button className="flex items-center justify-between w-full p-3 sm:p-4">
                     <div className="flex items-center gap-3">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +106,7 @@ const About = () => {
                     </svg>
                   </button>
                   {openSection === 1 && (
-                    <div className="px-4 pb-4 text-white">
+                    <div className="px-3 sm:px-4 pb-3 sm:pb-4 text-white text-sm sm:text-base">
                       Our team consists of experienced painters dedicated to
                       delivering flawless results, ensuring smooth finishes,
                       clean edges, and precision in every stroke.
@@ -343,9 +336,10 @@ const About = () => {
                 </div>
               </div>
             </div>
+            
             {/* Video Section */}
             <div className="w-full lg:w-1/2">
-              <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg">
+              <div className="relative w-full aspect-video rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
                 <iframe
                   className="absolute inset-0 w-full h-full"
                   src="https://www.youtube.com/embed/d1VN6h8m498"
@@ -360,213 +354,212 @@ const About = () => {
       </div>
 
       {/* Our Domains Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 bg-white dark:bg-gray-900">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-6 sm:py-8 md:py-12 lg:py-16 bg-white dark:bg-gray-900">
+        <div className="text-center mb-6 sm:mb-8 md:mb-12">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3">
             Our Domains
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-sm sm:text-base px-2 sm:px-4">
             Performed suspicion in certainty so frankness by attention
             pretended. Newspaper or in tolerably education enjoyment. Extremity
             excellent.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {/* Domain 1 */}
-          <div className="text-center group relative p-12 rounded-lg transition-all duration-300 cursor-pointer hover:bg-[#00A3FF] shadow-lg">
-            <div className="text-[180px] font-bold text-gray-100 dark:text-gray-800 group-hover:text-white/20 transition-colors duration-300">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
+          {/* Domain cards - update padding and text sizes */}
+          <div className="text-center group relative p-3 sm:p-4 md:p-6 rounded-lg transition-all duration-500 cursor-pointer hover:bg-[#00A3FF] hover:-translate-y-2 hover:scale-105 shadow-lg bg-white dark:bg-gray-950 hover:shadow-[#00A3FF]/50 hover:shadow-2xl">
+            <div className="text-[100px] sm:text-[120px] md:text-[140px] lg:text-[180px] font-bold text-gray-100 dark:text-gray-900 group-hover:text-white/20 transition-colors duration-500 group-hover:scale-110">
               01
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 -mt-20 group-hover:text-white transition-colors duration-300">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 -mt-12 sm:-mt-16 md:-mt-20 group-hover:text-white transition-colors duration-500">
               Interior Painting
             </h3>
-            <div className="h-1 w-24 bg-green-500 mx-auto mb-6 group-hover:w-36 group-hover:bg-white transition-all duration-300"></div>
-            <p className="text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-300 text-lg">
+            <div className="h-1 w-16 sm:w-24 bg-green-500 mx-auto mb-3 sm:mb-4 group-hover:w-28 sm:group-hover:w-36 group-hover:bg-white transition-all duration-500 group-hover:rotate-6"></div>
+            <p className="text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-500 text-sm sm:text-base md:text-lg">
               Professional interior painting services for your home or business,
               delivering perfect finishes and attention to detail.
             </p>
           </div>
 
           {/* Domain 2 */}
-          <div className="text-center group relative p-12 rounded-lg transition-all duration-300 cursor-pointer hover:bg-[#00A3FF] shadow-lg">
-            <div className="text-[180px] font-bold text-gray-100 dark:text-gray-800 group-hover:text-white/20 transition-colors duration-300">
+          <div className="text-center group relative p-4 sm:p-6 md:p-8 rounded-lg transition-all duration-500 cursor-pointer hover:bg-[#00A3FF] hover:-translate-y-2 hover:scale-105 shadow-lg bg-white dark:bg-gray-950 hover:shadow-[#00A3FF]/50 hover:shadow-2xl">
+            <div className="text-[100px] sm:text-[120px] md:text-[140px] lg:text-[180px] font-bold text-gray-100 dark:text-gray-900 group-hover:text-white/20 transition-colors duration-500 group-hover:scale-110">
               02
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 -mt-20 group-hover:text-white transition-colors duration-300">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 -mt-12 sm:-mt-16 md:-mt-20 group-hover:text-white transition-colors duration-500">
               Exterior Painting
             </h3>
-            <div className="h-1 w-24 bg-green-500 mx-auto mb-6 group-hover:w-36 group-hover:bg-white transition-all duration-300"></div>
-            <p className="text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-300 text-lg">
+            <div className="h-1 w-16 sm:w-24 bg-green-500 mx-auto mb-3 sm:mb-4 group-hover:w-28 sm:group-hover:w-36 group-hover:bg-white transition-all duration-500 group-hover:rotate-6"></div>
+            <p className="text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-500 text-sm sm:text-base md:text-lg">
               Expert exterior painting solutions that protect and beautify your
               property while enhancing curb appeal.
             </p>
           </div>
 
           {/* Domain 3 */}
-          <div className="text-center group relative p-12 rounded-lg transition-all duration-300 cursor-pointer hover:bg-[#00A3FF] shadow-lg">
-            <div className="text-[180px] font-bold text-gray-100 dark:text-gray-800 group-hover:text-white/20 transition-colors duration-300">
+          <div className="text-center group relative p-4 sm:p-6 md:p-8 rounded-lg transition-all duration-500 cursor-pointer hover:bg-[#00A3FF] hover:-translate-y-2 hover:scale-105 shadow-lg bg-white dark:bg-gray-950 hover:shadow-[#00A3FF]/50 hover:shadow-2xl">
+            <div className="text-[100px] sm:text-[120px] md:text-[140px] lg:text-[180px] font-bold text-gray-100 dark:text-gray-900 group-hover:text-white/20 transition-colors duration-500 group-hover:scale-110">
               03
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 -mt-20 group-hover:text-white transition-colors duration-300">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 -mt-12 sm:-mt-16 md:-mt-20 group-hover:text-white transition-colors duration-500">
               Commercial Painting
             </h3>
-            <div className="h-1 w-24 bg-green-500 mx-auto mb-6 group-hover:w-36 group-hover:bg-white transition-all duration-300"></div>
-            <p className="text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-300 text-lg">
+            <div className="h-1 w-16 sm:w-24 bg-green-500 mx-auto mb-3 sm:mb-4 group-hover:w-28 sm:group-hover:w-36 group-hover:bg-white transition-all duration-500 group-hover:rotate-6"></div>
+            <p className="text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-500 text-sm sm:text-base md:text-lg">
               Comprehensive commercial painting services tailored to businesses,
               ensuring minimal disruption and maximum quality.
             </p>
           </div>
-          <div className="text-center group relative p-12 rounded-lg transition-all duration-300 cursor-pointer hover:bg-[#00A3FF] shadow-lg">
-            <div className="text-[180px] font-bold text-gray-100 dark:text-gray-800 group-hover:text-white/20 transition-colors duration-300">
+
+          {/* Domain 4 */}
+          <div className="text-center group relative p-4 sm:p-6 md:p-8 rounded-lg transition-all duration-500 cursor-pointer hover:bg-[#00A3FF] hover:-translate-y-2 hover:scale-105 shadow-lg bg-white dark:bg-gray-950 hover:shadow-[#00A3FF]/50 hover:shadow-2xl">
+            <div className="text-[100px] sm:text-[120px] md:text-[140px] lg:text-[180px] font-bold text-gray-100 dark:text-gray-900 group-hover:text-white/20 transition-colors duration-500 group-hover:scale-110">
               04
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 -mt-20 group-hover:text-white transition-colors duration-300">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 -mt-12 sm:-mt-16 md:-mt-20 group-hover:text-white transition-colors duration-500">
               Residential Painting
             </h3>
-            <div className="h-1 w-24 bg-green-500 mx-auto mb-6 group-hover:w-36 group-hover:bg-white transition-all duration-300"></div>
-            <p className="text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-300 text-lg">
+            <div className="h-1 w-16 sm:w-24 bg-green-500 mx-auto mb-3 sm:mb-4 group-hover:w-28 sm:group-hover:w-36 group-hover:bg-white transition-all duration-500 group-hover:rotate-6"></div>
+            <p className="text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-500 text-sm sm:text-base md:text-lg">
               Transform your home with our professional residential painting
-              services, delivering beautiful and lasting results for every room
-              and surface.
+              services, delivering beautiful and lasting results.
             </p>
           </div>
         </div>
       </div>
 
       {/* Meet our team */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 bg-gray-50 dark:bg-gray-900">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-8 sm:py-12 md:py-16 lg:py-24 bg-gray-50 dark:bg-gray-900">
+        <div className="text-center mb-6 sm:mb-8 md:mb-12 animate-fade-in">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3">
             Meet Our Team
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-sm sm:text-base px-2 sm:px-4">
             Performed suspicion in certainty so frankness by attention
             pretended. Newspaper or in tolerably education enjoyment. Extremity
             excellent.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Stat 1 */}
-          <div className="text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl rounded-xl p-4">
-            <div className="inline-block p-4 rounded-full bg-red-100 dark:bg-red-900/20 mb-4 animate-bounce">
-              <svg
+        {/* Stats boxes grid - adjusted for better mobile layout */}
+                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+                {/* Stats box 1 - Heart Icon */}
+                <div className="text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4">
+                <div className="inline-block p-2 sm:p-3 rounded-full bg-red-100 dark:bg-red-900/20 mb-2 sm:mb-3 animate-bounce">
+                <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-8 h-8 text-red-500 dark:text-red-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-              >
+                >
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                 />
-              </svg>
-            </div>
-            <div className="text-5xl font-bold text-gray-900 dark:text-white mb-2 animate-count">
-              228
-            </div>
-            <div className="text-gray-600 dark:text-gray-300 font-medium">
-              HAPPY CLIENTS
-            </div>
-          </div>
-
-          {/* Copy the same animation classes to other stat boxes */}
-          {/* Stat 2, 3, and 4 with the same structure but different delays */}
-          <div className="text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl rounded-xl p-4 animate-delay-200">
-            <div className="inline-block p-4 rounded-full bg-red-100 dark:bg-red-900/20 mb-4 animate-bounce">
-              <svg
+                </svg>
+                </div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2 animate-count">
+                228
+                </div>
+                <div className="text-gray-600 dark:text-gray-300 font-medium text-xs sm:text-sm">
+                HAPPY CLIENTS
+                </div>
+                </div>
+                
+                {/* Apply the same padding and text size changes to boxes 2-4 */}
+                <div className="text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4">
+                <div className="inline-block p-3 sm:p-4 rounded-full bg-blue-100 dark:bg-blue-900/20 mb-3 sm:mb-4 animate-bounce">
+                <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-8 h-8 text-red-500 dark:text-red-400"
+                className="w-8 h-8 text-blue-500 dark:text-blue-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-              >
+                >
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"
                 />
-              </svg>
-            </div>
-            <div className="text-5xl font-bold text-gray-900 dark:text-white mb-2">
-              228
-            </div>
-            <div className="text-gray-600 dark:text-gray-300 font-medium">
-              HAPPY CLIENTS
-            </div>
-          </div>
-
-          {/* Stat 3 */}
-          <div className="text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl rounded-xl p-4 animate-delay-400">
-            <div className="inline-block p-4 rounded-full bg-red-100 dark:bg-red-900/20 mb-4 animate-bounce">
-              <svg
+                </svg>
+                </div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2 animate-count">
+                228
+                </div>
+                <div className="text-gray-600 dark:text-gray-300 font-medium text-sm sm:text-base">
+                HAPPY CLIENTS
+                </div>
+                </div>
+                
+                <div className="text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4">
+                <div className="inline-block p-3 sm:p-4 rounded-full bg-green-100 dark:bg-green-900/20 mb-3 sm:mb-4 animate-bounce">
+                <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-8 h-8 text-red-500 dark:text-red-400"
+                className="w-8 h-8 text-green-500 dark:text-green-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-              >
+                >
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 14l9-5-9-5-9 5 9 5z"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 14l9-5-9-5-9 5 9 5z"
                 />
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 14l9-5-9-5-9 5 9 5zM12 14v7"
                 />
-              </svg>
-            </div>
-            <div className="text-5xl font-bold text-gray-900 dark:text-white mb-2">
-              228
-            </div>
-            <div className="text-gray-600 dark:text-gray-300 font-medium">
-              HAPPY CLIENTS
-            </div>
-          </div>
-
-          {/* Stat 4 */}
-          <div className="text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl rounded-xl p-4 animate-delay-600">
-            <div className="inline-block p-4 rounded-full bg-red-100 dark:bg-red-900/20 mb-4 animate-bounce">
-              <svg
+                </svg>
+                </div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2 animate-count">
+                228
+                </div>
+                <div className="text-gray-600 dark:text-gray-300 font-medium text-sm sm:text-base">
+                HAPPY CLIENTS
+                </div>
+                </div>
+                
+                <div className="text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4">
+                <div className="inline-block p-3 sm:p-4 rounded-full bg-yellow-100 dark:bg-yellow-900/20 mb-3 sm:mb-4 animate-bounce">
+                <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-8 h-8 text-red-500 dark:text-red-400"
+                className="w-8 h-8 text-yellow-500 dark:text-yellow-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-              >
+                >
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
-              </svg>
-            </div>
-            <div className="text-5xl font-bold text-gray-900 dark:text-white mb-2">
-              228
-            </div>
-            <div className="text-gray-600 dark:text-gray-300 font-medium">
-              HAPPY CLIENTS
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Testimonial Section */}
-      <Testimonial/>
-      <ClientsSlider/>
-     
-    
-    </section>
-  );
-};
-
-export default About;
+                </svg>
+                </div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2 animate-count">
+                228
+                </div>
+                <div className="text-gray-600 dark:text-gray-300 font-medium text-sm sm:text-base">
+                HAPPY CLIENTS
+                </div>
+                </div>
+                </div>
+              </div>
+              {/* Testimonial Section */}
+              <Testimonial/>
+              <ClientsSlider/>
+             
+            
+            </section>
+          );
+        };
+        
+        export default About;

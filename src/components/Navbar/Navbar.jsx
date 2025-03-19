@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Phone, ChevronDown } from "lucide-react";
 import ModeToggle from "../mode-toggle";
 import { Link } from "react-router-dom";
+import OldLogo from "../../assets/oldlogo.svg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +44,7 @@ const Navbar = () => {
                 <span className="text-xl font-semibold text-gray-900 dark:text-white">
                   Dazzle{" "}
                   <span className="text-[#FF69B4] dark:text-[#FF69B4]">
-                    painting
+                    paintings
                   </span>
                 </span>
               </div>
@@ -81,11 +82,14 @@ const Navbar = () => {
 
               {/* About and Services Dropdowns */}
               <div className="relative group cursor-pointer">
-                <Link to="/about"> <button className="cursor-pointer flex items-center text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] transition-colors duration-200 font-medium">
-                  About Us
-                  {/* <ChevronDown className="ml-1 h-4 w-4" /> */}
-                </button></Link>
-               
+                <Link to="/about">
+                  {" "}
+                  <button className="cursor-pointer flex items-center text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] transition-colors duration-200 font-medium">
+                    About Us
+                    {/* <ChevronDown className="ml-1 h-4 w-4" /> */}
+                  </button>
+                </Link>
+
                 {/* <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-background dark:bg-gray-800 border border-border dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                   {aboutDropdown.map((item) => (
                     <a
@@ -163,7 +167,7 @@ const Navbar = () => {
           >
             <div className="fixed inset-y-0 right-0 w-full max-w-sm bg-background shadow-xl">
               <div className="flex items-center justify-between p-4 border-b border-border">
-                <div className="flex items-center">
+                <Link to="/home" onClick={() => setIsOpen(false)}>
                   <div className="flex items-center gap-2">
                     <div className="flex">
                       <div className="w-3 h-3 rounded-full bg-[#FFA07A]"></div>
@@ -177,10 +181,10 @@ const Navbar = () => {
                       </span>
                     </span>
                   </div>
-                </div>
+                </Link>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="p-2 rounded-md text-foreground hover:text-blue-600"
+                  className="p-2 rounded-md text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d]"
                 >
                   <svg
                     className="h-6 w-6"
@@ -199,81 +203,71 @@ const Navbar = () => {
               </div>
 
               <div className="px-4 py-6 space-y-4">
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-lg font-medium text-foreground hover:text-blue-600"
+                <Link
+                  to="/home"
+                  onClick={() => setIsOpen(false)}
+                  className="block px-3 py-2 text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
                 >
                   Home
-                </a>
-
-                {/* Mobile About Dropdown */}
-                <div className="space-y-2">
-                  <button
-                    onClick={() => handleDropdownClick("about")}
-                    className="flex items-center justify-between w-full px-4 py-2 text-lg font-medium text-foreground hover:text-blue-600"
-                  >
-                    About Us
-                    <ChevronDown
-                      className={`h-5 w-5 transform transition-transform ${
-                        openDropdown === "about" ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-                  {openDropdown === "about" && (
-                    <div className="pl-6 space-y-2">
-                      {aboutDropdown.map((item) => (
-                        <a
-                          key={item}
-                          href="#"
-                          className="block px-4 py-2 text-foreground hover:text-blue-600"
-                        >
-                          {item}
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </div>
+                </Link>
 
                 {/* Mobile Services Dropdown */}
-                <div className="space-y-2">
+                <div className="space-y-1">
                   <button
                     onClick={() => handleDropdownClick("services")}
-                    className="flex items-center justify-between w-full px-4 py-2 text-lg font-medium text-foreground hover:text-blue-600"
+                    className="flex items-center justify-between w-full px-3 py-2 text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
                   >
                     Services
                     <ChevronDown
-                      className={`h-5 w-5 transform transition-transform ${
+                      className={`h-4 w-4 transform transition-transform ${
                         openDropdown === "services" ? "rotate-180" : ""
                       }`}
                     />
                   </button>
                   {openDropdown === "services" && (
-                    <div className="pl-6 space-y-2">
+                    <div className="pl-4 space-y-1">
                       {servicesDropdown.map((item) => (
-                        <a
+                        <Link
                           key={item}
-                          href="#"
-                          className="block px-4 py-2 text-foreground hover:text-blue-600"
+                          to={`/services/${item
+                            .toLowerCase()
+                            .replace(/\s+/g, "-")}`}
+                          onClick={() => setIsOpen(false)}
+                          className="block px-3 py-2 text-sm text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
                         >
                           {item}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   )}
                 </div>
 
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-lg font-medium text-foreground hover:text-blue-600"
+                <Link
+                  to="/about"
+                  onClick={() => setIsOpen(false)}
+                  className="block px-3 py-2 text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
                 >
-                  Blog
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-lg font-medium text-foreground hover:text-blue-600"
+                  About Us
+                </Link>
+
+                <Link
+                  to="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="block px-3 py-2 text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
                 >
                   Contact
-                </a>
+                </Link>
+
+                <div className="flex items-center justify-between px-3 py-4 border-t border-border mt-4">
+                  <ModeToggle />
+                  <a
+                    href="tel:+1234567890"
+                    className="inline-flex items-center px-4 py-2 border-2 border-[#ff7d67] dark:border-[#ff9d8d] text-[#ff7d67] dark:text-[#ff9d8d] font-medium rounded-md hover:bg-[#ff7d67]/10 dark:hover:bg-[#ff9d8d]/10"
+                  >
+                    <Phone className="h-4 w-4 mr-2" />
+                    Call Us
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -287,39 +281,20 @@ const Navbar = () => {
         }`}
       >
         <div className="px-4 pt-2 pb-3 space-y-2">
-          <a
-            href="#"
+          <Link
+            to="/home"
             className="block px-3 py-2 text-foreground hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 rounded-md"
           >
             Home
-          </a>
+          </Link>
 
           {/* Mobile About Dropdown */}
           <div className="space-y-1">
-            <button
-              onClick={() => handleDropdownClick("about")}
-              className="flex items-center justify-between w-full px-3 py-2 text-foreground hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 rounded-md"
-            >
-              About Us
-              <ChevronDown
-                className={`h-4 w-4 transform transition-transform ${
-                  openDropdown === "about" ? "rotate-180" : ""
-                }`}
-              />
-            </button>
-            {openDropdown === "about" && (
-              <div className="pl-4 space-y-1">
-                {aboutDropdown.map((item) => (
-                  <a
-                    key={item}
-                    href="#"
-                    className="block px-3 py-2 text-sm text-foreground hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 rounded-md"
-                  >
-                    {item}
-                  </a>
-                ))}
-              </div>
-            )}
+            <Link to="/about">
+              <button className="flex items-center justify-between w-full px-3 py-2 text-foreground hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 rounded-md">
+                About Us
+              </button>
+            </Link>
           </div>
 
           {/* Mobile Services Dropdown */}
@@ -350,18 +325,18 @@ const Navbar = () => {
             )}
           </div>
 
-          <a
+          {/* <a
             href="#"
             className="block px-3 py-2 text-foreground hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 rounded-md"
           >
             Blog
-          </a>
-          <a
-            href="#"
+          </a> */}
+          <Link
+            to="/contact"
             className="block px-3 py-2 text-foreground hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 rounded-md"
           >
             Contact
-          </a>
+          </Link>
 
           <div className="flex items-center justify-between px-3 py-4 border-t border-border mt-4">
             <ModeToggle />

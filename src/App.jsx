@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer'
 import ContactForm from './components/Contact/ContactForm'
 import ScrollToTop from './components/ScrollToTop'
 import About from './components/About/About.jsx'
+import InteriorPainting from './components/PaintServices/InteriorPainting/InteriorPainting.jsx'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/home" element={<Main />} />
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/about" element={<About />} />
+          <Route path='/interior-painting' element={<InteriorPainting />} />
           {/* <Route path="/ho" element={<Main />} /> */}
           {/* <Route path="/About" element={<ContactForm />} /> */}
           <Route path="/" element={<Main />} />

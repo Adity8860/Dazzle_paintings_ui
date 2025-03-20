@@ -19,13 +19,14 @@ const Navbar = () => {
   //   // 'Testimonials'
   // ];
 
+  // Change the servicesDropdown array to include both display name and custom path
   const servicesDropdown = [
-    "Interior Painting",
-    "Exterior Painting",
-    "Commercial Painting",
-    "Residential Painting",
-    // 'Wallpaper Installation',
-    // 'Color Consultation'
+    { name: "Interior Painting", path: "/interior-painting" },
+    { name: "Exterior Painting", path: "/exterior-painting-services" },
+    { name: "Commercial Painting", path: "/commercial-services" },
+    { name: "Residential Painting", path: "/residential-services" },
+    // { name: 'Wallpaper Installation', path: '/wallpaper' },
+    // { name: 'Color Consultation', path: '/color-consultation' },
   ];
 
   return (
@@ -61,21 +62,20 @@ const Navbar = () => {
                 Home
               </Link>
 
-              {/* Services Dropdown */}
+              {/* Services Dropdown - Desktop */}
               <div className="relative group cursor-pointer">
                 <button className="cursor-pointer flex items-center text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] transition-colors duration-200 font-medium">
                   Services
-                  {/* <ChevronDown className="ml-1 h-4 w-4" /> */}
                 </button>
                 <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-background dark:bg-gray-800 border border-border dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                   {servicesDropdown.map((item) => (
-                    <a
-                      key={item}
-                      href="#"
+                    <Link
+                      key={item.name}
+                      to={item.path}
                       className="block px-4 py-2 text-sm text-foreground hover:text-[#ff7d67] dark:text-gray-300 dark:hover:text-[#ff9d8d] hover:bg-gray-50 dark:hover:bg-gray-700"
                     >
-                      {item}
-                    </a>
+                      {item.name}
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -228,14 +228,12 @@ const Navbar = () => {
                     <div className="pl-4 space-y-1">
                       {servicesDropdown.map((item) => (
                         <Link
-                          key={item}
-                          to={`/services/${item
-                            .toLowerCase()
-                            .replace(/\s+/g, "-")}`}
+                          key={item.name}
+                          to={item.path}
                           onClick={() => setIsOpen(false)}
                           className="block px-3 py-2 text-sm text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
                         >
-                          {item}
+                          {item.name}
                         </Link>
                       ))}
                     </div>
@@ -313,13 +311,13 @@ const Navbar = () => {
             {openDropdown === "services" && (
               <div className="pl-4 space-y-1">
                 {servicesDropdown.map((item) => (
-                  <a
-                    key={item}
-                    href="#"
+                  <Link
+                    key={item.name}
+                    to={item.path}
                     className="block px-3 py-2 text-sm text-foreground hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 rounded-md"
                   >
-                    {item}
-                  </a>
+                    {item.name}
+                  </Link>
                 ))}
               </div>
             )}

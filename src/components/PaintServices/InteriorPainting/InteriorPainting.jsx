@@ -23,6 +23,21 @@ const InteriorPainting = () => {
         </div>
       </div>
 
+
+      {/* Call to Action */}
+      <div className="w-full bg-[#FF69B4]/10">
+        <div className="max-w-7xl mx-auto px-4 py-10 sm:py-16">
+          <div className="text-center space-y-4 sm:space-y-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+              Ready to Transform Your Space?
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Contact us today to schedule your free consultation and get started on your interior painting project.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Content Sections */}
       <div className="max-w-7xl mx-auto px-4 py-6 sm:py-8 md:py-16 space-y-8 sm:space-y-16">
         {/* Services Overview */}
@@ -62,9 +77,17 @@ const InteriorPainting = () => {
               Schedule your free, in-home consultation today
             </p>
 
-            <button className="w-full sm:w-auto bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 sm:px-8 py-3 rounded-lg transition-colors duration-200 hover:shadow-lg">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <a href="tel:(0421) 431 2030" className="w-full sm:w-auto bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200 hover:shadow-lg text-center">
+                Call (0421) 431 2030
+              </a>
+              <button className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 border-2 border-[#FF69B4] text-[#FF69B4] font-medium rounded-lg hover:bg-[#FF69B4]/10 transition-colors duration-200">
+                Request a Quote
+              </button>
+            </div>
+            {/* <button className="w-full sm:w-auto bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 sm:px-8 py-3 rounded-lg transition-colors duration-200 hover:shadow-lg">
               View Calendar
-            </button>
+            </button> */}
           </div>
         </div>
 
@@ -276,28 +299,6 @@ const InteriorPainting = () => {
               <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                 Yes, we stand behind our work with a comprehensive warranty. Details will be provided in your service agreement during the consultation process.
               </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Call to Action */}
-      <div className="w-full bg-[#FF69B4]/10">
-        <div className="max-w-7xl mx-auto px-4 py-10 sm:py-16">
-          <div className="text-center space-y-4 sm:space-y-6">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
-              Ready to Transform Your Space?
-            </h2>
-            <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Contact us today to schedule your free consultation and get started on your interior painting project.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <a href="tel:(0421) 431 2030" className="w-full sm:w-auto bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200 hover:shadow-lg text-center">
-                Call (0421) 431 2030
-              </a>
-              <button className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 border-2 border-[#FF69B4] text-[#FF69B4] font-medium rounded-lg hover:bg-[#FF69B4]/10 transition-colors duration-200">
-                Request a Quote
-              </button>
             </div>
           </div>
         </div>

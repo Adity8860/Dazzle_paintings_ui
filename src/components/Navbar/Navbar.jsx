@@ -22,9 +22,9 @@ const Navbar = () => {
   // Change the servicesDropdown array to include both display name and custom path
   const servicesDropdown = [
     { name: "Interior Painting", path: "/interior-painting" },
-    { name: "Exterior Painting", path: "/exterior-painting-services" },
-    { name: "Commercial Painting", path: "/commercial-services" },
-    { name: "Residential Painting", path: "/residential-services" },
+    { name: "Exterior Painting", path: "/exterior-painting" },
+    { name: "Commercial Painting", path: "/commercial-painting" },
+    { name: "Residential Painting", path: "/residential-painting" },
     // { name: 'Wallpaper Installation', path: '/wallpaper' },
     // { name: 'Color Consultation', path: '/color-consultation' },
   ];
@@ -118,8 +118,8 @@ const Navbar = () => {
             <div className="flex items-center space-x-4 lg:space-x-6">
               <ModeToggle />
               <button className="inline-flex items-center px-4 lg:px-6 py-2 lg:py-2.5 border-2 border-[#ff7d67] dark:border-[#ff9d8d] text-[#ff7d67] dark:text-[#ff9d8d] font-medium rounded-md hover:bg-[#ff7d67]/10 dark:hover:bg-[#ff9d8d]/10 transition-colors duration-200">
-                <Phone className="h-4 w-4 mr-2" />
-                <span className="hidden sm:inline">Call Us</span>
+                {/* <Phone className="h-4 w-4 mr-2" /> */}
+                <span className="hidden sm:inline">Get a free Quote</span>
               </button>
             </div>
           </div>
@@ -263,7 +263,7 @@ const Navbar = () => {
                     className="inline-flex items-center px-4 py-2 border-2 border-[#ff7d67] dark:border-[#ff9d8d] text-[#ff7d67] dark:text-[#ff9d8d] font-medium rounded-md hover:bg-[#ff7d67]/10 dark:hover:bg-[#ff9d8d]/10"
                   >
                     <Phone className="h-4 w-4 mr-2" />
-                    Call Us
+                  Get a free quote
                   </a>
                 </div>
               </div>
@@ -340,7 +340,7 @@ const Navbar = () => {
             <ModeToggle />
             <button className="inline-flex items-center px-4 py-2 border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 font-medium rounded-md hover:bg-blue-50 dark:hover:bg-blue-950">
               <Phone className="h-4 w-4 mr-2" />
-              Contact Us
+              Get a free quote
             </button>
           </div>
         </div>

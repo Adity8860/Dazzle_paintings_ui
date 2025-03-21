@@ -8,6 +8,8 @@ import ContactForm from './components/Contact/ContactForm'
 import ScrollToTop from './components/ScrollToTop'
 import About from './components/About/About.jsx'
 import InteriorPainting from './components/PaintServices/InteriorPainting/InteriorPainting.jsx'
+import ExteriorPainting from './components/PaintServices/ExteriorPainting/ExteriorPainting.jsx'
+import CommercialPainting from './components/PaintServices/CommercialPainting/CommercialPainting'
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/about" element={<About />} />
           <Route path='/interior-painting' element={<InteriorPainting />} />
+          <Route path="/exterior-painting" element={<ExteriorPainting />} />
+          <Route path="/commercial-painting" element={<CommercialPainting />} />
           {/* <Route path="/ho" element={<Main />} /> */}
           {/* <Route path="/About" element={<ContactForm />} /> */}
           <Route path="/" element={<Main />} />

@@ -117,10 +117,11 @@ const Navbar = () => {
             {/* Right side buttons */}
             <div className="flex items-center space-x-4 lg:space-x-6">
               <ModeToggle />
-              <button className="inline-flex items-center px-4 lg:px-6 py-2 lg:py-2.5 border-2 border-[#ff7d67] dark:border-[#ff9d8d] text-[#ff7d67] dark:text-[#ff9d8d] font-medium rounded-md hover:bg-[#ff7d67]/10 dark:hover:bg-[#ff9d8d]/10 transition-colors duration-200">
-                {/* <Phone className="h-4 w-4 mr-2" /> */}
-                <span className="hidden sm:inline">Get a free Quote</span>
-              </button>
+              <a href="tel:+16477170133" className="inline-flex items-center px-4 lg:px-6 py-2 lg:py-2.5 border-2 border-[#ff7d67] dark:border-[#ff9d8d] text-[#ff7d67] dark:text-[#ff9d8d] font-medium rounded-md hover:bg-[#ff7d67]/10 dark:hover:bg-[#ff9d8d]/10 transition-colors duration-200">
+              
+                <Phone className="h-4 w-4 mr-2" />
+                <span className="hidden sm:inline">Call Us</span>
+              </a>
             </div>
           </div>
 
@@ -259,11 +260,11 @@ const Navbar = () => {
                 <div className="flex items-center justify-between px-3 py-4 border-t border-border mt-4">
                   <ModeToggle />
                   <a
-                    href="tel:+1234567890"
+                    href="tel:+16477170133"
                     className="inline-flex items-center px-4 py-2 border-2 border-[#ff7d67] dark:border-[#ff9d8d] text-[#ff7d67] dark:text-[#ff9d8d] font-medium rounded-md hover:bg-[#ff7d67]/10 dark:hover:bg-[#ff9d8d]/10"
                   >
                     <Phone className="h-4 w-4 mr-2" />
-                  Get a free quote
+                    Call Us
                   </a>
                 </div>
               </div>
@@ -338,10 +339,10 @@ const Navbar = () => {
 
           <div className="flex items-center justify-between px-3 py-4 border-t border-border mt-4">
             <ModeToggle />
-            <button className="inline-flex items-center px-4 py-2 border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 font-medium rounded-md hover:bg-blue-50 dark:hover:bg-blue-950">
+            <a href="tel:+16477170133" className="inline-flex items-center px-4 py-2 border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 font-medium rounded-md hover:bg-blue-50 dark:hover:bg-blue-950">
               <Phone className="h-4 w-4 mr-2" />
-              Get a free quote
-            </button>
+              Contact Us
+            </a>
           </div>
         </div>
       </div>

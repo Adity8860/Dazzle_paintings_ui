@@ -1,31 +1,40 @@
 import React, { useEffect, useRef } from "react";
-import EPImage from "../../../assets/EPImage.jpg";
-import PrevSlider from "./PrevSlider";
-import "./ExteriorPainting.css";
+import EPImage from "../assets/EPImage.jpg";
+import PrevSlider from "../components/PaintServices/PrevSlider";
+import "../components/PaintServices/ScrollAnimation.css";
 
 const ExteriorPainting = () => {
   const animatedElementsRef = useRef([]);
+  const beforeImage =
+    "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80";
+  const afterImage =
+    "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80";
 
   useEffect(() => {
     // Observer for fade-in animations
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
 
     // Get all elements with animation classes
-    const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-up');
-    animatedElements.forEach(el => {
+    const animatedElements = document.querySelectorAll(
+      ".fade-in, .slide-in-left, .slide-in-right, .scale-up"
+    );
+    animatedElements.forEach((el) => {
       observer.observe(el);
       animatedElementsRef.current.push(el);
     });
 
     return () => {
       // Cleanup observer
-      animatedElementsRef.current.forEach(el => {
+      animatedElementsRef.current.forEach((el) => {
         observer.unobserve(el);
       });
     };
@@ -164,29 +173,37 @@ const ExteriorPainting = () => {
               See the Transformation
             </h2>
             <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 hidden md:block">
-              Our before and after gallery showcases the dramatic difference our professional exterior painting services can make. Slide to compare the transformations and imagine what we can do for your home.
+              Our before and after gallery showcases the dramatic difference our
+              professional exterior painting services can make. Slide to compare
+              the transformations and imagine what we can do for your home.
             </p>
             <ul className="space-y-2 sm:space-y-3 list-animation">
               <li className="flex gap-2 sm:gap-3">
-                <span className="flex-shrink-0 text-[#FF69B4] text-sm sm:text-base bounce-animation">✓</span>
+                <span className="flex-shrink-0 text-[#FF69B4] text-sm sm:text-base bounce-animation">
+                  ✓
+                </span>
                 <p className="text-xs sm:text-sm md:text-base text-gray-600 dark:text-gray-300">
                   Revitalized curb appeal with vibrant, long-lasting colors
                 </p>
               </li>
               <li className="flex gap-2 sm:gap-3">
-                <span className="flex-shrink-0 text-[#FF69B4] text-sm sm:text-base bounce-animation">✓</span>
+                <span className="flex-shrink-0 text-[#FF69B4] text-sm sm:text-base bounce-animation">
+                  ✓
+                </span>
                 <p className="text-xs sm:text-sm md:text-base text-gray-600 dark:text-gray-300">
                   Enhanced property value with professional-grade finishes
                 </p>
               </li>
               <li className="flex gap-2 sm:gap-3">
-                <span className="flex-shrink-0 text-[#FF69B4] text-sm sm:text-base bounce-animation">✓</span>
+                <span className="flex-shrink-0 text-[#FF69B4] text-sm sm:text-base bounce-animation">
+                  ✓
+                </span>
                 <p className="text-xs sm:text-sm md:text-base text-gray-600 dark:text-gray-300">
                   Protected exterior surfaces against weather damage
                 </p>
               </li>
             </ul>
-            
+
             <div className="mt-4 pt-4 sm:mt-6 sm:pt-6 border-t border-gray-200 dark:border-gray-700">
               <div className="bg-white dark:bg-gray-800 p-3 sm:p-4 rounded-lg shadow-sm scale-up delay-300">
                 <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
@@ -210,7 +227,9 @@ const ExteriorPainting = () => {
                   </h3>
                 </div>
                 <p className="text-xs sm:text-sm md:text-base text-gray-600 dark:text-gray-300">
-                  Our Certified Color Experts are here to guide you through the selection process, ensuring the colors and shades you choose bring your vision to life.
+                  Our Certified Color Experts are here to guide you through the
+                  selection process, ensuring the colors and shades you choose
+                  bring your vision to life.
                 </p>
                 <button className="mt-3 sm:mt-4 inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 border-2 border-[#FF69B4] text-[#FF69B4] text-xs sm:text-sm font-medium rounded-lg hover:bg-[#FF69B4]/10 transition-colors duration-200">
                   Book a Color Consultation
@@ -219,7 +238,7 @@ const ExteriorPainting = () => {
             </div>
           </div>
           <div className="order-1 md:order-2 fade-in">
-            <PrevSlider />
+            <PrevSlider beforeImage={beforeImage} afterImage={afterImage} />
           </div>
         </div>
       </div>
@@ -240,7 +259,9 @@ const ExteriorPainting = () => {
 
               <ul className="space-y-4 sm:space-y-6 list-animation">
                 <li className="flex gap-3">
-                  <span className="flex-shrink-0 text-[#FF69B4] bounce-animation">✓</span>
+                  <span className="flex-shrink-0 text-[#FF69B4] bounce-animation">
+                    ✓
+                  </span>
                   <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                     Thorough surface preparation including power washing,
                     scraping, and sanding to remove dirt, mildew, and peeling
@@ -248,7 +269,9 @@ const ExteriorPainting = () => {
                   </p>
                 </li>
                 <li className="flex gap-3">
-                  <span className="flex-shrink-0 text-[#FF69B4] bounce-animation">✓</span>
+                  <span className="flex-shrink-0 text-[#FF69B4] bounce-animation">
+                    ✓
+                  </span>
                   <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                     Careful protection of landscaping, windows, and other
                     exterior features with professional-grade coverings and drop
@@ -256,7 +279,9 @@ const ExteriorPainting = () => {
                   </p>
                 </li>
                 <li className="flex gap-3">
-                  <span className="flex-shrink-0 text-[#FF69B4] bounce-animation">✓</span>
+                  <span className="flex-shrink-0 text-[#FF69B4] bounce-animation">
+                    ✓
+                  </span>
                   <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                     Repair of damaged surfaces, including wood replacement,
                     caulking, and filling of cracks and holes to create a smooth
@@ -264,7 +289,9 @@ const ExteriorPainting = () => {
                   </p>
                 </li>
                 <li className="flex gap-3">
-                  <span className="flex-shrink-0 text-[#FF69B4] bounce-animation">✓</span>
+                  <span className="flex-shrink-0 text-[#FF69B4] bounce-animation">
+                    ✓
+                  </span>
                   <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                     Application of premium exterior primers and paints using
                     professional techniques to ensure even coverage and maximum
@@ -272,7 +299,9 @@ const ExteriorPainting = () => {
                   </p>
                 </li>
                 <li className="flex gap-3">
-                  <span className="flex-shrink-0 text-[#FF69B4] bounce-animation">✓</span>
+                  <span className="flex-shrink-0 text-[#FF69B4] bounce-animation">
+                    ✓
+                  </span>
                   <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                     Thorough cleanup and final inspection to ensure every detail
                     meets our high standards and your complete satisfaction.

@@ -1,22 +1,53 @@
-import React from "react";
-import CPImage from "../../../assets/CPImage.jpg";
+import React, { useEffect, useRef } from "react";
+import CPImage from "../assets/CPImage.jpg";
+import "../components/PaintServices/ScrollAnimation.css";
 
 const CommercialPainting = () => {
+  const animatedElementsRef = useRef([]);
+  useEffect(() => {
+    // Observer for fade-in animations
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    // Get all elements with animation classes
+    const animatedElements = document.querySelectorAll(
+      ".fade-in, .slide-in-left, .slide-in-right, .scale-up"
+    );
+    animatedElements.forEach((el) => {
+      observer.observe(el);
+      animatedElementsRef.current.push(el);
+    });
+
+    return () => {
+      // Cleanup observer
+      animatedElementsRef.current.forEach((el) => {
+        observer.unobserve(el);
+      });
+    };
+  }, []);
   return (
     <div>
       <div
         className="relative h-[300px] xs:h-[350px] sm:h-[400px] md:h-[500px] bg-cover bg-center bg-no-repeat hero-animation"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${CPImage})`,
-          backgroundColor: '#000', // Fallback color if image fails to load
+          backgroundColor: "#000", // Fallback color if image fails to load
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center px-3 sm:px-4 z-10">
           <div className="text-center max-w-[90%] sm:max-w-[85%] md:max-w-[80%] relative z-20">
-            <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4 text-white drop-shadow-lg">
+            <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4 text-white drop-shadow-lg fade-in">
               Commercial Painting
             </h1>
-            <p className="text-sm xs:text-base sm:text-lg md:text-xl text-white leading-relaxed drop-shadow-lg">
+            <p className="text-sm xs:text-base sm:text-lg md:text-xl text-white leading-relaxed drop-shadow-lg fade-in delay-200">
               Professional commercial painting services for businesses and properties
             </p>
           </div>
@@ -25,56 +56,43 @@ const CommercialPainting = () => {
       {/* Commercial Painting Services Section */}
       <div className="max-w-7xl mx-auto px-4 py-12 sm:py-16 md:py-20">
         <div className="text-center mb-12">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 fade-in">
             Professional Commercial Painting Services
           </h1>
-          <h3 className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 font-medium">
-            Multi-Unit Properties | Office Spaces | Warehouses | Special
-            Coatings
+          <h3 className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 font-medium fade-in delay-200">
+            Multi-Unit Properties | Office Spaces | Warehouses | Special Coatings
           </h3>
         </div>
 
         <div className="mb-12 text-center sm:text-left">
-          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed">
-            Revitalize your Canada area business with Danzzel Painting's
-            professional painting services! Serving{" "}
-            <span className="text-green-600 font-medium">Canada, </span>, and
-            surrounding areas, we specialize in transforming dull, outdated
-            spaces into functional and visually appealing spaces.
+          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed fade-in delay-400">
+            Revitalize your Canada area business with Danzzel Painting's professional painting services! Serving{" "}
+            <span className="text-green-600 font-medium">Canada, </span>, and surrounding areas, we specialize in transforming dull, outdated spaces into functional and visually appealing spaces.
           </p>
 
-          <div className="mt-8 bg-gray-50 dark:bg-gray-900/50 rounded-xl p-8">
+          <div className="mt-8 bg-gray-50 dark:bg-gray-900/50 rounded-xl p-8 fade-in delay-600">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-4">
-                <p className="text-gray-600 dark:text-gray-300">
-                  Using high-quality paints and materials, we offer a range of
-                  colors and finishes, from durable floor coatings to vibrant
-                  wall colors, ensuring your building serves its functional
-                  purpose and enhances your overall aesthetic.
+                <p className="text-gray-600 dark:text-gray-300 fade-in delay-800">
+                  Using high-quality paints and materials, we offer a range of colors and finishes, from durable floor coatings to vibrant wall colors, ensuring your building serves its functional purpose and enhances your overall aesthetic.
                 </p>
-                <p className="text-gray-600 dark:text-gray-300">
-                  With a focus on efficiency, cleanliness, and open
-                  communication, we guarantee a smooth and satisfying makeover
-                  process, leaving you with a space that's not just functional
-                  but visually appealing too.
+                <p className="text-gray-600 dark:text-gray-300 fade-in delay-1000">
+                  With a focus on efficiency, cleanliness, and open communication, we guarantee a smooth and satisfying makeover process, leaving you with a space that's not just functional but visually appealing too.
                 </p>
               </div>
-              <div className="flex items-center justify-center">
-                <div className="text-center bg-white dark:bg-gray-800 p-6  ">
-                  <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              <div className="flex items-center justify-center fade-in delay-1200">
+                <div className="text-center bg-white dark:bg-gray-800 p-6">
+                  <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3 fade-in delay-1400">
                     Ready to get started?
                   </h4>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 fade-in delay-1600">
                     Contact us at{" "}
-                    <a
-                      href="tel:(619) 446-6983"
-                      className="text-[#FF69B4] font-medium"
-                    >
+                    <a href="tel:(619) 446-6983" className="text-[#FF69B4] font-medium">
                       (619) 446-6983
                     </a>{" "}
                     to start your commercial paint project today!
                   </p>
-                  <button className="bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 py-2 rounded-lg transition-colors duration-200 hover:shadow-lg">
+                  <button className="bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 py-2 rounded-lg transition-colors duration-200 hover:shadow-lg fade-in delay-1800">
                     Request a Quote
                   </button>
                 </div>
@@ -86,7 +104,7 @@ const CommercialPainting = () => {
       <div>
         <div className="max-w-7xl mx-auto px-4 py-12 sm:py-16 md:py-20 bg-gray-50 dark:bg-gray-900/50">
           <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 fade-in">
               Choose Danzzel Painting For Expert Commercial Painting
             </h2>
           </div>
@@ -216,15 +234,16 @@ const CommercialPainting = () => {
                 Color Consultations For Canada Commercial Painting Projects
               </h2>
               <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300">
-                Danzzel Painting offers in-depth color consultation appointments with one
-                of our Canada color specialists. They will help you pick out the
-                perfect colors for the interior spaces that will give you the look
-                and feel you want.
+                Danzzel Painting offers in-depth color consultation appointments
+                with one of our Canada color specialists. They will help you
+                pick out the perfect colors for the interior spaces that will
+                give you the look and feel you want.
               </p>
               <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300">
-                If you are painting your building in preparation for putting it on
-                the market, they can help you select the colors that will appeal to
-                a majority of buyers. Click here for more details and pricing.
+                If you are painting your building in preparation for putting it
+                on the market, they can help you select the colors that will
+                appeal to a majority of buyers. Click here for more details and
+                pricing.
               </p>
               <div className="mt-6">
                 <button className="border-2 border-pink-400 dark:border-gray-200 text-gray-800 dark:text-gray-200 font-medium px-6 py-2 rounded-lg transition-colors duration-200 hover:bg-pink-400 hover:text-white dark:hover:bg-gray-200 dark:hover:text-gray-800">

@@ -7,9 +7,11 @@ import Footer from './components/Footer/Footer'
 import ContactForm from './components/Contact/ContactForm'
 import ScrollToTop from './components/ScrollToTop'
 import About from './components/About/About.jsx'
-import InteriorPainting from './components/PaintServices/InteriorPainting/InteriorPainting.jsx'
-import ExteriorPainting from './components/PaintServices/ExteriorPainting/ExteriorPainting.jsx'
-import CommercialPainting from './components/PaintServices/CommercialPainting/CommercialPainting'
+import InteriorPainting from './Pages/InteriorPainting.jsx'
+import ExteriorPainting from './Pages/ExteriorPainting.jsx'
+import CommercialPainting from './Pages/CommercialPainting'
+// import NotFound from './Pages/NotFound'
+// import WelcomePage from './Pages/WelcomePage'
 
 function App() {
   return (
@@ -26,7 +28,8 @@ function App() {
           <Route path="/commercial-painting" element={<CommercialPainting />} />
           {/* <Route path="/ho" element={<Main />} /> */}
           {/* <Route path="/About" element={<ContactForm />} /> */}
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={<Main/>} />
+          {/* <Route path='/not-found' element={<NotFound/>} /> */}
         </Routes>
         <Footer />
       </Router>

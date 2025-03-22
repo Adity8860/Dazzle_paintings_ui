@@ -1,17 +1,46 @@
-import React from "react";
-import IPImage from "../../../assets/IPImage.jpg";
+import React, { useEffect, useRef } from "react";
+import IPImage from "../assets/IPImage.jpg";
+import "../components/PaintServices/ScrollAnimation.css";
 
 const InteriorPainting = () => {
+  const animatedElementsRef = useRef([]);
+  useEffect(() => {
+    // Observer for fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log(`Element ${entry.target} is intersecting`);
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    // Get all elements with animation classes
+    const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-up');
+    animatedElements.forEach(el => {
+      console.log(`Observing element: ${el}`);
+      observer.observe(el);
+      animatedElementsRef.current.push(el);
+    });
+
+    return () => {
+      // Cleanup observer
+      animatedElementsRef.current.forEach(el => {
+        observer.unobserve(el);
+      });
+    };
+  }, []);
+  
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <div
-        className="relative h-[400px] sm:h-[500px] bg-cover bg-center bg-no-repeat"
+        className="relative h-[400px] sm:h-[500px] bg-cover bg-center bg-no-repeat fade-in"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${IPImage})`
         }}
       >
-        <div className="absolute inset-0 flex items-center justify-center px-4">
+        <div className="absolute inset-0 flex items-center justify-center px-4 slide-in-left">
           <div className="text-center">
             <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2 sm:mb-4 text-white">
               Interior Painting
@@ -23,11 +52,10 @@ const InteriorPainting = () => {
         </div>
       </div>
 
-
       {/* Call to Action */}
-      <div className="w-full bg-[#FF69B4]/10">
+      <div className="w-full bg-[#FF69B4]/10 fade-in">
         <div className="max-w-7xl mx-auto px-4 py-10 sm:py-16">
-          <div className="text-center space-y-4 sm:space-y-6">
+          <div className="text-center space-y-4 sm:space-y-6 slide-in-right">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
               Ready to Transform Your Space?
             </h2>
@@ -41,7 +69,7 @@ const InteriorPainting = () => {
       {/* Content Sections */}
       <div className="max-w-7xl mx-auto px-4 py-6 sm:py-8 md:py-16 space-y-8 sm:space-y-16">
         {/* Services Overview */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center fade-in">
           <div>
             <img
               src="https://paintgreen.com/wp-content/uploads/2021/11/Interior-Painting.jpg"
@@ -49,7 +77,7 @@ const InteriorPainting = () => {
               className="rounded-lg shadow-lg w-full h-[250px] sm:h-[300px] md:h-[400px] object-cover"
             />
           </div>
-          <div className="space-y-3 sm:space-y-4 md:space-y-6 mt-4 sm:mt-0">
+          <div className="space-y-3 sm:space-y-4 md:space-y-6 mt-4 sm:mt-0 slide-in-left">
             <div className="inline-flex items-center gap-2 bg-pink-100 dark:bg-pink-900/20 px-3 py-1 rounded-full">
               <svg
                 className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF69B4]"
@@ -92,10 +120,10 @@ const InteriorPainting = () => {
         </div>
 
         {/* Additional Services Section */}
-        <div className="grid grid-cols-1 gap-8 items-start">
+        <div className="grid grid-cols-1 gap-8 items-start fade-in">
           <div className="w-full bg-gray-50 dark:bg-gray-900/50">
             <div className="px-4 py-8 sm:py-12 md:py-16">
-              <div className="space-y-6 sm:space-y-8">
+              <div className="space-y-6 sm:space-y-8 slide-in-right">
                 <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold text-start text-gray-900 dark:text-white">
                   Expert Color Consultation For Your Interior Painting Project
                 </h2>

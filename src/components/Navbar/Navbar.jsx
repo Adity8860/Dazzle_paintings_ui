@@ -128,10 +128,12 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-4">
             <ModeToggle />
-            <button className="inline-flex items-center p-2 border-2 border-[#ff7d67] dark:border-[#ff9d8d] text-[#ff7d67] dark:text-[#ff9d8d] rounded-md hover:bg-[#ff7d67]/10 dark:hover:bg-[#ff9d8d]/10 transition-colors duration-200">
+          
+            <a href="tel:+16477170133" className="inline-flex items-center p-2 border-2 border-[#ff7d67] dark:border-[#ff9d8d] text-[#ff7d67] dark:text-[#ff9d8d] rounded-md hover:bg-[#ff7d67]/10 dark:hover:bg-[#ff9d8d]/10 transition-colors duration-200">
               <Phone className="h-4 w-4" />
-            </button>
-            <button
+            </a>
+            <a
+             href="tel:+16477170133"
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] hover:bg-gray-100 dark:hover:bg-gray-800"
             >
@@ -157,7 +159,7 @@ const Navbar = () => {
                   />
                 )}
               </svg>
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu */}

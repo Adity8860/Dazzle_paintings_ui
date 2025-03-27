@@ -46,11 +46,13 @@ const About = () => {
             <div className="w-full lg:w-1/2">
               <div className="space-y-2 sm:space-y-3 md:space-y-4">
                 {/* Accordion sections - update button and content padding */}
-                <div className={`rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-300 ${
-                  openSection === 1
-                    ? "bg-[#00A3FF]"
-                    : "bg-white dark:bg-gray-800 border dark:border-gray-700"
-                }`}>
+                <div
+                  className={`rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-300 ${
+                    openSection === 1
+                      ? "bg-[#00A3FF]"
+                      : "bg-white dark:bg-gray-800 border dark:border-gray-700"
+                  }`}
+                >
                   <button className="flex items-center justify-between w-full p-3 sm:p-4">
                     <div className="flex items-center gap-3">
                       <svg
@@ -336,7 +338,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-            
+
             {/* Video Section */}
             <div className="w-full lg:w-1/2">
               <div className="relative w-full aspect-video rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
@@ -443,123 +445,123 @@ const About = () => {
         </div>
 
         {/* Stats boxes grid - adjusted for better mobile layout */}
-                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-                {/* Stats box 1 - Heart Icon */}
-                <div className="text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4">
-                <div className="inline-block p-2 sm:p-3 rounded-full bg-red-100 dark:bg-red-900/20 mb-2 sm:mb-3 animate-bounce">
-                <svg
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+          {/* Stats box 1 - Heart Icon */}
+          <div className="text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4">
+            <div className="inline-block p-2 sm:p-3 rounded-full bg-red-100 dark:bg-red-900/20 mb-2 sm:mb-3 animate-bounce">
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-8 h-8 text-red-500 dark:text-red-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                >
+              >
                 <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                 />
-                </svg>
-                </div>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2 animate-count">
-                228
-                </div>
-                <div className="text-gray-600 dark:text-gray-300 font-medium text-xs sm:text-sm">
-                HAPPY CLIENTS
-                </div>
-                </div>
-                
-                {/* Apply the same padding and text size changes to boxes 2-4 */}
-                <div className="text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4">
-                <div className="inline-block p-3 sm:p-4 rounded-full bg-blue-100 dark:bg-blue-900/20 mb-3 sm:mb-4 animate-bounce">
-                <svg
+              </svg>
+            </div>
+            <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2 animate-count">
+              228
+            </div>
+            <div className="text-gray-600 dark:text-gray-300 font-medium text-xs sm:text-sm">
+              HAPPY CLIENTS
+            </div>
+          </div>
+
+          {/* Stats box 2 - Hand Icon */}
+          <div className="text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4">
+            <div className="inline-block p-3 sm:p-4 rounded-full bg-blue-100 dark:bg-blue-900/20 mb-3 sm:mb-4 animate-bounce">
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-8 h-8 text-blue-500 dark:text-blue-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                >
+              >
                 <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"
                 />
-                </svg>
-                </div>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2 animate-count">
-                228
-                </div>
-                <div className="text-gray-600 dark:text-gray-300 font-medium text-sm sm:text-base">
-                HAPPY CLIENTS
-                </div>
-                </div>
-                
-                <div className="text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4">
-                <div className="inline-block p-3 sm:p-4 rounded-full bg-green-100 dark:bg-green-900/20 mb-3 sm:mb-4 animate-bounce">
-                <svg
+              </svg>
+            </div>
+            <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2 animate-count">
+              150
+            </div>
+            <div className="text-gray-600 dark:text-gray-300 font-medium text-sm sm:text-base">
+              PROJECTS COMPLETED
+            </div>
+          </div>
+
+          {/* Stats box 3 - Education Icon */}
+          <div className="text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4">
+            <div className="inline-block p-3 sm:p-4 rounded-full bg-green-100 dark:bg-green-900/20 mb-3 sm:mb-4 animate-bounce">
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-8 h-8 text-green-500 dark:text-green-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                >
+              >
                 <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 14l9-5-9-5-9 5 9 5z"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 14l9-5-9-5-9 5 9 5z"
                 />
                 <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 14l9-5-9-5-9 5 9 5zM12 14v7"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 14l9-5-9-5-9 5 9 5zM12 14v7"
                 />
-                </svg>
-                </div>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2 animate-count">
-                228
-                </div>
-                <div className="text-gray-600 dark:text-gray-300 font-medium text-sm sm:text-base">
-                HAPPY CLIENTS
-                </div>
-                </div>
-                
-                <div className="text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4">
-                <div className="inline-block p-3 sm:p-4 rounded-full bg-yellow-100 dark:bg-yellow-900/20 mb-3 sm:mb-4 animate-bounce">
-                <svg
+              </svg>
+            </div>
+            <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2 animate-count">
+              25
+            </div>
+            <div className="text-gray-600 dark:text-gray-300 font-medium text-sm sm:text-base">
+              CERTIFIED PAINTERS
+            </div>
+          </div>
+
+          {/* Stats box 4 - Money Icon */}
+          <div className="text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4">
+            <div className="inline-block p-3 sm:p-4 rounded-full bg-yellow-100 dark:bg-yellow-900/20 mb-3 sm:mb-4 animate-bounce">
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-8 h-8 text-yellow-500 dark:text-yellow-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                >
+              >
                 <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
-                </svg>
-                </div>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2 animate-count">
-                228
-                </div>
-                <div className="text-gray-600 dark:text-gray-300 font-medium text-sm sm:text-base">
-                HAPPY CLIENTS
-                </div>
-                </div>
-                </div>
-              </div>
-              {/* Testimonial Section */}
-              <Testimonial/>
-              <ClientsSlider/>
-             
-            
-            </section>
-          );
-        };
-        
-        export default About;
+              </svg>
+            </div>
+            <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2 animate-count">
+              10
+            </div>
+            <div className="text-gray-600 dark:text-gray-300 font-medium text-sm sm:text-base">
+              YEARS EXPERIENCE
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Testimonial Section */}
+      <Testimonial />
+      <ClientsSlider />
+    </section>
+  );
+};
+
+export default About;

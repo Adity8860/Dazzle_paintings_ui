@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Slider from "./Slider";
 import { Link } from "react-router-dom";
+import BGVideo from "../../assets/BGVideo.mp4";
 
 var showSlider = false;
 var showVideo = true;
@@ -9,31 +10,34 @@ const Hero = () => {
   const heroRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
 
-    const elements = heroRef.current.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
-    elements.forEach(el => observer.observe(el));
+    const elements = heroRef.current.querySelectorAll(
+      ".fade-in, .slide-in-left, .slide-in-right"
+    );
+    elements.forEach((el) => observer.observe(el));
 
     return () => {
-      elements.forEach(el => observer.unobserve(el));
+      elements.forEach((el) => observer.unobserve(el));
     };
   }, []);
 
   return (
     <div ref={heroRef}>
       {showSlider && (
-        <div className="relative fade-in">
-          {/* {<Slider />} */}
-        </div>
+        <div className="relative fade-in">{/* {<Slider />} */}</div>
       )}
       {showVideo && (
-        <div className="relative h-[100svh] slide-in-left">
+        <div className="relative h-[50vh] sm:h-[70vh] md:h-[100svh] slide-in-left">
           {/* <Slider/> */}
           <div className="absolute bottom-0 left-0 right-0 z-10 h-1/4 md:h-1/3 flex flex-col justify-between">
             {[...Array(15)].map((_, i) => {
@@ -54,21 +58,18 @@ const Hero = () => {
             muted
             className="w-full h-full object-cover absolute top-0 left-0 z-0 brightness-100 dark:brightness-90"
           >
-            <source
-              src="https://video.wixstatic.com/video/041b7c_2e2b08a8d76f4726a48163332e907b9c/1080p/mp4/file.mp4"
-              type="video/mp4"
-            />
+            <source src={BGVideo} type="video/mp4" />
           </video>
 
           {/* Content Overlay */}
-          <div
-            className="relative z-20 h-full flex flex-col items-center justify-center text-white px-4 sm:px-6 md:px-8 text-center  "
-          >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif italic mb-4 sm:mb-6 tracking-wider">
+          <div className="relative z-20 h-full flex flex-col items-center justify-center text-white px-4 sm:px-6 md:px-8 text-center">
+            <h1 className="text-xl sm:text-3xl md:text-5xl font-serif italic mb-2 sm:mb-4 md:mb-6 tracking-wider">
               Painters With Professional Touch!
             </h1>
-            <button className="bg-transparent border-2 border-white hover:bg-white/20 text-white text-sm sm:text-base font-medium py-1.5 sm:py-2 px-4 sm:px-6 rounded-full transition-all duration-300 flex items-center space-x-2">
-              <Link to="/contact"><span>Get free Quote</span></Link>
+            <button className="bg-transparent border-2 border-white hover:bg-white/20 text-white text-xs sm:text-sm md:text-base font-medium py-1 sm:py-1.5 md:py-2 px-3 sm:px-4 md:px-6 rounded-full transition-all duration-300 flex items-center space-x-2">
+              <Link to="/contact">
+                <span>Get free Quote</span>
+              </Link>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4 sm:h-5 sm:w-5"
@@ -86,7 +87,7 @@ const Hero = () => {
         </div>
       )}
       <div className="bg-background dark:bg-gray-900 transition-colors duration-300">
-        <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:grid-cols-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 fade-in">
             {/* Feature cards with enhanced hover effects */}
             <div className="group flex flex-col items-center text-center p-6 rounded-xl bg-white dark:bg-gray-800/50 hover:shadow-xl dark:hover:bg-gray-800 transition-all duration-300 hover:-translate-y-1 slide-in-left">
@@ -108,8 +109,8 @@ const Hero = () => {
                 We Always Confirm
               </h3>
               <p className="text-gray-600 dark:text-gray-400">
-                Clear communication throughout your project ensures we meet
-                your expectations.
+                Clear communication throughout your project ensures we meet your
+                expectations.
               </p>
             </div>
 
@@ -152,8 +153,8 @@ const Hero = () => {
                 We Respect Everyone's Property
               </h3>
               <p className="text-gray-600 dark:text-gray-400">
-                Your home is treated with the utmost care and respect
-                throughout the painting process.
+                Your home is treated with the utmost care and respect throughout
+                the painting process.
               </p>
             </div>
 

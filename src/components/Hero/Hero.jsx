@@ -3,8 +3,8 @@ import Slider from "./Slider";
 import { Link } from "react-router-dom";
 import BGVideo from "../../assets/BGVideo.mp4";
 
-var showSlider = false;
-var showVideo = true;
+var showSlider = true;
+var showVideo = false;
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -34,7 +34,9 @@ const Hero = () => {
   return (
     <div ref={heroRef}>
       {showSlider && (
-        <div className="relative fade-in">{/* {<Slider />} */}</div>
+        <div className="relative fade-in">
+          {<Slider />}
+        </div>
       )}
       {showVideo && (
         <div className="relative h-[50vh] sm:h-[70vh] md:h-[100svh] slide-in-left">

@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from "react";
 import Slider from "./Slider";
 import { Link } from "react-router-dom";
 
-var showSlider = false;
-var showVideo = true;
+var showSlider = true;
+var showVideo = false;
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -29,7 +29,7 @@ const Hero = () => {
     <div ref={heroRef}>
       {showSlider && (
         <div className="relative fade-in">
-          {/* {<Slider />} */}
+          {<Slider />}
         </div>
       )}
       {showVideo && (

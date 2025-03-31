@@ -68,7 +68,7 @@ const Footer = () => {
               title="Our address"
               className="transition-colors duration-300 text-[#FF69B4] hover:text-[#FF69B4]/80 dark:text-[#FF69B4] dark:hover:text-[#FF69B4]/80"
             >
-              Dazzle painting, 795 9 Ave #204, Campbell River, BC V9W 4B7, Canada
+         Dazzle Painting, 795 9 Ave #204, Campbell River, BC V9W4B9, Canada
             </a>
           </div>
         </div>
@@ -79,15 +79,15 @@ const Footer = () => {
           <div className="flex items-center mt-1 space-x-3">
             <a
               href="/"
-              className="text-gray-500 dark:text-gray-400 transition-colors duration-300 hover:text-[#FF69B4] dark:hover:text-[#FF69B4]"
+              className="text-gray-500 dark:text-gray-400 transition-colors duration-300 hover:text-[#0077B5] dark:hover:text-[#0077B5]"
             >
-              <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
-                <path d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z"></path>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5">
+                <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
               </svg>
             </a>
             <a
               href="/"
-              className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+              className="text-gray-500 dark:text-gray-400 transition-colors duration-300 hover:text-[#E4405F] dark:hover:text-[#E4405F]"
             >
               <svg viewBox="0 0 30 30" fill="currentColor" className="h-6">
                 <circle cx="15" cy="15" r="4"></circle>
@@ -96,7 +96,7 @@ const Footer = () => {
             </a>
             <a
               href="/"
-              className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+              className="text-gray-500 dark:text-gray-400 transition-colors duration-300 hover:text-[#1877F2] dark:hover:text-[#1877F2]"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
                 <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z"></path>

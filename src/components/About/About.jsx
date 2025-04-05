@@ -43,10 +43,10 @@ const About = () => {
           </div>
 
           <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 pb-8 sm:pb-12 md:pb-16">
-            <div className="w-full lg:w-1/2">
-              <div className="space-y-2 sm:space-y-3 md:space-y-4">
+            {/* <div className="w-full lg:w-1/2"> */}
+              {/* <div className="space-y-2 sm:space-y-3 md:space-y-4"> */}
                 {/* Accordion sections - update button and content padding */}
-                <div
+                {/* <div
                   className={`rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-300 ${
                     openSection === 1
                       ? "bg-[#00A3FF]"
@@ -117,7 +117,7 @@ const About = () => {
                 </div>
 
                 {/* Section 2 */}
-                <div
+                {/* <div
                   className={`rounded-2xl overflow-hidden transition-all duration-300 ${
                     openSection === 2
                       ? "bg-[#00A3FF]"
@@ -188,10 +188,10 @@ const About = () => {
                       interior design painting to match your vision.
                     </div>
                   )}
-                </div>
+                </div> */}
 
                 {/* Section 3 */}
-                <div
+                {/* <div
                   className={`rounded-2xl overflow-hidden transition-all duration-300 ${
                     openSection === 3
                       ? "bg-[#00A3FF]"
@@ -262,9 +262,9 @@ const About = () => {
                       for your family and the environment.
                     </div>
                   )}
-                </div>
+                </div>  */}
 
-                <div
+                {/* <div
                   className={`rounded-2xl overflow-hidden transition-all duration-300 ${
                     openSection === 4
                       ? "bg-[#00A3FF]"
@@ -336,11 +336,12 @@ const About = () => {
                     </div>
                   )}
                 </div>
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
 
             {/* Video Section */}
-            <div className="w-full lg:w-1/2">
+            {/* <div className="w-full lg:w-1/2"> / */}
+            {/* <div className="w-full">
               <div className="relative w-full aspect-video rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
                 <iframe
                   className="absolute inset-0 w-full h-full"
@@ -350,7 +351,7 @@ const About = () => {
                   allowFullScreen
                 ></iframe>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

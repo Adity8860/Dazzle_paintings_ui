@@ -45,11 +45,12 @@ const Navbar = () => {
                 <span className="text-xl font-semibold text-gray-900 dark:text-white">
                   Dazzle{" "}
                   <span className="text-[#FF69B4] dark:text-[#FF69B4]">
-                    paintings
+                    painting
                   </span>
                 </span>
               </div>
             </Link>
+              <span>&nbsp; <small><em>Fully Insured By</em></small> &nbsp;</span> <img src="https://www.worksafebc.com/img/worksafebc_logo.jpg" alt="WorksafeBC" />
           </div>
 
           {/* Desktop Menu */}

@@ -24,7 +24,7 @@ const Navbar = () => {
     { name: "Interior Painting", path: "/interior-painting" },
     { name: "Exterior Painting", path: "/exterior-painting" },
     { name: "Commercial Painting", path: "/commercial-painting" },
-    { name: "Residential Painting", path: "/residential-painting" },
+    // { name: "Residential Painting", path: "/residential-painting" },
     // { name: 'Wallpaper Installation', path: '/wallpaper' },
     // { name: 'Color Consultation', path: '/color-consultation' },
   ];
@@ -133,7 +133,7 @@ const Navbar = () => {
               <Phone className="h-4 w-4" />
             </a>
             <a
-             href="tel:+16477170133"
+            
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] hover:bg-gray-100 dark:hover:bg-gray-800"
             >
@@ -259,7 +259,7 @@ const Navbar = () => {
                   Contact
                 </Link>
 
-                <div className="flex items-center justify-between px-3 py-4 border-t border-border mt-4">
+                {/* <div className="flex items-center justify-between px-3 py-4 border-t border-border mt-4">
                   <ModeToggle />
                   <a
                     href="tel:+16477170133"
@@ -268,7 +268,7 @@ const Navbar = () => {
                     <Phone className="h-4 w-4 mr-2" />
                     Call Us
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

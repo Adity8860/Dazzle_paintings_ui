@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import EPImage from "../assets/EPImage.jpg";
 import PrevSlider from "../components/PaintServices/PrevSlider";
 import "../components/PaintServices/ScrollAnimation.css";
+import { Link } from "react-router-dom";
 
 const ExteriorPainting = () => {
   const animatedElementsRef = useRef([]);
@@ -41,7 +42,7 @@ const ExteriorPainting = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white dark:bg-gray-900">
       {/* Hero Section */}
       <div
         className="relative h-[400px] sm:h-[500px] bg-cover bg-center bg-no-repeat hero-animation"
@@ -63,9 +64,9 @@ const ExteriorPainting = () => {
       </div>
 
       {/* Content Sections */}
-      <div className="max-w-7xl mx-auto px-4 py-6 sm:py-8 md:py-16 space-y-8 sm:space-y-16">
+      <div className="max-w-7xl mx-auto px-4 py-6 sm:py-8 md:py-16 space-y-8 sm:space-y-16 dark:bg-gray-900">
         {/* Services Overview */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center ">
           <div className="fade-in">
             <img
               src="https://paintgreen.com/wp-content/uploads/2022/07/Exterior-Painting-in-San-Diegoca.jpg"
@@ -73,8 +74,8 @@ const ExteriorPainting = () => {
               className="rounded-lg shadow-lg w-full h-[250px] sm:h-[300px] md:h-[400px] object-cover"
             />
           </div>
-          <div className="space-y-3 sm:space-y-4 md:space-y-6 mt-4 sm:mt-0 slide-in-right">
-            <div className="inline-flex items-center gap-2 bg-pink-100 dark:bg-pink-900/20 px-3 py-1 rounded-full">
+          <div className="space-y-3 sm:space-y-4 md:space-y-6 mt-4 sm:mt-0 slide-in-right ">
+            <div className="inline-flex items-center gap-2 bg-pink-100 dark:bg-pink-900/30 px-3 py-1 rounded-full">
               <svg
                 className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF69B4] rotate-animation"
                 fill="none"
@@ -110,7 +111,7 @@ const ExteriorPainting = () => {
 
         {/* Additional Services Section */}
         <div className="grid grid-cols-1 gap-8 items-start">
-          <div className="w-full bg-gray-50 dark:bg-gray-900/50">
+          <div className="w-full bg-gray-50 dark:bg-gray-800">
             <div className="px-4 py-8 sm:py-12 md:py-16">
               <div className="space-y-6 sm:space-y-8">
                 <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold text-start text-gray-900 dark:text-white fade-in">
@@ -138,8 +139,8 @@ const ExteriorPainting = () => {
                     results that stand the test of time.
                   </p>
 
-                  <div className="bg-white dark:bg-gray-800 text-start p-4 rounded-lg fade-in delay-300">
-                    <p className="text-base sm:text-lg">
+                  <div className="bg-white dark:bg-gray-700 text-start p-4 rounded-lg fade-in delay-300">
+                    <p className="text-base sm:text-lg text-gray-700 dark:text-gray-200">
                       Ready to protect and beautify your home's exterior? Call
                       us at{" "}
                       <a
@@ -153,11 +154,11 @@ const ExteriorPainting = () => {
                     </p>
                   </div>
 
-                  <div className="flex justify-start pt-4">
+                  {/* <div className="flex justify-start pt-4">
                     <button className="w-full sm:w-auto inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 border-2 border-[#FF69B4] text-[#FF69B4] font-medium rounded-lg hover:bg-[#FF69B4]/10 transition-colors duration-200 shimmer-animation">
                       Learn More About Our Exterior Coatings
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -166,7 +167,7 @@ const ExteriorPainting = () => {
       </div>
 
       {/* Before/After Slider Section */}
-      <div className="w-full bg-gray-50 dark:bg-gray-900/50 py-8 sm:py-12 md:py-16">
+      <div className="w-full bg-gray-50 dark:bg-gray-900 py-8 sm:py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-2 sm:px-4 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
           <div className="space-y-3 sm:space-y-4 md:space-y-6 order-2 md:order-1 slide-in-left">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white hidden md:block">
@@ -205,9 +206,9 @@ const ExteriorPainting = () => {
             </ul>
 
             <div className="mt-4 pt-4 sm:mt-6 sm:pt-6 border-t border-gray-200 dark:border-gray-700">
-              <div className="bg-white dark:bg-gray-800 p-3 sm:p-4 rounded-lg shadow-sm scale-up delay-300">
+              <div className="bg-white dark:bg-gray-700 p-3 sm:p-4 rounded-lg shadow-sm scale-up delay-300">
                 <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
-                  <div className="p-1.5 sm:p-2 bg-pink-100 dark:bg-pink-900/20 rounded-full">
+                  <div className="p-1.5 sm:p-2 bg-pink-100 dark:bg-pink-900/30 rounded-full">
                     <svg
                       className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF69B4]"
                       fill="none"
@@ -231,9 +232,12 @@ const ExteriorPainting = () => {
                   selection process, ensuring the colors and shades you choose
                   bring your vision to life.
                 </p>
-                <button className="mt-3 sm:mt-4 inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 border-2 border-[#FF69B4] text-[#FF69B4] text-xs sm:text-sm font-medium rounded-lg hover:bg-[#FF69B4]/10 transition-colors duration-200">
+                <Link
+                  to="/color-consult"
+                  className="mt-3 sm:mt-4 inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 border-2 border-[#FF69B4] text-[#FF69B4] text-xs sm:text-sm font-medium rounded-lg hover:bg-[#FF69B4]/10 transition-colors duration-200"
+                >
                   Book a Color Consultation
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -243,10 +247,18 @@ const ExteriorPainting = () => {
         </div>
       </div>
 
-      <div className="w-full bg-background">
+      <div className="w-full bg-gray-100 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 py-8 sm:py-12 md:py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="space-y-6 sm:space-y-8 slide-in-left">
+            <div className="relative h-[300px] sm:h-[400px] md:h-[500px] mt-6 md:mt-0 fade-in delay-200 order-2 md:order-1">
+              <img
+                src="https://images.unsplash.com/photo-1743686609399-508b6b05dac0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Interior Bedroom Painting"
+                className="w-full h-full object-cover rounded-lg shadow-lg"
+              />
+            </div>
+
+            <div className="space-y-6 sm:space-y-8 slide-in-left order-1 md:order-2">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
                 Our Comprehensive 5-Step Exterior Painting Process
               </h2>
@@ -309,18 +321,10 @@ const ExteriorPainting = () => {
                 </li>
               </ul>
             </div>
-
-            <div className="relative h-[300px] sm:h-[400px] md:h-[500px] mt-6 md:mt-0 fade-in delay-200">
-              <img
-                src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27700%27%20height%3D%27467%27%20viewBox%3D%270%200%20700%20467%27%3E%3Crect%20width%3D%27700%27%20height%3D%27467%27%20fill-opacity%3D%220%22%2F%3E%3C%2Fsvg%3E"
-                alt="Interior Bedroom Painting"
-                className="w-full h-full object-cover rounded-lg shadow-lg"
-              />
-            </div>
           </div>
         </div>
       </div>
-      <div className="w-full bg-gray-50 dark:bg-gray-900/50">
+      <div className="w-full bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 py-8 sm:py-12 md:py-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8 sm:mb-12 text-center fade-in">
             Why Dazzle Painting Is The Top Choice For Interior House Painting?
@@ -330,7 +334,7 @@ const ExteriorPainting = () => {
             {/* Certified Color Experts */}
             <div className="space-y-3 sm:space-y-4 fade-in delay-100">
               <div className="flex items-center gap-3">
-                <div className="p-2 sm:p-3 bg-pink-100 dark:bg-pink-900/20 rounded-full">
+                <div className="p-2 sm:p-3 bg-pink-100 dark:bg-pink-900/30 rounded-full">
                   <svg
                     className="w-5 h-5 sm:w-6 sm:h-6 text-[#FF69B4] rotate-animation"
                     fill="none"
@@ -363,7 +367,7 @@ const ExteriorPainting = () => {
             {/* Proper Preparation */}
             <div className="space-y-3 sm:space-y-4 fade-in delay-200">
               <div className="flex items-center gap-3">
-                <div className="p-2 sm:p-3 bg-pink-100 dark:bg-pink-900/20 rounded-full">
+                <div className="p-2 sm:p-3 bg-pink-100 dark:bg-pink-900/30 rounded-full">
                   <svg
                     className="w-5 h-5 sm:w-6 sm:h-6 text-[#FF69B4] rotate-animation"
                     fill="none"
@@ -396,7 +400,7 @@ const ExteriorPainting = () => {
             {/* Quality, Non-Toxic Paint */}
             <div className="space-y-3 sm:space-y-4 fade-in delay-300">
               <div className="flex items-center gap-3">
-                <div className="p-2 sm:p-3 bg-pink-100 dark:bg-pink-900/20 rounded-full">
+                <div className="p-2 sm:p-3 bg-pink-100 dark:bg-pink-900/30 rounded-full">
                   <svg
                     className="w-5 h-5 sm:w-6 sm:h-6 text-[#FF69B4] rotate-animation"
                     fill="none"
@@ -429,14 +433,14 @@ const ExteriorPainting = () => {
       </div>
 
       {/* FAQ Section */}
-      <div className="w-full bg-background">
+      <div className="w-full bg-gray-100 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 py-8 sm:py-12 md:py-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center fade-in">
             Frequently Asked Questions
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm scale-up delay-100">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+            <div className="bg-white dark:bg-gray-700 p-5 rounded-lg shadow-sm scale-up delay-100">
               <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-3">
                 How long does interior painting typically take?
               </h3>
@@ -448,7 +452,7 @@ const ExteriorPainting = () => {
               </p>
             </div>
 
-            <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm scale-up delay-200">
+            <div className="bg-white dark:bg-gray-700 p-5 rounded-lg shadow-sm scale-up delay-200">
               <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-3">
                 Do I need to move my furniture before you arrive?
               </h3>
@@ -459,7 +463,7 @@ const ExteriorPainting = () => {
               </p>
             </div>
 
-            <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm scale-up delay-300">
+            <div className="bg-white dark:bg-gray-700 p-5 rounded-lg shadow-sm scale-up delay-300">
               <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-3">
                 What type of paint do you use?
               </h3>
@@ -470,7 +474,7 @@ const ExteriorPainting = () => {
               </p>
             </div>
 
-            <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm scale-up delay-400">
+            <div className="bg-white dark:bg-gray-700 p-5 rounded-lg shadow-sm scale-up delay-400">
               <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-3">
                 Do you offer a warranty on your work?
               </h3>
@@ -485,13 +489,13 @@ const ExteriorPainting = () => {
       </div>
 
       {/* Call to Action */}
-      <div className="w-full bg-[#FF69B4]/10">
+      <div className="w-full bg-gray-50 dark:bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 py-10 sm:py-16">
           <div className="text-center space-y-4 sm:space-y-6 fade-in">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-950 dark:text-white">
               Ready to Transform Your Space?
             </h2>
-            <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-gray-900 max-w-2xl mx-auto dark:text-white">
               Contact us today to schedule your free consultation and get
               started on your interior painting project.
             </p>
@@ -502,9 +506,12 @@ const ExteriorPainting = () => {
               >
                 Call (0421) 431 2030
               </a>
-              <button className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 border-2 border-[#FF69B4] text-[#FF69B4] font-medium rounded-lg hover:bg-[#FF69B4]/10 transition-colors duration-200 shimmer-animation">
+              <Link
+                to="/color-consult"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 border-2 border-[#FF69B4] text-[#FF69B4] dark:text-pink-200 font-medium rounded-lg hover:bg-[#FF69B4]/10 transition-colors duration-200 shimmer-animation"
+              >
                 Request a Quote
-              </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import CPImage from "../assets/CPImage.jpg";
 import "../components/PaintServices/ScrollAnimation.css";
+import { Link } from "react-router-dom";
 
 const CommercialPainting = () => {
   const animatedElementsRef = useRef([]);
@@ -34,7 +35,7 @@ const CommercialPainting = () => {
     };
   }, []);
   return (
-    <div>
+    <div className="bg-white dark:bg-gray-900">
       <div
         className="relative h-[300px] xs:h-[350px] sm:h-[400px] md:h-[500px] bg-cover bg-center bg-no-repeat hero-animation"
         style={{
@@ -54,7 +55,7 @@ const CommercialPainting = () => {
         </div>
       </div>
       {/* Commercial Painting Services Section */}
-      <div className="max-w-7xl mx-auto px-4 py-12 sm:py-16 md:py-20">
+      <div className="max-w-7xl mx-auto px-4  py-12 sm:py-16 md:py-20">
         <div className="text-center mb-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 fade-in">
             Professional Commercial Painting Services
@@ -70,7 +71,7 @@ const CommercialPainting = () => {
             <span className="text-green-600 font-medium">Canada, </span>, and surrounding areas, we specialize in transforming dull, outdated spaces into functional and visually appealing spaces.
           </p>
 
-          <div className="mt-8 bg-gray-50 dark:bg-gray-900/50 rounded-xl p-8 fade-in delay-600">
+          <div className="mt-8 bg-gray-50 dark:bg-gray-900 rounded-xl p-8 fade-in delay-600">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-4">
                 <p className="text-gray-600 dark:text-gray-300 fade-in delay-800">
@@ -81,7 +82,7 @@ const CommercialPainting = () => {
                 </p>
               </div>
               <div className="flex items-center justify-center fade-in delay-1200">
-                <div className="text-center bg-white dark:bg-gray-800 p-6">
+                <div className="text-center bg-white dark:bg-gray-900 p-6 shadow-md dark:shadow-gray-800/20 rounded-lg">
                   <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3 fade-in delay-1400">
                     Ready to get started?
                   </h4>
@@ -92,9 +93,9 @@ const CommercialPainting = () => {
                     </a>{" "}
                     to start your commercial paint project today!
                   </p>
-                  <button className="bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 py-2 rounded-lg transition-colors duration-200 hover:shadow-lg fade-in delay-1800">
+                  <Link to="/contact" className="bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 py-2 rounded-lg transition-colors duration-200 hover:shadow-lg fade-in delay-1800">
                     Request a Quote
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -102,7 +103,7 @@ const CommercialPainting = () => {
         </div>
       </div>
       <div>
-        <div className="max-w-7xl mx-auto px-4 py-12 sm:py-16 md:py-20 bg-gray-50 dark:bg-gray-900/50">
+        <div className="max-w-7xl mx-auto px-4  sm:py-16 md:py-20 bg-gray-50 dark:bg-gray-900">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 fade-in">
               Choose Danzzel Painting For Expert Commercial Painting
@@ -111,9 +112,9 @@ const CommercialPainting = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
             {/* Quality Workmanship */}
-            <div className="text-center bg-white dark:bg-gray-800/30 p-6 rounded-lg shadow-sm">
+            <div className="text-center bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 fade-in">
               <div className="flex justify-center mb-4">
-                <div className="bg-gray-800 dark:bg-gray-700 rounded-full p-4">
+                <div className="bg-gray-800 dark:bg-gray-800 rounded-full p-4 transition-transform duration-500 hover:rotate-12">
                   <svg
                     className="w-8 h-8 text-white"
                     fill="currentColor"
@@ -128,10 +129,10 @@ const CommercialPainting = () => {
                   </svg>
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 transition-colors duration-300 hover:text-[#FF69B4]">
                 Quality Workmanship
               </h3>
-              <p className="text-green-600 font-medium mb-3">Work That Lasts</p>
+              <p className="text-green-600 font-medium mb-3 hover:scale-110 transition-transform duration-300 ">Work That Lasts</p>
               <p className="text-gray-600 dark:text-gray-300">
                 We do the necessary prep to ensure your building looks fantastic
                 immediately and remains vibrant and well-protected for years
@@ -140,11 +141,11 @@ const CommercialPainting = () => {
             </div>
 
             {/* Certified Color Experts */}
-            <div className="text-center bg-white dark:bg-gray-800/30 p-6 rounded-lg shadow-sm">
+            <div className="text-center bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 fade-in delay-200">
               <div className="flex justify-center mb-4">
-                <div className="bg-gray-800 dark:bg-gray-700 rounded-full p-4">
+                <div className="bg-gray-800 dark:bg-gray-800 rounded-full p-4 transition-all duration-500 hover:bg-[#FF69B4]">
                   <svg
-                    className="w-8 h-8 text-white"
+                    className="w-8 h-8 text-white transition-transform duration-500 hover:rotate-[360deg]"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -153,10 +154,10 @@ const CommercialPainting = () => {
                   </svg>
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 transition-colors duration-300 hover:text-[#FF69B4]">
                 Certified Color Experts
               </h3>
-              <p className="text-green-600 font-medium mb-3">
+              <p className="text-green-600 font-medium mb-3 hover:scale-110 transition-transform duration-300">
                 Getting the Color Right
               </p>
               <p className="text-gray-600 dark:text-gray-300">
@@ -167,11 +168,11 @@ const CommercialPainting = () => {
             </div>
 
             {/* Skilled Painters */}
-            <div className="text-center bg-white dark:bg-gray-800/30 p-6 rounded-lg shadow-sm sm:col-span-2 md:col-span-1 sm:max-w-md sm:mx-auto md:max-w-none">
+            <div className="text-center bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 sm:col-span-2 md:col-span-1 sm:max-w-md sm:mx-auto md:max-w-none fade-in delay-400">
               <div className="flex justify-center mb-4">
-                <div className="bg-gray-800 dark:bg-gray-700 rounded-full p-4">
+                <div className="bg-gray-800 dark:bg-gray-800 rounded-full p-4 transition-all duration-300 hover:shadow-lg hover:shadow-pink-200 dark:hover:shadow-pink-900/30">
                   <svg
-                    className="w-8 h-8 text-white"
+                    className="w-8 h-8 text-white hover:text-[#FF69B4] transition-colors duration-300"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -184,13 +185,13 @@ const CommercialPainting = () => {
                   </svg>
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 transition-colors duration-300 hover:text-[#FF69B4]">
                 Skilled Painters
               </h3>
-              <p className="text-green-600 font-medium mb-3">
+              <p className="text-green-600 font-medium mb-3 hover:scale-110 transition-transform duration-300">
                 It's in the Details
               </p>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600 dark:text-gray-300 transition-all duration-300 hover:font-medium">
                 Our painters ensure every project is completed with precision,
                 resulting in a professional-quality finish that elevates the
                 look of your space.
@@ -205,18 +206,26 @@ const CommercialPainting = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 py-12 sm:py-16 md:py-20">
-        <div className="bg-white dark:bg-gray-800  p-8 text-center">
+      <div className="max-w-7xl mx-auto px-4 py-12 sm:py-16 ">
+        <div className="bg-white dark:bg-gray-900 p-8 text-center shadow-sm hover:shadow-md dark:shadow-gray-800/10 dark:hover:shadow-gray-800/20 rounded-lg transition-all duration-300 transform hover:-translate-y-1">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
             We handle the painting so you can focus on business.
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-6">
             Whether you're looking to modernize a commercial interior, refresh
             an exterior, complete a new build, or reinforce high-durability
             surfaces in Canada, our professional team will work efficiently to
             minimize disruptions and deliver the final product on or ahead of
             schedule.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-2">
+            {/* <Link to ="/contact" className="bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 py-2 rounded-lg transition-colors duration-200 hover:shadow-lg">
+              Get a Free Quote
+            </Link> */}
+            <button className="border-2 border-gray-300 dark:border-gray-700 hover:border-[#FF69B4] dark:hover:border-[#FF69B4] text-gray-800 dark:text-gray-200 font-medium px-6 py-2 rounded-lg transition-colors duration-200 hover:text-[#FF69B4] dark:hover:text-[#FF69B4]">
+              View Our Portfolio
+            </button>
+          </div>
         </div>
       </div>
       <div className="flex">
@@ -246,9 +255,9 @@ const CommercialPainting = () => {
                 pricing.
               </p>
               <div className="mt-6">
-                <button className="border-2 border-pink-400 dark:border-gray-200 text-gray-800 dark:text-gray-200 font-medium px-6 py-2 rounded-lg transition-colors duration-200 hover:bg-pink-400 hover:text-white dark:hover:bg-gray-200 dark:hover:text-gray-800">
+                <Link to="/color-consult" className="border-2 border-pink-400 dark:border-gray-200 text-gray-800 dark:text-gray-200 font-medium px-6 py-2 rounded-lg transition-colors duration-200 hover:bg-pink-400 hover:text-white dark:hover:bg-gray-200 dark:hover:text-gray-800">
                   More About Color Consultations
-                </button>
+                </Link>
               </div>
             </div>
           </div>

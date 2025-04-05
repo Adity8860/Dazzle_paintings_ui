@@ -19,13 +19,20 @@ const Footer = () => {
                 <div className="w-3 h-3 rounded-full bg-[#FF69B4] -ml-1"></div>
               </div>
               <span className="text-xl font-semibold text-gray-900 dark:text-white">
-                Dazzle <span className="text-[#FF69B4] dark:text-[#FF69B4]">paintings</span>
+                Dazzle{" "}
+                <span className="text-[#FF69B4] dark:text-[#FF69B4]">
+                  paintings
+                </span>
               </span>
             </div>
           </a>
           <div className="mt-6 lg:max-w-sm">
             <p className="text-sm text-gray-800 dark:text-gray-300">
-            Discover a world of color and creativity with Dazzle Painting! Join our online community for inspiration, exclusive behind-the-scenes glimpses, and the latest updates on our projects. Whether you're looking for expert painting tips, design ideas, or special offers, our social channels are the place to be. 
+              Discover a world of color and creativity with Dazzle Painting!
+              Join our online community for inspiration, exclusive
+              behind-the-scenes glimpses, and the latest updates on our
+              projects. Whether you're looking for expert painting tips, design
+              ideas, or special offers, our social channels are the place to be.
             </p>
             {/* <p className="mt-4 text-sm text-gray-800 dark:text-gray-300">
             Connect with us on Facebook, Instagram, Twitter, and Pinterest—let’s transform your home, one brushstroke at a time!
@@ -44,7 +51,7 @@ const Footer = () => {
               title="Our phone"
               className="transition-colors duration-300 text-[#FF69B4] hover:text-[#FF69B4]/80 dark:text-[#FF69B4] dark:hover:text-[#FF69B4]/80"
             >
-            +16477170133
+              +16477170133
             </a>
           </div>
           <div className="flex">
@@ -68,7 +75,7 @@ const Footer = () => {
               title="Our address"
               className="transition-colors duration-300 text-[#FF69B4] hover:text-[#FF69B4]/80 dark:text-[#FF69B4] dark:hover:text-[#FF69B4]/80"
             >
-         Dazzle Painting, 795 9 Ave #204, Campbell River, BC V9W4B9, Canada
+              Dazzle Painting, 795 9 Ave #204, Campbell River, BC V9W4B9, Canada
             </a>
           </div>
         </div>
@@ -78,15 +85,22 @@ const Footer = () => {
           </span>
           <div className="flex items-center mt-1 space-x-3">
             <a
-              href="/"
+              href="https://www.linkedin.com/in/dazzle-painting-70525b35a/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-500 dark:text-gray-400 transition-colors duration-300 hover:text-[#0077B5] dark:hover:text-[#0077B5]"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="h-5"
+              >
                 <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
               </svg>
             </a>
             <a
-              href="/"
+              href="https://www.instagram.com/dazzlepainting/" target="_blank"
               className="text-gray-500 dark:text-gray-400 transition-colors duration-300 hover:text-[#E4405F] dark:hover:text-[#E4405F]"
             >
               <svg viewBox="0 0 30 30" fill="currentColor" className="h-6">
@@ -95,7 +109,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="/"
+              href="https://www.facebook.com/profile.php?id=61573042036021" target="_blank"
               className="text-gray-500 dark:text-gray-400 transition-colors duration-300 hover:text-[#1877F2] dark:hover:text-[#1877F2]"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
@@ -104,17 +118,14 @@ const Footer = () => {
             </a>
           </div>
           <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
-
-          Follow us on social media for painting inspiration, design tips, project showcases, 
-          and exclusive offers!
-
-
+            Follow us on social media for painting inspiration, design tips,
+            project showcases, and exclusive offers!
           </p>
         </div>
       </div>
       <div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t border-gray-200 dark:border-gray-700 lg:flex-row">
         <p className="text-sm text-gray-600 dark:text-gray-400">
-          © Copyright 2025 Dazzle Painting Ltd.  All rights reserved.
+          © Copyright 2025 Dazzle Painting Ltd. All rights reserved.
         </p>
         <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
           {/* <li>

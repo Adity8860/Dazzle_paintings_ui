@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import IPImage from "../assets/IPImage.jpg";
 import "../components/PaintServices/ScrollAnimation.css";
+import { Link } from "react-router-dom";
 
 const InteriorPainting = () => {
   const animatedElementsRef = useRef([]);
@@ -32,7 +33,7 @@ const InteriorPainting = () => {
   }, []);
   
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       {/* Hero Section */}
       <div
         className="relative h-[400px] sm:h-[500px] bg-cover bg-center bg-no-repeat fade-in"
@@ -53,7 +54,7 @@ const InteriorPainting = () => {
       </div>
 
       {/* Call to Action */}
-      <div className="w-full bg-[#FF69B4]/10 fade-in">
+      <div className="w-full bg-gray-50 dark:bg-gray-800/50 fade-in transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 py-10 sm:py-16">
           <div className="text-center space-y-4 sm:space-y-6 slide-in-right">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
@@ -74,7 +75,7 @@ const InteriorPainting = () => {
             <img
               src="https://paintgreen.com/wp-content/uploads/2021/11/Interior-Painting.jpg"
               alt="Modern Interior Living Room"
-              className="rounded-lg shadow-lg w-full h-[250px] sm:h-[300px] md:h-[400px] object-cover"
+              className="rounded-lg shadow-lg w-full h-[250px] sm:h-[300px] md:h-[400px] object-cover dark:shadow-gray-800/30"
             />
           </div>
           <div className="space-y-3 sm:space-y-4 md:space-y-6 mt-4 sm:mt-0 slide-in-left">
@@ -109,9 +110,9 @@ const InteriorPainting = () => {
               <a href="tel:(0421) 431 2030" className="w-full sm:w-auto bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200 hover:shadow-lg text-center">
                 Call (0421) 431 2030
               </a>
-              <button className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 border-2 border-[#FF69B4] text-[#FF69B4] font-medium rounded-lg hover:bg-[#FF69B4]/10 transition-colors duration-200">
+              <Link to="/contact" className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 border-2 border-[#FF69B4] text-[#FF69B4] font-medium rounded-lg hover:bg-[#FF69B4]/10 dark:hover:bg-[#FF69B4]/20 transition-colors duration-200">
                 Request a Quote
-              </button>
+              </Link>
             </div>
             {/* <button className="w-full sm:w-auto bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 sm:px-8 py-3 rounded-lg transition-colors duration-200 hover:shadow-lg">
               View Calendar
@@ -121,7 +122,7 @@ const InteriorPainting = () => {
 
         {/* Additional Services Section */}
         <div className="grid grid-cols-1 gap-8 items-start fade-in">
-          <div className="w-full bg-gray-50 dark:bg-gray-900/50">
+          <div className="w-full bg-gray-50 dark:bg-gray-800/30 rounded-xl shadow-sm dark:shadow-gray-800/10 transition-colors duration-300">
             <div className="px-4 py-8 sm:py-12 md:py-16">
               <div className="space-y-6 sm:space-y-8 slide-in-right">
                 <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold text-start text-gray-900 dark:text-white">
@@ -148,7 +149,7 @@ const InteriorPainting = () => {
                     expectations.
                   </p>
 
-                  <div className="bg-white dark:bg-gray-800 text-start p-4 rounded-lg">
+                  <div className="bg-white dark:bg-gray-800 text-start p-4 rounded-lg shadow-sm dark:shadow-gray-800/20">
                     <p className="text-base sm:text-lg">
                       Ready to find the perfect palette for your space? Call us
                       at{" "}
@@ -164,9 +165,9 @@ const InteriorPainting = () => {
                   </div>
 
                   <div className="flex justify-start pt-4">
-                    <button className="w-full sm:w-auto inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 border-2 border-[#FF69B4] text-[#FF69B4] font-medium rounded-lg hover:bg-[#FF69B4]/10 transition-colors duration-200">
+                    <Link to="/color-consult" className="w-full sm:w-auto inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 border-2 border-[#FF69B4] text-[#FF69B4] font-medium rounded-lg hover:bg-[#FF69B4]/10 dark:hover:bg-[#FF69B4]/20 transition-colors duration-200">
                       Learn More About Color Consultations
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -174,7 +175,7 @@ const InteriorPainting = () => {
           </div>
         </div>
       </div>
-      <div className="w-full bg-background">
+      <div className="w-full bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 py-8 sm:py-12 md:py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-6 sm:space-y-8">
@@ -227,7 +228,7 @@ const InteriorPainting = () => {
 
             <div className="relative h-[300px] sm:h-[400px] md:h-[500px] mt-6 md:mt-0">
               <img
-                src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27700%27%20height%3D%27467%27%20viewBox%3D%270%200%20700%20467%27%3E%3Crect%20width%3D%27700%27%20height%3D%27467%27%20fill-opacity%3D%220%22%2F%3E%3C%2Fsvg%3E"
+                src="https://images.unsplash.com/photo-1600054648630-e10e710825f6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Interior Bedroom Painting"
                 className="w-full h-full object-cover rounded-lg shadow-lg"
               />
@@ -294,7 +295,7 @@ const InteriorPainting = () => {
       </div>
 
       {/* FAQ Section */}
-      <div className="w-full bg-background">
+      <div className="w-full bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 py-8 sm:py-12 md:py-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center">
             Frequently Asked Questions

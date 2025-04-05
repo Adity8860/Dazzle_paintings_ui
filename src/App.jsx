@@ -10,6 +10,7 @@ import About from './components/About/About.jsx'
 import InteriorPainting from './Pages/InteriorPainting.jsx'
 import ExteriorPainting from './Pages/ExteriorPainting.jsx'
 import CommercialPainting from './Pages/CommercialPainting'
+import ColourConsult from './Pages/ColourConsult'
 // import NotFound from './Pages/NotFound'
 // import WelcomePage from './Pages/WelcomePage'
 
@@ -26,6 +27,7 @@ function App() {
           <Route path='/interior-painting' element={<InteriorPainting />} />
           <Route path="/exterior-painting" element={<ExteriorPainting />} />
           <Route path="/commercial-painting" element={<CommercialPainting />} />
+          <Route path='/color-consult' element={<ColourConsult/>} />
           {/* <Route path="/ho" element={<Main />} /> */}
           {/* <Route path="/About" element={<ContactForm />} /> */}
           <Route path="/" element={<Main/>} />

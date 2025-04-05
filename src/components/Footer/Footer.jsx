@@ -26,6 +26,7 @@ const Footer = () => {
               </span>
             </div>
           </a>
+          <span>&nbsp; <small><em>Fully Insured By</em></small> &nbsp;</span> <img src="https://www.worksafebc.com/img/worksafebc_logo.jpg" alt="WorksafeBC" />
           <div className="mt-6 lg:max-w-sm">
             <p className="text-sm text-gray-800 dark:text-gray-300">
               Discover a world of color and creativity with Dazzle Painting!
@@ -125,7 +126,7 @@ const Footer = () => {
       </div>
       <div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t border-gray-200 dark:border-gray-700 lg:flex-row">
         <p className="text-sm text-gray-600 dark:text-gray-400">
-          © Copyright 2025 Dazzle Painting Ltd. All rights reserved.
+          © Copyright 2025 Dazzle Painting Ltd. All rights reserved. 
         </p>
         <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
           {/* <li>

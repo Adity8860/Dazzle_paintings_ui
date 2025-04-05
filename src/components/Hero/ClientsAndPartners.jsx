@@ -148,17 +148,23 @@ const ClientsAndPartners = () => {
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
               <div className="flex items-center justify-center p-4 sm:p-6 bg-gray-50 dark:bg-gray-800 rounded-lg hover:shadow-lg transition-shadow border border-gray-100 dark:border-gray-700">
-                <svg className="w-16 sm:w-24 h-8 sm:h-12 text-gray-400 dark:text-gray-500" viewBox="0 0 100 60">
+                {/* <svg className="w-16 sm:w-24 h-8 sm:h-12 text-gray-400 dark:text-gray-500" viewBox="0 0 100 60">
                   <path d="M20 10L80 50" stroke="currentColor" strokeWidth="8" strokeLinecap="round"/>
                   <text x="30" y="45" className="text-xl sm:text-2xl font-bold" fill="currentColor">A</text>
                   <text x="60" y="25" className="text-xl sm:text-2xl font-bold" fill="currentColor">B</text>
-                </svg>
+                </svg> */}
+                <img 
+                src="https://northlandconstructors.com/wp-content/uploads/2023/11/Northland-Logos-New_Brown-with-Tagline.png"
+                alt="Northland Logo"
+                className="h-20 w-auto"
+              />
               </div>
               <div className="flex items-center justify-center p-4 sm:p-6 bg-gray-50 dark:bg-gray-800 rounded-lg hover:shadow-lg transition-shadow border border-gray-100 dark:border-gray-700">
-                <svg className="w-16 sm:w-24 h-8 sm:h-12 text-gray-400 dark:text-gray-500" viewBox="0 0 100 60">
-                  <path d="M20 50L50 10L80 50" stroke="currentColor" strokeWidth="8" strokeLinecap="round" fill="none"/>
-                  <path d="M35 50L50 30L65 50" stroke="currentColor" strokeWidth="8" strokeLinecap="round" fill="none"/>
-                </svg>
+              <img 
+                  src="https://www.akerspropertysolutions.ca/templates/main/images/logo.svg"
+                  alt="Northland Logo"
+                  className="h-20 w-auto"
+                />
               </div>
               <div className="flex items-center justify-center p-4 sm:p-6 bg-gray-50 dark:bg-gray-800 rounded-lg hover:shadow-lg transition-shadow border border-gray-100 dark:border-gray-700">
                 <div className="border-2 border-gray-400 dark:border-gray-500 p-2 sm:p-3">

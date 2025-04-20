@@ -108,7 +108,7 @@ const InteriorPainting = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <a href="tel:(0421) 431 2030" className="w-full sm:w-auto bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200 hover:shadow-lg text-center">
-                Call (0421) 431 2030
+              +1(647)717-0133
               </a>
               <Link to="/contact" className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 border-2 border-[#FF69B4] text-[#FF69B4] font-medium rounded-lg hover:bg-[#FF69B4]/10 dark:hover:bg-[#FF69B4]/20 transition-colors duration-200">
                 Request a Quote
@@ -157,7 +157,7 @@ const InteriorPainting = () => {
                         href="tel:(0421) 431 2030"
                         className="text-[#FF69B4] hover:text-[#FF69B4]/80 font-medium"
                       >
-                        (0421) 431 2030
+                         +1(647)717-0133
                       </a>{" "}
                       and simply mention you'd like a color consultation when
                       booking your initial appointment with us!
@@ -175,7 +175,7 @@ const InteriorPainting = () => {
           </div>
         </div>
       </div>
-      <div className="w-full bg-gray-900/50">
+      <div className="w-full dark:bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 py-8 sm:py-12 md:py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-6 sm:space-y-8">
@@ -295,7 +295,7 @@ const InteriorPainting = () => {
       </div>
 
       {/* FAQ Section */}
-      <div className="w-full bg-gray-900">
+      <div className="w-full dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 py-8 sm:py-12 md:py-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center">
             Frequently Asked Questions

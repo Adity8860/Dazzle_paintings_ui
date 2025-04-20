@@ -3,6 +3,7 @@ import EPImage from "../assets/EPImage.jpg";
 import PrevSlider from "../components/PaintServices/PrevSlider";
 import "../components/PaintServices/ScrollAnimation.css";
 import { Link } from "react-router-dom";
+import SehduleButton from "@/components/Sehedule/SehduleButton";
 
 const ExteriorPainting = () => {
   const animatedElementsRef = useRef([]);
@@ -103,9 +104,9 @@ const ExteriorPainting = () => {
               specialists
             </p>
 
-            <button className="w-full sm:w-auto bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 sm:px-8 py-3 rounded-lg transition-colors duration-200 hover:shadow-lg pulse-animation">
-              View Calendar
-            </button>
+            <SehduleButton className="w-full sm:w-auto bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 sm:px-8 py-2 sm:py-3 rounded-lg transition-colors duration-200 hover:shadow-lg">
+              Schedule Your Free Consultation
+            </SehduleButton>
           </div>
         </div>
 

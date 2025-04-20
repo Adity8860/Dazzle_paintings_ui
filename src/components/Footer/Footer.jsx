@@ -21,7 +21,7 @@ const Footer = () => {
               <span className="text-xl font-semibold text-gray-900 dark:text-white">
                 Dazzle{" "}
                 <span className="text-[#FF69B4] dark:text-[#FF69B4]">
-                  paintings
+                  painting
                 </span>
               </span>
             </div>
@@ -51,7 +51,7 @@ const Footer = () => {
               title="Our phone"
               className="transition-colors duration-300 text-[#FF69B4] hover:text-[#FF69B4]/80 dark:text-[#FF69B4] dark:hover:text-[#FF69B4]/80"
             >
-              +16477170133
+              +1(647)717-0133
             </a>
           </div>
           <div className="flex">

@@ -11,6 +11,10 @@ import InteriorPainting from './Pages/InteriorPainting.jsx'
 import ExteriorPainting from './Pages/ExteriorPainting.jsx'
 import CommercialPainting from './Pages/CommercialPainting'
 import ColourConsult from './Pages/ColourConsult'
+import StrataPainting from './Pages/StrataPainting'
+import CabinatePainting from './Pages/CabinatePainting'
+import Staining from './Pages/Staining'
+import PowerWashing from './Pages/PowerWashing'
 // import NotFound from './Pages/NotFound'
 // import WelcomePage from './Pages/WelcomePage'
 
@@ -28,6 +32,10 @@ function App() {
           <Route path="/exterior-painting" element={<ExteriorPainting />} />
           <Route path="/commercial-painting" element={<CommercialPainting />} />
           <Route path='/color-consult' element={<ColourConsult/>} />
+          <Route path='/strata-painting' element={<StrataPainting/>}/>
+          <Route path='/cabinet-painting' element={<CabinatePainting/>}/>
+          <Route path='/staining' element={<Staining/>}/>
+          <Route path='/power-washing' element={<PowerWashing/>}/>
           {/* <Route path="/ho" element={<Main />} /> */}
           {/* <Route path="/About" element={<ContactForm />} /> */}
           <Route path="/" element={<Main/>} />

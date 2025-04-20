@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import CPImage from "../assets/CPImage.jpg";
 import "../components/PaintServices/ScrollAnimation.css";
 import { Link } from "react-router-dom";
+import SehduleButton from "@/components/Sehedule/SehduleButton";
 
 const CommercialPainting = () => {
   const animatedElementsRef = useRef([]);
@@ -49,7 +50,8 @@ const CommercialPainting = () => {
               Commercial Painting
             </h1>
             <p className="text-sm xs:text-base sm:text-lg md:text-xl text-white leading-relaxed drop-shadow-lg fade-in delay-200">
-              Professional commercial painting services for businesses and properties
+              Professional commercial painting services for businesses and
+              properties
             </p>
           </div>
         </div>
@@ -61,24 +63,34 @@ const CommercialPainting = () => {
             Professional Commercial Painting Services
           </h1>
           <h3 className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 font-medium fade-in delay-200">
-            Multi-Unit Properties | Office Spaces | Warehouses | Special Coatings
+            Multi-Unit Properties | Office Spaces | Warehouses | Special
+            Coatings
           </h3>
         </div>
 
         <div className="mb-12 text-center sm:text-left">
           <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed fade-in delay-400">
-            Revitalize your Canada area business with Danzzel Painting's professional painting services! Serving{" "}
-            <span className="text-green-600 font-medium">Canada, </span>, and surrounding areas, we specialize in transforming dull, outdated spaces into functional and visually appealing spaces.
+            Revitalize your Canada area business with Danzzel Painting's
+            professional painting services! Serving{" "}
+            <span className="text-green-600 font-medium">Canada, </span>, and
+            surrounding areas, we specialize in transforming dull, outdated
+            spaces into functional and visually appealing spaces.
           </p>
 
           <div className="mt-8 bg-gray-50 dark:bg-gray-900 rounded-xl p-8 fade-in delay-600">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-4">
                 <p className="text-gray-600 dark:text-gray-300 fade-in delay-800">
-                  Using high-quality paints and materials, we offer a range of colors and finishes, from durable floor coatings to vibrant wall colors, ensuring your building serves its functional purpose and enhances your overall aesthetic.
+                  Using high-quality paints and materials, we offer a range of
+                  colors and finishes, from durable floor coatings to vibrant
+                  wall colors, ensuring your building serves its functional
+                  purpose and enhances your overall aesthetic.
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 fade-in delay-1000">
-                  With a focus on efficiency, cleanliness, and open communication, we guarantee a smooth and satisfying makeover process, leaving you with a space that's not just functional but visually appealing too.
+                  With a focus on efficiency, cleanliness, and open
+                  communication, we guarantee a smooth and satisfying makeover
+                  process, leaving you with a space that's not just functional
+                  but visually appealing too.
                 </p>
               </div>
               <div className="flex items-center justify-center fade-in delay-1200">
@@ -88,12 +100,18 @@ const CommercialPainting = () => {
                   </h4>
                   <p className="text-gray-600 dark:text-gray-300 mb-4 fade-in delay-1600">
                     Contact us at{" "}
-                    <a href="tel:(619) 446-6983" className="text-[#FF69B4] font-medium">
+                    <a
+                      href="tel:(619) 446-6983"
+                      className="text-[#FF69B4] font-medium"
+                    >
                       (619) 446-6983
                     </a>{" "}
                     to start your commercial paint project today!
                   </p>
-                  <Link to="/contact" className="bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 py-2 rounded-lg transition-colors duration-200 hover:shadow-lg fade-in delay-1800">
+                  <Link
+                    to="/contact"
+                    className="bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 py-2 rounded-lg transition-colors duration-200 hover:shadow-lg fade-in delay-1800"
+                  >
                     Request a Quote
                   </Link>
                 </div>
@@ -132,7 +150,9 @@ const CommercialPainting = () => {
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 transition-colors duration-300 hover:text-[#FF69B4]">
                 Quality Workmanship
               </h3>
-              <p className="text-green-600 font-medium mb-3 hover:scale-110 transition-transform duration-300 ">Work That Lasts</p>
+              <p className="text-green-600 font-medium mb-3 hover:scale-110 transition-transform duration-300 ">
+                Work That Lasts
+              </p>
               <p className="text-gray-600 dark:text-gray-300">
                 We do the necessary prep to ensure your building looks fantastic
                 immediately and remains vibrant and well-protected for years
@@ -200,29 +220,29 @@ const CommercialPainting = () => {
           </div>
 
           <div className="text-center">
-            <button className="w-full sm:w-auto bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 sm:px-8 py-2 sm:py-3 rounded-lg transition-colors duration-200 hover:shadow-lg">
+            <SehduleButton className="w-full sm:w-auto bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 sm:px-8 py-2 sm:py-3 rounded-lg transition-colors duration-200 hover:shadow-lg">
               Schedule Your Free Consultation
-            </button>
+            </SehduleButton>
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 py-12 sm:py-16 ">
-        <div className="bg-white dark:bg-gray-900 p-8 text-center shadow-sm hover:shadow-md dark:shadow-gray-800/10 dark:hover:shadow-gray-800/20 rounded-lg transition-all duration-300 transform hover:-translate-y-1">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+      <div className="max-w-7xl mx-auto px-4 py-12 sm:py-16">
+        <div className="bg-white dark:bg-gray-800 p-8 sm:p-10 text-center shadow-md hover:shadow-xl dark:shadow-gray-800/20 dark:hover:shadow-gray-700/30 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 dark:border-gray-700">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4 fade-in">
             We handle the painting so you can focus on business.
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-6">
+          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8 fade-in delay-200">
             Whether you're looking to modernize a commercial interior, refresh
             an exterior, complete a new build, or reinforce high-durability
             surfaces in Canada, our professional team will work efficiently to
             minimize disruptions and deliver the final product on or ahead of
             schedule.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-2">
-            {/* <Link to ="/contact" className="bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 py-2 rounded-lg transition-colors duration-200 hover:shadow-lg">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4 fade-in delay-400">
+            <Link to="/contact" className="bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-8 py-3 rounded-lg transition-colors duration-200 hover:shadow-lg">
               Get a Free Quote
-            </Link> */}
-            <button className="border-2 border-gray-300 dark:border-gray-700 hover:border-[#FF69B4] dark:hover:border-[#FF69B4] text-gray-800 dark:text-gray-200 font-medium px-6 py-2 rounded-lg transition-colors duration-200 hover:text-[#FF69B4] dark:hover:text-[#FF69B4]">
+            </Link>
+            <button className="border-2 border-gray-300 dark:border-gray-600 hover:border-[#FF69B4] dark:hover:border-[#FF69B4] text-gray-800 dark:text-gray-200 font-medium px-8 py-3 rounded-lg transition-all duration-200 hover:text-[#FF69B4] dark:hover:text-[#FF69B4] hover:bg-gray-50 dark:hover:bg-gray-700/50">
               View Our Portfolio
             </button>
           </div>
@@ -255,7 +275,10 @@ const CommercialPainting = () => {
                 pricing.
               </p>
               <div className="mt-6">
-                <Link to="/color-consult" className="border-2 border-pink-400 dark:border-gray-200 text-gray-800 dark:text-gray-200 font-medium px-6 py-2 rounded-lg transition-colors duration-200 hover:bg-pink-400 hover:text-white dark:hover:bg-gray-200 dark:hover:text-gray-800">
+                <Link
+                  to="/color-consult"
+                  className="border-2 border-pink-400 dark:border-gray-200 text-gray-800 dark:text-gray-200 font-medium px-6 py-2 rounded-lg transition-colors duration-200 hover:bg-pink-400 hover:text-white dark:hover:bg-gray-200 dark:hover:text-gray-800"
+                >
                   More About Color Consultations
                 </Link>
               </div>

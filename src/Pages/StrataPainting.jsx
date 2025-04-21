@@ -72,7 +72,7 @@ const StrataPainting = () => {
 
         <div className="mb-12 text-center sm:text-left">
           <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed fade-in delay-400">
-            Danzzel Painting specializes in strata painting services for
+            Dazzel Painting specializes in strata painting services for
             multi-unit residential properties across Canada. We understand the
             unique challenges of strata projects and work closely with property
             managers and strata councils to deliver exceptional results.
@@ -411,7 +411,7 @@ const StrataPainting = () => {
       <div className="max-w-7xl mx-auto px-4 py-12 sm:py-16 md:py-20">
         <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 fade-in">
-            Why Choose Danzzel Painting For Your Strata Project
+            Why Choose dazzel Painting For Your Strata Project
           </h2>
           <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto fade-in delay-200">
             We understand the unique requirements of strata painting projects

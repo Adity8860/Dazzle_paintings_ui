@@ -70,7 +70,7 @@ const CommercialPainting = () => {
 
         <div className="mb-12 text-center sm:text-left">
           <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed fade-in delay-400">
-            Revitalize your Canada area business with Danzzel Painting's
+            Revitalize your Canada area business with Dazzel Painting
             professional painting services! Serving{" "}
             <span className="text-green-600 font-medium">Canada, </span>, and
             surrounding areas, we specialize in transforming dull, outdated
@@ -108,12 +108,12 @@ const CommercialPainting = () => {
                     </a>{" "}
                     to start your commercial paint project today!
                   </p>
-                  <Link
+                  {/* <Link
                     to="/contact"
                     className="bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 py-2 rounded-lg transition-colors duration-200 hover:shadow-lg fade-in delay-1800"
                   >
                     Request a Quote
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
@@ -124,7 +124,7 @@ const CommercialPainting = () => {
         <div className="max-w-7xl mx-auto px-4  sm:py-16 md:py-20 bg-gray-50 dark:bg-gray-900">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 fade-in">
-              Choose Danzzel Painting For Expert Commercial Painting
+              Choose Dazzel Painting For Expert Commercial Painting
             </h2>
           </div>
 
@@ -242,9 +242,9 @@ const CommercialPainting = () => {
             <Link to="/contact" className="bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-8 py-3 rounded-lg transition-colors duration-200 hover:shadow-lg">
               Get a Free Quote
             </Link>
-            <button className="border-2 border-gray-300 dark:border-gray-600 hover:border-[#FF69B4] dark:hover:border-[#FF69B4] text-gray-800 dark:text-gray-200 font-medium px-8 py-3 rounded-lg transition-all duration-200 hover:text-[#FF69B4] dark:hover:text-[#FF69B4] hover:bg-gray-50 dark:hover:bg-gray-700/50">
+            {/* <button className="border-2 border-gray-300 dark:border-gray-600 hover:border-[#FF69B4] dark:hover:border-[#FF69B4] text-gray-800 dark:text-gray-200 font-medium px-8 py-3 rounded-lg transition-all duration-200 hover:text-[#FF69B4] dark:hover:text-[#FF69B4] hover:bg-gray-50 dark:hover:bg-gray-700/50">
               View Our Portfolio
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
@@ -263,7 +263,7 @@ const CommercialPainting = () => {
                 Color Consultations For Canada Commercial Painting Projects
               </h2>
               <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300">
-                Danzzel Painting offers in-depth color consultation appointments
+                Dazzel Painting offers in-depth color consultation appointments
                 with one of our Canada color specialists. They will help you
                 pick out the perfect colors for the interior spaces that will
                 give you the look and feel you want.

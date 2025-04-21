@@ -136,7 +136,7 @@ const ExteriorPainting = () => {
                   <p className="text-sm sm:text-base fade-in delay-200">
                     Whether you're looking to refresh your home's appearance,
                     increase its market value, or protect it from the elements,
-                    Dazzle Painting's exterior services deliver exceptional
+                    Dazzle Painting exterior services deliver exceptional
                     results that stand the test of time.
                   </p>
 
@@ -233,12 +233,12 @@ const ExteriorPainting = () => {
                   selection process, ensuring the colors and shades you choose
                   bring your vision to life.
                 </p>
-                <Link
+                {/* <Link
                   to="/color-consult"
                   className="mt-3 sm:mt-4 inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 border-2 border-[#FF69B4] text-[#FF69B4] text-xs sm:text-sm font-medium rounded-lg hover:bg-[#FF69B4]/10 transition-colors duration-200"
                 >
                   Book a Color Consultation
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

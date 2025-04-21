@@ -2,9 +2,12 @@ import React, { useEffect, useRef } from "react";
 import Slider from "./Slider";
 import { Link } from "react-router-dom";
 import BGVideo from "../../assets/BGVideo.mp4";
+import OldLogo from "../../assets/OldLogo.PNG";
+import OldLogotheme from "../../assets/old_logo_theme.png";
 
 var showSlider = false;
-var showVideo = true;
+var showVideo = false;
+var showImage = true;
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -34,7 +37,9 @@ const Hero = () => {
   return (
     <div ref={heroRef}>
       {showSlider && (
-        <div className="relative fade-in">{/* {<Slider />} */}</div>
+        <div className="relative fade-in">
+          {<Slider />}
+        </div>
       )}
       {showVideo && (
         <div className="relative h-[50vh] sm:h-[70vh] md:h-[100svh] slide-in-left">
@@ -51,15 +56,59 @@ const Hero = () => {
               );
             })}
           </div>
-
-          <video
+         <video
             autoPlay
             loop
             muted
             className="w-full h-full object-cover absolute top-0 left-0 z-0 brightness-100 dark:brightness-90"
           >
             <source src={BGVideo} type="video/mp4" />
-          </video>
+          </video> 
+          {/* Content Overlay */}
+          <div className="relative z-20 h-full flex flex-col items-center justify-center text-white px-4 sm:px-6 md:px-8 text-center">
+            <h1 className="text-xl sm:text-3xl md:text-5xl font-serif italic mb-2 sm:mb-4 md:mb-6 tracking-wider">
+              Painters With Professional Touch!
+            </h1>
+            <button className="bg-transparent border-2 border-white hover:bg-white/20 text-white text-xs sm:text-sm md:text-base font-medium py-1 sm:py-1.5 md:py-2 px-3 sm:px-4 md:px-6 rounded-full transition-all duration-300 flex items-center space-x-2">
+              <Link to="/contact">
+                <span>Get free Quote</span>
+              </Link>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4 sm:h-5 sm:w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
+      {showImage && (
+        <div className="relative h-[50vh] sm:h-[70vh] md:h-[100svh] slide-in-left">
+          {/* <Slider/> */}
+          <div className="absolute bottom-0 left-0 right-0 z-10 h-1/4 md:h-1/3 flex flex-col justify-between">
+            {[...Array(15)].map((_, i) => {
+              const height = Math.max(1, 6 - Math.floor(i / 3));
+              return (
+                <div
+                  key={i}
+                  className={`w-full bg-white/40`}
+                  style={{ height: `${height}px` }}
+                />
+              );
+            })}
+          </div>
+          <svg>
+            
+          </svg>
+          <img className="w-full h-full object-cover absolute top-0 left-0 z-0 brightness-60 dark:brightness-40"
+           src={OldLogo} alt="Dazzle Painting" />
 
           {/* Content Overlay */}
           <div className="relative z-20 h-full flex flex-col items-center justify-center text-white px-4 sm:px-6 md:px-8 text-center">

@@ -9,13 +9,13 @@ const ContactForm = () => {
     lastName: "",
     email: "",
     phone: "",
-    address: "",
-    city: "",
-    service: "",
-    hearAboutUs: "",
-    surfaces: "",
+    // address: "",
+    // city: "",
+    // service: "",
+    // hearAboutUs: "",
+    // surfaces: "",
     message: "",
-    attachedFiles: null,
+    // attachedFiles: null,
   });
 
   // const handleFileChange = (e) => {
@@ -64,14 +64,14 @@ const ContactForm = () => {
             firstName: "",
             lastName: "",
             email: "",
-            phone: "",
-            address: "",
-            city: "",
-            service: "",
-            hearAboutUs: "",
-            surfaces: "",
+            // phone: "",
+            // address: "",
+            // city: "",
+            // service: "",
+            // hearAboutUs: "",
+            // surfaces: "",
             message: "",
-            attachedFiles: null,
+            // attachedFiles: null,
           });
           // Reset file input
           const fileInput = document.getElementById("file-upload");

@@ -49,11 +49,20 @@ const Navbar = () => {
                 <span className="text-xl font-semibold text-gray-900 dark:text-white">
                   Dazzle{" "}
                   <span className="text-[#FF69B4] dark:text-[#FF69B4]">
-                    paintings
+                    painting
                   </span>
                 </span>
               </div>
             </Link>
+            <span className="hidden md:inline">
+              &nbsp; <small><em>Fully Insured By</em></small> &nbsp;
+              <img
+                src="https://www.worksafebc.com/img/worksafebc_logo.jpg"
+                alt="WorksafeBC"
+                className="inline h-6 align-middle"
+              />
+            </span>
+             
           </div>
 
           {/* Desktop Menu */}
@@ -262,6 +271,17 @@ const Navbar = () => {
                 >
                   Contact
                 </Link>
+                {/* WorkSafeBC Logo - Only on Mobile Menu */}
+                  <div className="block md:hidden text-sm text-foreground text-center pt-4">
+                    <span className="block mb-2">
+                      <small><em>Fully Insured By</em></small>
+                    </span>
+                    <img
+                      src="https://www.worksafebc.com/img/worksafebc_logo.jpg"
+                      alt="WorksafeBC"
+                      className="mx-auto h-6"
+                    />
+                  </div>
 
                 {/* <div className="flex items-center justify-between px-3 py-4 border-t border-border mt-4">
                   <ModeToggle />

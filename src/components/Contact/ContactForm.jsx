@@ -425,7 +425,7 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <h3 className="text-base font-medium text-gray-900 dark:text-white group-hover:text-[#FF69B4] transition-colors duration-300">
-                      Land Line
+                     Mobile  
                     </h3>
                     <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">
                       +16477170133

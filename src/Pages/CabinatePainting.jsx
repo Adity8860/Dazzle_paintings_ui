@@ -81,7 +81,7 @@ const CabinatePainting = () => {
 
         <div className="mb-12 text-center sm:text-left">
           <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed fade-in delay-400">
-            Danzzel Painting specializes in transforming outdated cabinets into beautiful, modern fixtures that enhance your home's value and appearance. Our professional cabinet painting services offer a cost-effective alternative to full cabinet replacement.
+            Dazzel Painting specializes in transforming outdated cabinets into beautiful, modern fixtures that enhance your home's value and appearance. Our professional cabinet painting services offer a cost-effective alternative to full cabinet replacement.
           </p>
 
           <div className="mt-8 bg-gray-50 dark:bg-gray-800 rounded-xl p-8 fade-in delay-600">
@@ -106,9 +106,9 @@ const CabinatePainting = () => {
                     </a>{" "}
                     to discuss your cabinet painting project today!
                   </p>
-                  <Link to="/contact" className="bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 py-2 rounded-lg transition-colors duration-200 hover:shadow-lg fade-in delay-1800">
+                  {/* <Link to="/contact" className="bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 py-2 rounded-lg transition-colors duration-200 hover:shadow-lg fade-in delay-1800">
                     Request a Quote
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>

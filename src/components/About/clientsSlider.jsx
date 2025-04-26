@@ -14,11 +14,11 @@ const ClientsSlider = () => {
       name: 'NorthLand Construction',
       logo: 'https://northlandconstructors.com/wp-content/uploads/2023/11/Northland-Logos-New_Brown-with-Tagline.png'
     },
-    {
-      id: 3,
-      name: 'Wsh Contracting',
-      logo: 'https://placehold.co/200x100/FFFFFF/000000?text=Yoga+Fitness'
-    }
+    // {
+    //   id: 3,
+    //   name: 'Wsh Contracting',
+    //   logo: 'https://placehold.co/200x100/FFFFFF/000000?text=Yoga+Fitness'
+    // }
     // {
     //   id: 4,
     //   name: 'Tech Solutions',

@@ -97,9 +97,9 @@ const PowerWashing = () => {
                     </a>{" "}
                     to discuss your power washing project today!
                   </p>
-                  <Link to="/contact" className="bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 py-2 rounded-lg transition-colors duration-200 hover:shadow-lg fade-in delay-1800">
+                  {/* <Link to="/contact" className="bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 py-2 rounded-lg transition-colors duration-200 hover:shadow-lg fade-in delay-1800">
                     Request a Quote
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>

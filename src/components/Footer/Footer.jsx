@@ -1,5 +1,6 @@
 import config from "@/config/config";
 import React from "react";
+import {MOBILE_NO,DAZZLE_PAINTING, EMAIL, ADDRESS} from  "@/constants/details"
 
 const Footer = () => {
   return (
@@ -29,7 +30,7 @@ const Footer = () => {
           <span>&nbsp; <small><em>Fully Insured By</em></small> &nbsp;</span> <img src="https://www.worksafebc.com/img/worksafebc_logo.jpg" alt="WorksafeBC" />
           <div className="mt-6 lg:max-w-sm">
             <p className="text-sm text-gray-800 dark:text-gray-300">
-              Discover a world of color and creativity with Dazzle Painting!
+              Discover a world of color and creativity with {DAZZLE_PAINTING}!
               Join our online community for inspiration, exclusive
               behind-the-scenes glimpses, and the latest updates on our
               projects. Whether you're looking for expert painting tips, design
@@ -47,12 +48,12 @@ const Footer = () => {
           <div className="flex">
             <p className="mr-1 text-gray-800 dark:text-gray-300">Phone:</p>
             <a
-              href="tel:850-123-5021"
+              href={`tel:${MOBILE_NO}`}
               aria-label="Our phone"
               title="Our phone"
               className="transition-colors duration-300 text-[#FF69B4] hover:text-[#FF69B4]/80 dark:text-[#FF69B4] dark:hover:text-[#FF69B4]/80"
             >
-              +1(647)717-0133
+              {MOBILE_NO}
             </a>
           </div>
           <div className="flex">
@@ -63,7 +64,7 @@ const Footer = () => {
               title="Our email"
               className="transition-colors duration-300 text-[#FF69B4] hover:text-[#FF69B4]/80 dark:text-[#FF69B4] dark:hover:text-[#FF69B4]/80"
             >
-              paintingdazzle@gmail.com
+              {EMAIL}
             </a>
           </div>
           <div className="flex">
@@ -76,7 +77,7 @@ const Footer = () => {
               title="Our address"
               className="transition-colors duration-300 text-[#FF69B4] hover:text-[#FF69B4]/80 dark:text-[#FF69B4] dark:hover:text-[#FF69B4]/80"
             >
-              Dazzle Painting, 795 9 Ave #204, Campbell River, BC V9W4B9, Canada
+              {ADDRESS}
             </a>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import {ADDRESS, EMAIL, MOBILE_NO} from  "@/constants/details"
 
 const ContactForm = () => {
   const form = useRef();
@@ -405,7 +406,7 @@ const ContactForm = () => {
                       Technical Support
                     </h3>
                     <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">
-                      paintingdazzle@gmail.com
+                      {EMAIL}
                     </p>
                   </div>
                 </div>
@@ -428,7 +429,7 @@ const ContactForm = () => {
                      Mobile  
                     </h3>
                     <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">
-                      +16477170133
+                    {MOBILE_NO}
                     </p>
                   </div>
                 </div>
@@ -452,13 +453,13 @@ const ContactForm = () => {
                       Address
                     </h3>
                     <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">
-                    Dazzle Painting, 795 9 Ave #204, Campbell River, BC V9W4B9, Canada
+                    {ADDRESS}
                     </p>
                   </div>
                 </div>
 
                 {/* Mobile */}
-                <div className="flex items-center space-x-4 p-4 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300 hover:scale-[1.02] cursor-pointer group">
+                {/* <div className="flex items-center space-x-4 p-4 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300 hover:scale-[1.02] cursor-pointer group">
                   <div className="bg-[#FF69B4]/10 p-4 rounded-xl flex items-center justify-center shadow-sm group-hover:bg-[#FF69B4]/20 transition-all duration-300">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -478,7 +479,7 @@ const ContactForm = () => {
                       +91 123456789
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

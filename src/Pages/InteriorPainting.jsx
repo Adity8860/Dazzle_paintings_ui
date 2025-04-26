@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import IPImage from "../assets/IPImage.jpg";
 import "../components/PaintServices/ScrollAnimation.css";
 import { Link } from "react-router-dom";
+import { MOBILE_NO } from "@/constants/details";
 
 const InteriorPainting = () => {
   const animatedElementsRef = useRef([]);
@@ -108,7 +109,7 @@ const InteriorPainting = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <a href="tel:(0421) 431 2030" className="w-full sm:w-auto bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200 hover:shadow-lg text-center">
-              +1(647)717-0133
+              {MOBILE_NO}
               </a>
               <Link to="/contact" className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 border-2 border-[#FF69B4] text-[#FF69B4] font-medium rounded-lg hover:bg-[#FF69B4]/10 dark:hover:bg-[#FF69B4]/20 transition-colors duration-200">
                 Request a Quote
@@ -157,7 +158,7 @@ const InteriorPainting = () => {
                         href="tel:(0421) 431 2030"
                         className="text-[#FF69B4] hover:text-[#FF69B4]/80 font-medium"
                       >
-                         +1(647)717-0133
+                         {MOBILE_NO}
                       </a>{" "}
                       and simply mention you'd like a color consultation when
                       booking your initial appointment with us!

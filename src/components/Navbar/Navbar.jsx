@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Phone, ChevronDown } from "lucide-react";
 import ModeToggle from "../mode-toggle";
 import { Link } from "react-router-dom";
-import OldLogo from "../../assets/oldlogo.svg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

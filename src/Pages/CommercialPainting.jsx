@@ -3,6 +3,7 @@ import CPImage from "../assets/CPImage.jpg";
 import "../components/PaintServices/ScrollAnimation.css";
 import { Link } from "react-router-dom";
 import SehduleButton from "@/components/Sehedule/SehduleButton";
+import {MOBILE_NO} from  "@/constants/details"
 
 const CommercialPainting = () => {
   const animatedElementsRef = useRef([]);
@@ -101,10 +102,10 @@ const CommercialPainting = () => {
                   <p className="text-gray-600 dark:text-gray-300 mb-4 fade-in delay-1600">
                     Contact us at{" "}
                     <a
-                      href="tel:(619) 446-6983"
+                      href={`tel:${MOBILE_NO}`}
                       className="text-[#FF69B4] font-medium"
                     >
-                      (619) 446-6983
+                      {MOBILE_NO}
                     </a>{" "}
                     to start your commercial paint project today!
                   </p>

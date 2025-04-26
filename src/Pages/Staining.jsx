@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import StainingBI from "../assets/Staining.jpg";
 import "../components/PaintServices/ScrollAnimation.css";
 import { Link } from "react-router-dom";
+import { MOBILE_NO } from '@/constants/details';
 
 const Staining = () => {
   const animatedElementsRef = useRef([]);
@@ -91,8 +92,8 @@ const Staining = () => {
                   </h4>
                   <p className="text-gray-600 dark:text-gray-300 mb-4 fade-in delay-1600">
                     Contact us at{" "}
-                    <a href="tel:(619) 446-6983" className="text-[#FF69B4] font-medium">
-                      (619) 446-6983
+                    <a href={`tel:${MOBILE_NO}`} className="text-[#FF69B4] font-medium">
+                    {MOBILE_NO}
                     </a>{" "}
                     to discuss your staining project today!
                   </p>
@@ -284,8 +285,8 @@ const Staining = () => {
                   <Link to="/contact" className="bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200 hover:shadow-lg text-center">
                     Request a Quote
                   </Link>
-                  <a href="tel:(619) 446-6983" className="border-2 border-gray-300 dark:border-gray-700 hover:border-[#FF69B4] dark:hover:border-[#FF69B4] text-gray-800 dark:text-gray-200 font-medium px-6 py-3 rounded-lg transition-colors duration-200 hover:text-[#FF69B4] dark:hover:text-[#FF69B4] text-center">
-                    Call Us: (619) 446-6983
+                  <a href={`tel:${MOBILE_NO}`} className="border-2 border-gray-300 dark:border-gray-700 hover:border-[#FF69B4] dark:hover:border-[#FF69B4] text-gray-800 dark:text-gray-200 font-medium px-6 py-3 rounded-lg transition-colors duration-200 hover:text-[#FF69B4] dark:hover:text-[#FF69B4] text-center">
+                    Call Us: {MOBILE_NO}
                   </a>
                 </div>
               </div>

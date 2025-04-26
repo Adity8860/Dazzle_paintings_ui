@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Testimonial from "./testimonial";
 import ClientsSlider from "./clientsSlider";
+import {DAZZLE_PAINTING,YEARS_EXPERIENCE} from "@/constants/details";
 
 const About = () => {
   const [openSection, setOpenSection] = useState(1);
@@ -35,7 +36,7 @@ const About = () => {
               Our Philosophy
             </h2>
             <div className="max-w-3xl mx-auto text-gray-600 dark:text-gray-300 text-sm sm:text-base px-2 sm:px-4">
-              At Dazzle Painting, our mission is to bring vibrant, high-quality,
+              At {DAZZLE_PAINTING}, our mission is to bring vibrant, high-quality,
               and professional painting services to homes across Canada. We aim
               to enhance interiors and exteriors with expert craftsmanship,
               attention to detail, and long-lasting finishes.
@@ -550,7 +551,7 @@ const About = () => {
               </svg>
             </div>
             <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2 animate-count">
-              10
+              {YEARS_EXPERIENCE}
             </div>
             <div className="text-gray-600 dark:text-gray-300 font-medium text-sm sm:text-base">
               YEARS EXPERIENCE

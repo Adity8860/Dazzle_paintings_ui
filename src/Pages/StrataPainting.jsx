@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import StrataBI from "../assets/strata.jpg";
 import { Link } from "react-router-dom";
 import SehduleButton from "@/components/Sehedule/SehduleButton";
+import { MOBILE_NO } from "@/constants/details";
 
 const StrataPainting = () => {
   const animatedElementsRef = useRef([]);
@@ -103,10 +104,10 @@ const StrataPainting = () => {
                   <p className="text-gray-600 dark:text-gray-300 mb-4 fade-in delay-1600">
                     Contact us at{" "}
                     <a
-                      href="tel:(619) 446-6983"
+                      href={`tel:${MOBILE_NO}`}
                       className="text-[#FF69B4] font-medium"
                     >
-                      (619) 446-6983
+                      {MOBILE_NO}
                     </a>{" "}
                     to discuss your strata painting project today!
                   </p>
@@ -566,10 +567,10 @@ const StrataPainting = () => {
                     Request a Quote
                   </Link>
                   <a
-                    href="tel:(619) 446-6983"
+                    href={`tel:${MOBILE_NO}`}
                     className="border-2 border-gray-300 dark:border-gray-700 hover:border-[#FF69B4] dark:hover:border-[#FF69B4] text-gray-800 dark:text-gray-200 font-medium px-6 py-3 rounded-lg transition-colors duration-200 hover:text-[#FF69B4] dark:hover:text-[#FF69B4] text-center"
                   >
-                    Call Us: (619) 446-6983
+                    Call Us: {MOBILE_NO}
                   </a>
                 </div>
               </div>

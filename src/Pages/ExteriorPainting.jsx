@@ -4,6 +4,7 @@ import PrevSlider from "../components/PaintServices/PrevSlider";
 import "../components/PaintServices/ScrollAnimation.css";
 import { Link } from "react-router-dom";
 import SehduleButton from "@/components/Sehedule/SehduleButton";
+import {MOBILE_NO} from  "@/constants/details"
 
 const ExteriorPainting = () => {
   const animatedElementsRef = useRef([]);
@@ -145,10 +146,10 @@ const ExteriorPainting = () => {
                       Ready to protect and beautify your home's exterior? Call
                       us at{" "}
                       <a
-                        href="tel:(0421) 431 2030"
+                        href={`tel:${MOBILE_NO}`}
                         className="text-[#FF69B4] hover:text-[#FF69B4]/80 font-medium"
                       >
-                        (0421) 431 2030
+                        {MOBILE_NO}
                       </a>{" "}
                       to discuss your exterior painting project and schedule a
                       convenient appointment!
@@ -502,10 +503,10 @@ const ExteriorPainting = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <a
-                href="tel:(0421) 431 2030"
+                href="tel:{MOBILE_NO}"
                 className="w-full sm:w-auto bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200 hover:shadow-lg text-center pulse-animation"
               >
-                Call (0421) 431 2030
+                Call {MOBILE_NO}
               </a>
               <Link
                 to="/color-consult"

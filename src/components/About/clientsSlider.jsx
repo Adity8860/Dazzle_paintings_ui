@@ -18,7 +18,7 @@ const ClientsSlider = () => {
     //   id: 3,
     //   name: 'Wsh Contracting',
     //   logo: 'https://placehold.co/200x100/FFFFFF/000000?text=Yoga+Fitness'
-    // }
+    // },
     // {
     //   id: 4,
     //   name: 'Tech Solutions',
@@ -40,6 +40,7 @@ const ClientsSlider = () => {
     //   logo: 'https://placehold.co/200x100/FFFFFF/000000?text=Eco+Solutions'
     // }
   ];
+  const slidesToShow = window.innerWidth < 640 ? 2 : 3;
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -63,27 +64,27 @@ const ClientsSlider = () => {
         </div>
 
         <div className="relative overflow-hidden">
-          <div 
-            className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-          >
-            {Array(Math.ceil(clients.length / 5)).fill().map((_, slideIndex) => (
-              <div key={slideIndex} className="w-full flex-shrink-0 grid grid-cols-5 gap-4">
-                {clients.slice(slideIndex * 5, (slideIndex + 1) * 5).map((client) => (
-                  <div 
-                    key={client.id}
-                    className="flex items-center justify-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg hover:shadow-xl transition-all duration-300"
-                  >
-                    <img 
-                      src={client.logo}
-                      alt={client.name}
-                      className="max-h-16 w-auto grayscale hover:grayscale-0 transition-all duration-300"
-                    />
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
+        <div 
+      className="flex transition-transform duration-500 ease-in-out"
+      style={{ transform: `translateX(-${currentSlide * (100 / slidesToShow)}%)` }}
+    >
+      {Array(Math.ceil(clients.length / slidesToShow)).fill().map((_, slideIndex) => (
+        <div key={slideIndex} className="w-full flex-shrink-0 flex flex-row justify-center gap-6">
+          {clients.slice(slideIndex * slidesToShow, (slideIndex + 1) * slidesToShow).map((client) => (
+            <div 
+              key={client.id}
+              className="flex items-center justify-center p-2 bg-gray-50 dark:bg-gray-800 rounded-lg hover:shadow-xl transition-all duration-300 w-fit"
+            >
+              <img 
+                src={client.logo}
+                alt={client.name}
+                className="max-h-32 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+              />
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
 
           {/* Dots indicator */}
           <div className="flex justify-center mt-8 gap-2">

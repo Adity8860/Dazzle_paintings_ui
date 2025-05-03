@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import {ADDRESS, EMAIL, MOBILE_NO} from  "@/constants/details"
+import {ADDRESS, EMAIL, MOBILE_NO, TEMPLATE_CONTACT_FORM_ID} from  "@/constants/details";
+import  { sendEmail }  from '@/service/emailService';
 
 const ContactForm = () => {
   const form = useRef();
@@ -48,17 +49,14 @@ const ContactForm = () => {
       alert("Please fill in all required fields");
       return;
     }
+    console.log(getTemplateParams(formData));
+    console.log(sendEmail(TEMPLATE_CONTACT_FORM_ID,getTemplateParams(formData)));
 
     // Add loading state if needed
-    emailjs
-      .sendForm(
-        "service_j86f0ic",
-        "template_xkds0a6",
-        form.current,
-        "X_ptKww76Wf9icNDI"
-      )
+    sendEmail(TEMPLATE_CONTACT_FORM_ID,getTemplateParams(formData))
       .then(
         (result) => {
+           // todo: Query send successfully
           console.log("SUCCESS!", result.text);
           alert("Message sent successfully!");
           setFormData({
@@ -75,14 +73,30 @@ const ContactForm = () => {
             // attachedFiles: null,
           });
           // Reset file input
-          const fileInput = document.getElementById("file-upload");
-          if (fileInput) fileInput.value = "";
+          // const fileInput = document.getElementById("file-upload");
+          // if (fileInput) fileInput.value = "";
+          setIsLoading(false);
         },
         (error) => {
+          setIsLoading(false);
+          // todo: Query send failed
           console.error("FAILED...", error.text);
           alert("Failed to send message. Please try again.");
         }
       );
+
+      function getTemplateParams(formData){
+        const templateParams = {
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          description: formData.message,
+          name :"Dazzle Painting"
+        };
+        return templateParams;
+      }
+    
   };
 
   return (

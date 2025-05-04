@@ -184,8 +184,10 @@ const SehduleButton = () => {
                   <option value="interior">Interior Painting</option>
                   <option value="exterior">Exterior Painting</option>
                   <option value="commercial">Commercial Painting</option>
+                  <option value="commercial">Strata Painting</option>
                   <option value="cabinet">Cabinet Painting</option>
-                  <option value="other">Other Services</option>
+                  <option value="cabinet">Staining</option>
+                  <option value="other">Power Washing</option>
                 </select>
               </div>
               <div>

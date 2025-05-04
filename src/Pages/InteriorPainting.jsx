@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from "react";
-import IPImage from "../assets/IPImage.jpg";
+import InteriorImage from "../assets/InteriorImage.png";
+import  Interior2 from "../assets/Interior2.png";
+
 import "../components/PaintServices/ScrollAnimation.css";
 import { Link } from "react-router-dom";
 import { MOBILE_NO } from "@/constants/details";
@@ -39,7 +41,7 @@ const InteriorPainting = () => {
       <div
         className="relative h-[400px] sm:h-[500px] bg-cover bg-center bg-no-repeat fade-in"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${IPImage})`
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${InteriorImage})`
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center px-4 slide-in-left">
@@ -74,7 +76,7 @@ const InteriorPainting = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center fade-in">
           <div>
             <img
-              src="https://paintgreen.com/wp-content/uploads/2021/11/Interior-Painting.jpg"
+              src={Interior2}
               alt="Modern Interior Living Room"
               className="rounded-lg shadow-lg w-full h-[250px] sm:h-[300px] md:h-[400px] object-cover dark:shadow-gray-800/30"
             />

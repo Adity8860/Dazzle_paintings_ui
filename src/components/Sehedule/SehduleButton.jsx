@@ -242,14 +242,20 @@ const ScheduleButton = () => {
                     Preferred Date
                   </label>
                   <input
-                    type="date"
+                    type="date" 
                     id="date"
                     value={formData.preferredDate}
-                    onChange={(e) => setFormData({ ...formData, preferredDate: e.target.value })}
+                    onChange={(e) => {
+                      const value = e.target.value;
+                      setFormData({ ...formData, preferredDate: value });
+                    }}
+                    min={new Date().toISOString().split('T')[0]} // Optional: Set minimum date to today
                     className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF69B4] dark:bg-gray-700 dark:text-white"
-                    min={new Date().toISOString().split("T")[0]}
                     required
                   />
+                  <small className="text-gray-500 dark:text-gray-400 text-xs mt-1 block">
+                    Please select your preferred date
+                  </small>
                 </div>
                 <div>
                   <label

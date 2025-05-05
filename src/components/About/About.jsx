@@ -2,22 +2,19 @@ import React, { useState } from "react";
 import Testimonial from "./testimonial";
 import ClientsSlider from "./clientsSlider";
 import { DAZZLE_PAINTING, YEARS_EXPERIENCE } from "@/constants/details";
+import Titlebar from "../../assets/titlebar.jpg";
 
 const About = () => {
   const [openSection, setOpenSection] = useState(1);
   return (
     <section className="min-h-screen dark:bg-gray-900">
-      <style>
-        @import
-        url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-      </style>
       <div className="bg-white dark:bg-gray-900">
         {/* Hero Section */}
         <div className="relative h-[120px] sm:h-[150px] md:h-[200px] lg:h-[300px]">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat brightness-525"
             style={{
-              backgroundImage: "url('/src/assets/titlebar.jpg')",
+              backgroundImage: `url(${Titlebar})`,
               fontFamily: "'DM Sans', sans-serif",
             }}
           >
@@ -31,10 +28,6 @@ const About = () => {
 
         <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
           {/* Philosophy Section */}
-          <style>
-            @import
-            url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-          </style>
           <div className="bg-transparent dark:bg-transparent">
             {/* Hero Section - Improved with overlay and animation */}
 

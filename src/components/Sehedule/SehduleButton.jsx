@@ -1,18 +1,25 @@
-import React from 'react'
-import * as Dialog from '@radix-ui/react-dialog'
-import { keyframes } from '@emotion/react'
-import styled from '@emotion/styled'
+import React, { useState } from "react";
+import * as Dialog from "@radix-ui/react-dialog";
+import { keyframes } from "@emotion/react";
+import styled from "@emotion/styled";
+import {
+  ADDRESS,
+  EMAIL,
+  MOBILE_NO,
+  TEMPLATE_SCHEDULE_ID,
+} from "@/constants/details";
+import { sendEmail } from "@/service/emailService";
 
 // Define animations
 const overlayShow = keyframes`
   from { opacity: 0 }
   to { opacity: 1 }
-`
+`;
 
 const overlayHide = keyframes`
   from { opacity: 1 }
   to { opacity: 0 }
-`
+`;
 
 const contentShow = keyframes`
   from { 
@@ -23,7 +30,7 @@ const contentShow = keyframes`
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
   }
-`
+`;
 
 const contentHide = keyframes`
   from { 
@@ -34,7 +41,7 @@ const contentHide = keyframes`
     opacity: 0;
     transform: translate(-50%, -48%) scale(0.96);
   }
-`
+`;
 
 // Styled components for animations
 const StyledOverlay = styled(Dialog.Overlay)`
@@ -42,15 +49,15 @@ const StyledOverlay = styled(Dialog.Overlay)`
   position: fixed;
   inset: 0;
   z-index: 40;
-  
+
   &[data-state="open"] {
     animation: ${overlayShow} 150ms cubic-bezier(0.16, 1, 0.3, 1);
   }
-  
+
   &[data-state="closed"] {
     animation: ${overlayHide} 150ms cubic-bezier(0.16, 1, 0.3, 1);
   }
-`
+`;
 
 const StyledContent = styled(Dialog.Content)`
   background-color: white;
@@ -66,27 +73,92 @@ const StyledContent = styled(Dialog.Content)`
   padding: 1.5rem;
   z-index: 50;
   overflow-y: auto;
-  
+
   &[data-state="open"] {
     animation: ${contentShow} 300ms cubic-bezier(0.16, 1, 0.3, 1);
   }
-  
+
   &[data-state="closed"] {
     animation: ${contentHide} 300ms cubic-bezier(0.16, 1, 0.3, 1);
   }
-  
+
   &:focus {
     outline: none;
   }
-  
+
   .dark & {
     background-color: #1f2937;
   }
-`
+`;
 
-const SehduleButton = () => {
+const ScheduleButton = () => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    preferredDate: "",
+    preferredTime: "",
+    serviceType: "",
+    projectDetails: "",
+  });
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Mock sendEmail function (replace with actual API call in production)
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    // Validate required fields
+    const requiredFields = ["fullName", "email", "phone", "preferredDate", "preferredTime", "serviceType"];
+    const missingFields = requiredFields.filter((field) => !formData[field]);
+
+    if (missingFields.length > 0) {
+      alert("Please fill in all required fields");
+      return;
+    }
+
+    console.log(getTemplateParams(formData));
+    console.log(sendEmail(TEMPLATE_SCHEDULE_ID, getTemplateParams(formData)));
+
+    sendEmail(TEMPLATE_SCHEDULE_ID, getTemplateParams(formData)).then(
+      (result) => {
+        console.log("SUCCESS!", result.text);
+        alert("Message sent successfully!");
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          preferredDate: "",
+          preferredTime: "",
+          serviceType: "",
+          projectDetails: "",
+        });
+        setIsLoading(false);
+      },
+      (error) => {
+        setIsLoading(false);
+        console.error("FAILED...", error.text);
+        alert("Failed to send message. Please try again.");
+      }
+    );
+  };
+
+  function getTemplateParams(formData) {
+    const templateParams = {
+      full_name: formData.fullName,
+      email: formData.email,
+      phone: formData.phone,
+      preferred_date: formData.preferredDate,
+      preferred_time: formData.preferredTime,
+      service_type: formData.serviceType,
+      project_details: formData.projectDetails,
+      company_name: "Dazzle Painting"
+    };
+    return templateParams;
+  }
+
   return (
-    <div className="">
+    <div>
       <Dialog.Root>
         <Dialog.Trigger asChild>
           <button className="bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200 hover:shadow-lg">
@@ -100,43 +172,57 @@ const SehduleButton = () => {
               Schedule Your Free Consultation
             </Dialog.Title>
             <Dialog.Description className="text-gray-600 dark:text-gray-300 mb-4">
-              Fill out the form below and we'll contact you to schedule your free consultation.
+              Fill out the form below and we'll contact you to schedule your
+              free consultation.
             </Dialog.Description>
-            
-            <form className="space-y-4">
+
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >
                   Full Name
                 </label>
-                <input 
-                  type="text" 
-                  id="name" 
+                <input
+                  type="text"
+                  id="name"
+                  value={formData.fullName}
+                  onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF69B4] dark:bg-gray-700 dark:text-white"
                   placeholder="Your Name"
                   required
                 />
               </div>
-              
-              {/* Rest of the form fields remain unchanged */}
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >
                   Email Address
                 </label>
-                <input 
-                  type="email" 
-                  id="email" 
+                <input
+                  type="email"
+                  id="email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF69B4] dark:bg-gray-700 dark:text-white"
                   placeholder="your.email@example.com"
                   required
                 />
               </div>
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >
                   Phone Number
                 </label>
-                <input 
-                  type="tel" 
-                  id="phone" 
+                <input
+                  type="tel"
+                  id="phone"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF69B4] dark:bg-gray-700 dark:text-white"
                   placeholder="(123) 456-7890"
                   required
@@ -144,23 +230,33 @@ const SehduleButton = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="date" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  <label
+                    htmlFor="date"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                  >
                     Preferred Date
                   </label>
-                  <input 
-                    type="date" 
-                    id="date" 
+                  <input
+                    type="date"
+                    id="date"
+                    value={formData.preferredDate}
+                    onChange={(e) => setFormData({ ...formData, preferredDate: e.target.value })}
                     className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF69B4] dark:bg-gray-700 dark:text-white"
-                    min={new Date().toISOString().split('T')[0]}
+                    min={new Date().toISOString().split("T")[0]}
                     required
                   />
                 </div>
                 <div>
-                  <label htmlFor="time" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  <label
+                    htmlFor="time"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                  >
                     Preferred Time
                   </label>
-                  <select 
-                    id="time" 
+                  <select
+                    id="time"
+                    value={formData.preferredTime}
+                    onChange={(e) => setFormData({ ...formData, preferredTime: e.target.value })}
                     className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF69B4] dark:bg-gray-700 dark:text-white"
                     required
                   >
@@ -172,11 +268,16 @@ const SehduleButton = () => {
                 </div>
               </div>
               <div>
-                <label htmlFor="service" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                <label
+                  htmlFor="service"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >
                   Service Type
                 </label>
-                <select 
-                  id="service" 
+                <select
+                  id="service"
+                  value={formData.serviceType}
+                  onChange={(e) => setFormData({ ...formData, serviceType: e.target.value })}
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF69B4] dark:bg-gray-700 dark:text-white"
                   required
                 >
@@ -184,45 +285,63 @@ const SehduleButton = () => {
                   <option value="interior">Interior Painting</option>
                   <option value="exterior">Exterior Painting</option>
                   <option value="commercial">Commercial Painting</option>
-                  <option value="commercial">Strata Painting</option>
+                  <option value="strata">Strata Painting</option>
                   <option value="cabinet">Cabinet Painting</option>
-                  <option value="cabinet">Staining</option>
-                  <option value="other">Power Washing</option>
+                  <option value="staining">Staining</option>
+                  <option value="power-washing">Power Washing</option>
                 </select>
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >
                   Project Details
                 </label>
-                <textarea 
-                  id="message" 
-                  rows="3" 
+                <textarea
+                  id="message"
+                  rows="3"
+                  value={formData.projectDetails}
+                  onChange={(e) => setFormData({ ...formData, projectDetails: e.target.value })}
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF69B4] dark:bg-gray-700 dark:text-white"
                   placeholder="Tell us about your project"
                 ></textarea>
               </div>
               <div className="flex justify-end gap-3 pt-2">
                 <Dialog.Close asChild>
-                  <button type="button" className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                  <button
+                    type="button"
+                    className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                  >
                     Cancel
                   </button>
                 </Dialog.Close>
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="px-4 py-2 bg-[#FF69B4] hover:bg-[#FF69B4]/90 text-white rounded-md transition-colors"
+                  disabled={isLoading}
                 >
-                  Submit
+                  {isLoading ? "Submitting..." : "Submit"}
                 </button>
               </div>
             </form>
-            
+
             <Dialog.Close asChild>
-              <button 
+              <button
                 className="absolute top-4 right-4 text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400"
                 aria-label="Close"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
                 </svg>
               </button>
             </Dialog.Close>
@@ -230,7 +349,7 @@ const SehduleButton = () => {
         </Dialog.Portal>
       </Dialog.Root>
     </div>
-  )
-}
+  );
+};
 
-export default SehduleButton
+export default ScheduleButton;

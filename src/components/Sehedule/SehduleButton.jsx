@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState,useRef } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
+import { useToast } from "@/components/ui/ToastContainer";
 import {
   ADDRESS,
   EMAIL,
@@ -92,6 +93,8 @@ const StyledContent = styled(Dialog.Content)`
 `;
 
 const ScheduleButton = () => {
+  const form = useRef();
+  const { addToast } = useToast();
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -113,17 +116,19 @@ const ScheduleButton = () => {
     const missingFields = requiredFields.filter((field) => !formData[field]);
 
     if (missingFields.length > 0) {
-      alert("Please fill in all required fields");
+      addToast("Please fill in all required fields", "error");
+      setIsLoading(false);
       return;
     }
 
     console.log(getTemplateParams(formData));
-    console.log(sendEmail(TEMPLATE_SCHEDULE_ID, getTemplateParams(formData)));
+    // duplicate sending message
+    // console.log(sendEmail(TEMPLATE_SCHEDULE_ID, getTemplateParams(formData)));
 
     sendEmail(TEMPLATE_SCHEDULE_ID, getTemplateParams(formData)).then(
       (result) => {
         console.log("SUCCESS!", result.text);
-        alert("Message sent successfully!");
+        addToast("Message sent successfully!", "success");
         setFormData({
           fullName: "",
           email: "",
@@ -138,7 +143,7 @@ const ScheduleButton = () => {
       (error) => {
         setIsLoading(false);
         console.error("FAILED...", error.text);
-        alert("Failed to send message. Please try again.");
+        addToast("Failed to send message. Please try again.", "error");
       }
     );
   };

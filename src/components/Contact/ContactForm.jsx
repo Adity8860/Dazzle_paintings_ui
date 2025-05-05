@@ -2,9 +2,12 @@ import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import {ADDRESS, EMAIL, MOBILE_NO, TEMPLATE_CONTACT_FORM_ID} from  "@/constants/details";
 import  { sendEmail }  from '@/service/emailService';
+import { useToast } from "@/components/ui/ToastContainer";
 
 const ContactForm = () => {
   const form = useRef();
+  const { addToast } = useToast();
+  
   // First update the formData state to include new fields
   const [formData, setFormData] = useState({
     firstName: "",
@@ -25,7 +28,7 @@ const ContactForm = () => {
   //   if (files && files[0]) {
   //     if (files[0].size > 15 * 1024 * 1024) {
   //       // 15MB limit
-  //       alert("File size should not exceed 15MB");
+  //       addToast("File size should not exceed 15MB", "error");
   //       e.target.value = null;
   //       return;
   //     }
@@ -46,11 +49,13 @@ const ContactForm = () => {
     const missingFields = requiredFields.filter((field) => !formData[field]);
 
     if (missingFields.length > 0) {
-      alert("Please fill in all required fields");
+      addToast("Please fill in all required fields", "error");
+      setIsLoading(false);
       return;
     }
     console.log(getTemplateParams(formData));
-    console.log(sendEmail(TEMPLATE_CONTACT_FORM_ID,getTemplateParams(formData)));
+    //duplicate message sending
+    // console.log(sendEmail(TEMPLATE_CONTACT_FORM_ID,getTemplateParams(formData)));
 
     // Add loading state if needed
     sendEmail(TEMPLATE_CONTACT_FORM_ID,getTemplateParams(formData))
@@ -58,12 +63,12 @@ const ContactForm = () => {
         (result) => {
            // todo: Query send successfully
           console.log("SUCCESS!", result.text);
-          alert("Message sent successfully!");
+          addToast("Message sent successfully!", "success");
           setFormData({
             firstName: "",
             lastName: "",
             email: "",
-            // phone: "",
+            phone: "", // Keep phone field in reset
             // address: "",
             // city: "",
             // service: "",
@@ -81,7 +86,7 @@ const ContactForm = () => {
           setIsLoading(false);
           // todo: Query send failed
           console.error("FAILED...", error.text);
-          alert("Failed to send message. Please try again.");
+          addToast("Failed to send message. Please try again.", "error");
         }
       );
 

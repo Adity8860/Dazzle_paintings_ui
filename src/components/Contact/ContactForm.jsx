@@ -367,7 +367,7 @@ const ContactForm = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
                     }
-                    className="w-full px-4 py-2.5 text-sm sm:text-base border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-[#FF69B4] dark:bg-gray-700/50 dark:text-white transition-colors duration-200"
+                    className="w-full px-4 py-2.5 text-sm sm:text-base border-2 border-gray-700 dark:border-gray-600 rounded-lg focus:outline-none focus:border-[#FF69B4] dark:bg-gray-700/50 dark:text-white transition-colors duration-200"
                   ></textarea>
                 </div>
 

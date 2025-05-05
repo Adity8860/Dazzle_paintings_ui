@@ -272,9 +272,9 @@ const ScheduleButton = () => {
                     required
                   >
                     <option value="">Select a time</option>
-                    <option value="morning">Morning (8AM - 12PM)</option>
-                    <option value="afternoon">Afternoon (12PM - 4PM)</option>
-                    <option value="evening">Evening (4PM - 7PM)</option>
+                    <option value="Morning(8AM - 12PM)">Morning (8AM - 12PM)</option>
+                    <option value="Afternoon(12PM - 4PM)">Afternoon (12PM - 4PM)</option>
+                    <option value="Evening(4PM - 7PM)">Evening (4PM - 7PM)</option>
                   </select>
                 </div>
               </div>

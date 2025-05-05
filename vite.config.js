@@ -21,7 +21,7 @@ export default defineConfig(({ mode }) => {
       react(), 
       tailwindcss()
     ],
-    assetsInclude: ['**/*.PNG'],
+    assetsInclude: ['**/*.PNG','**/*.JPG','**/*.jpg','**/*.png'],
     build: {
       chunkSizeWarningLimit: 1000,
       rollupOptions: {

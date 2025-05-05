@@ -14,5 +14,6 @@ export const POWER_WASHING ="Power Washing";
 export const YEARS_EXPERIENCE ="2+";
 
 export const TEMPLATE_CONTACT_FORM_ID ="template_xkds0a6";
+export const TEMPLATE_SCHEDULE_ID ="template_qn726js";
 export const TEMPLATE_CONTACT_FORM_POPUP_ID ="template_qn726js";
 

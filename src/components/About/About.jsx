@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Testimonial from "./testimonial";
 import ClientsSlider from "./clientsSlider";
-import {DAZZLE_PAINTING,YEARS_EXPERIENCE} from "@/constants/details";
+import { DAZZLE_PAINTING, YEARS_EXPERIENCE } from "@/constants/details";
 
 const About = () => {
   const [openSection, setOpenSection] = useState(1);
@@ -31,23 +31,91 @@ const About = () => {
 
         <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
           {/* Philosophy Section */}
-          <div className="text-center py-6 sm:py-8 md:py-12 lg:py-16">
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
-              Our Philosophy
-            </h2>
-            <div className="max-w-3xl mx-auto text-gray-600 dark:text-gray-300 text-sm sm:text-base px-2 sm:px-4">
-              At {DAZZLE_PAINTING}, our mission is to bring vibrant, high-quality,
-              and professional painting services to homes across Canada. We aim
-              to enhance interiors and exteriors with expert craftsmanship,
-              attention to detail, and long-lasting finishes.
+          <style>
+            @import
+            url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+          </style>
+          <div className="bg-transparent dark:bg-transparent">
+            {/* Hero Section - Improved with overlay and animation */}
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-9">
+              {/* Philosophy Section - Enhanced with card styling and animations */}
+              <div className="text-center py-10 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white/50 dark:bg-gray-800/40 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700/50 mx-2 sm:mx-4 lg:mx-6 transform hover:scale-[1.01] transition-all duration-500">
+                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-blue-600 dark:bg-blue-500 text-white px-6 py-2 rounded-full font-medium shadow-lg">
+                  Our Vision
+                </div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-gray-50 mb-6 sm:mb-8 relative inline-block">
+                  <span className="relative z-10">Our Philosophy</span>
+                  <span className="absolute bottom-0 left-0 w-full h-3 bg-blue-500/30 dark:bg-blue-400/40 -z-0 transform -rotate-1"></span>
+                </h2>
+                <div className="max-w-3xl mx-auto text-gray-700 dark:text-gray-200 text-lg sm:text-xl px-4 sm:px-6 leading-relaxed">
+                  <span className="text-3xl text-blue-500 dark:text-blue-400 font-serif italic">
+                    "
+                  </span>
+                  At{" "}
+                  <span className="text-blue-600 dark:text-blue-300 font-semibold">
+                    {DAZZLE_PAINTING}
+                  </span>
+                  , our mission is to bring vibrant, high-quality, and
+                  professional painting services to homes across Canada. We aim
+                  to enhance interiors and exteriors with expert craftsmanship,
+                  attention to detail, and long-lasting finishes.
+                  <span className="text-3xl text-blue-500 dark:text-blue-400 font-serif italic">
+                    "
+                  </span>
+                </div>
+                {/*             
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <div className="flex items-center bg-blue-50 dark:bg-blue-900/30 px-4 py-2 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-500 dark:text-blue-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="text-gray-700 dark:text-gray-300">Quality Materials</span>
+              </div>
+              <div className="flex items-center bg-blue-50 dark:bg-blue-900/30 px-4 py-2 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-500 dark:text-blue-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="text-gray-700 dark:text-gray-300">Expert Craftsmanship</span>
+              </div>
+              <div className="flex items-center bg-blue-50 dark:bg-blue-900/30 px-4 py-2 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-500 dark:text-blue-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="text-gray-700 dark:text-gray-300">Attention to Detail</span>
+              </div>
+              <div className="flex items-center bg-blue-50 dark:bg-blue-900/30 px-4 py-2 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-500 dark:text-blue-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="text-gray-700 dark:text-gray-300">Customer Satisfaction</span>
+              </div>
+            </div>
+            
+            <div className="mt-10 inline-block">
+              <a href="#domains" className="group relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-medium text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 rounded-lg shadow-md transition duration-300 ease-out border border-blue-200 dark:border-blue-800">
+                <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-blue-600 dark:bg-blue-500 group-hover:translate-x-0 ease">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </span>
+                <span className="absolute flex items-center justify-center w-full h-full text-blue-600 dark:text-blue-400 transition-all duration-300 transform group-hover:translate-x-full ease">Explore Our Services</span>
+                <span className="relative invisible">Explore Our Services</span>
+              </a>
+            </div> */}
+              </div>
+
+              <div className="flex flex-col lg:flex-row gap-8 sm:gap-10 pb-10 sm:pb-14 md:pb-18">
+                {/* Content area - can be re-enabled and styled when needed */}
+              </div>
             </div>
           </div>
 
           <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 pb-8 sm:pb-12 md:pb-16">
             {/* <div className="w-full lg:w-1/2"> */}
-              {/* <div className="space-y-2 sm:space-y-3 md:space-y-4"> */}
-                {/* Accordion sections - update button and content padding */}
-                {/* <div
+            {/* <div className="space-y-2 sm:space-y-3 md:space-y-4"> */}
+            {/* Accordion sections - update button and content padding */}
+            {/* <div
                   className={`rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-300 ${
                     openSection === 1
                       ? "bg-[#00A3FF]"
@@ -118,7 +186,7 @@ const About = () => {
                 </div>
 
                 {/* Section 2 */}
-                {/* <div
+            {/* <div
                   className={`rounded-2xl overflow-hidden transition-all duration-300 ${
                     openSection === 2
                       ? "bg-[#00A3FF]"
@@ -191,8 +259,8 @@ const About = () => {
                   )}
                 </div> */}
 
-                {/* Section 3 */}
-                {/* <div
+            {/* Section 3 */}
+            {/* <div
                   className={`rounded-2xl overflow-hidden transition-all duration-300 ${
                     openSection === 3
                       ? "bg-[#00A3FF]"
@@ -265,7 +333,7 @@ const About = () => {
                   )}
                 </div>  */}
 
-                {/* <div
+            {/* <div
                   className={`rounded-2xl overflow-hidden transition-all duration-300 ${
                     openSection === 4
                       ? "bg-[#00A3FF]"
@@ -446,11 +514,13 @@ const About = () => {
           </p>
         </div>
 
-        {/* Stats boxes grid - adjusted for better mobile layout */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-          {/* Stats box 1 - Heart Icon */}
-          <div className="text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4">
-            <div className="inline-block p-2 sm:p-3 rounded-full bg-red-100 dark:bg-red-900/20 mb-2 sm:mb-3 animate-bounce">
+        {/* Stats boxes grid - centered layout for all screen sizes */}
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 px-2 sm:px-4">
+          {/* Stats box 1 - Heart Icon - Enhanced */}
+          <div className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)] max-w-xs mx-auto text-center relative overflow-hidden group bg-white dark:bg-gray-800/80 shadow-lg hover:shadow-xl rounded-xl p-4 sm:p-5 md:p-6 transform hover:scale-102 transition-all duration-300 border border-gray-100/80 dark:border-gray-700/50">
+            <div className="absolute -right-12 -top-12 w-24 h-24 rounded-full bg-red-500/10 dark:bg-red-500/5"></div>
+            <div className="absolute -left-12 -bottom-12 w-24 h-24 rounded-full bg-red-500/10 dark:bg-red-500/5"></div>
+            <div className="inline-flex items-center justify-center p-3 sm:p-4 rounded-full bg-red-100 dark:bg-red-900/30 mb-3 sm:mb-4 relative z-10 group-hover:scale-110 transition-transform duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-8 h-8 text-red-500 dark:text-red-400"
@@ -466,17 +536,21 @@ const About = () => {
                 />
               </svg>
             </div>
-            <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2 animate-count">
-              228
-            </div>
-            <div className="text-gray-600 dark:text-gray-300 font-medium text-xs sm:text-sm">
-              HAPPY CLIENTS
+            <div className="relative z-10">
+              <div className="text-4xl sm:text-5xl md:text-6xl font-bold dark:text-white mb-2 bg-clip-text bg-gradient-to-r from-red-500 to-red-600 dark:from-red-400 dark:to-red-500 text-transparent">
+                228
+              </div>
+              <div className="text-gray-600 dark:text-gray-300 font-medium text-sm sm:text-base uppercase tracking-wider">
+                Happy Clients
+              </div>
             </div>
           </div>
 
-          {/* Stats box 2 - Hand Icon */}
-          <div className="text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4">
-            <div className="inline-block p-3 sm:p-4 rounded-full bg-blue-100 dark:bg-blue-900/20 mb-3 sm:mb-4 animate-bounce">
+          {/* Stats box 2 - Hand Icon - Enhanced */}
+          <div className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)] max-w-xs mx-auto text-center relative overflow-hidden group bg-white dark:bg-gray-800/80 shadow-lg hover:shadow-xl rounded-xl p-4 sm:p-5 md:p-6 transform hover:scale-102 transition-all duration-300 border border-gray-100/80 dark:border-gray-700/50">
+            <div className="absolute -right-12 -top-12 w-24 h-24 rounded-full bg-blue-500/10 dark:bg-blue-500/5"></div>
+            <div className="absolute -left-12 -bottom-12 w-24 h-24 rounded-full bg-blue-500/10 dark:bg-blue-500/5"></div>
+            <div className="inline-flex items-center justify-center p-3 sm:p-4 rounded-full bg-blue-100 dark:bg-blue-900/30 mb-3 sm:mb-4 relative z-10 group-hover:scale-110 transition-transform duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-8 h-8 text-blue-500 dark:text-blue-400"
@@ -492,17 +566,21 @@ const About = () => {
                 />
               </svg>
             </div>
-            <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2 animate-count">
-              150
-            </div>
-            <div className="text-gray-600 dark:text-gray-300 font-medium text-sm sm:text-base">
-              PROJECTS COMPLETED
+            <div className="relative z-10">
+              <div className="text-4xl sm:text-5xl md:text-6xl font-bold   dark:text-white mb-2 bg-clip-text bg-gradient-to-r from-blue-500 to-blue-600 dark:from-blue-400 dark:to-blue-500 text-transparent">
+                150
+              </div>
+              <div className="text-gray-600 dark:text-gray-300 font-medium text-sm sm:text-base uppercase tracking-wider">
+                Projects Completed
+              </div>
             </div>
           </div>
 
-          {/* Stats box 3 - Education Icon */}
-          <div className="text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4">
-            <div className="inline-block p-3 sm:p-4 rounded-full bg-green-100 dark:bg-green-900/20 mb-3 sm:mb-4 animate-bounce">
+          {/* Stats box 3 - Education Icon - Enhanced */}
+          <div className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)] max-w-xs mx-auto text-center relative overflow-hidden group bg-white dark:bg-gray-800/80 shadow-lg hover:shadow-xl rounded-xl p-4 sm:p-5 md:p-6 transform hover:scale-102 transition-all duration-300 border border-gray-100/80 dark:border-gray-700/50">
+            <div className="absolute -right-12 -top-12 w-24 h-24 rounded-full bg-green-500/10 dark:bg-green-500/5"></div>
+            <div className="absolute -left-12 -bottom-12 w-24 h-24 rounded-full bg-green-500/10 dark:bg-green-500/5"></div>
+            <div className="inline-flex items-center justify-center p-3 sm:p-4 rounded-full bg-green-100 dark:bg-green-900/30 mb-3 sm:mb-4 relative z-10 group-hover:scale-110 transition-transform duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-8 h-8 text-green-500 dark:text-green-400"
@@ -524,39 +602,16 @@ const About = () => {
                 />
               </svg>
             </div>
-            <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2 animate-count">
-              25
-            </div>
-            <div className="text-gray-600 dark:text-gray-300 font-medium text-sm sm:text-base">
-              CERTIFIED PAINTERS
+            <div className="relative z-10">
+              <div className="text-4xl sm:text-5xl md:text-6xl font-bold dark:text-white mb-2 bg-clip-text bg-gradient-to-r from-green-500 to-green-600 dark:from-green-400 dark:to-green-500 text-transparent">
+                25
+              </div>
+              <div className="text-gray-600 dark:text-gray-300 font-medium text-sm sm:text-base uppercase tracking-wider">
+                Certified Painters
+              </div>
             </div>
           </div>
 
-          {/* Stats box 4 - Money Icon */}
-          <div className="text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4">
-            <div className="inline-block p-3 sm:p-4 rounded-full bg-yellow-100 dark:bg-yellow-900/20 mb-3 sm:mb-4 animate-bounce">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-8 h-8 text-yellow-500 dark:text-yellow-400"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-            </div>
-            <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2 animate-count">
-              {YEARS_EXPERIENCE}
-            </div>
-            <div className="text-gray-600 dark:text-gray-300 font-medium text-sm sm:text-base">
-              YEARS EXPERIENCE
-            </div>
-          </div>
         </div>
       </div>
       {/* Testimonial Section */}

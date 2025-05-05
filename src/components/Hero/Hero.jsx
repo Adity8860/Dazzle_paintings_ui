@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import Slider from "./Slider";
 import { Link } from "react-router-dom";
-import BGVideo from "../../assets/BGVideo.mp4";
+import IntroBG from "../../assets/IntroBG.mp4";
 import OldLogo from "../../assets/OldLogo.PNG";
 import OldLogotheme from "../../assets/old_logo_theme.png";
 
 var showSlider = false;
-var showVideo = false;
-var showImage = true;
+var showVideo = true;
+var showImage = false;
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -62,7 +62,7 @@ const Hero = () => {
             muted
             className="w-full h-full object-cover absolute top-0 left-0 z-0 brightness-100 dark:brightness-90"
           >
-            <source src={BGVideo} type="video/mp4" />
+            <source src={IntroBG} type="video/mp4" />
           </video> 
           {/* Content Overlay */}
           <div className="relative z-20 h-full flex flex-col items-center justify-center text-white px-4 sm:px-6 md:px-8 text-center">

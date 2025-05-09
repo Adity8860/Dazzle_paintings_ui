@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const Testimonial = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+
   const testimonials = [
     {
       text: "Our clients love Dazzle Painting for our professionalism, attention to detail, and high-quality results. They praise our smooth, hassle-free service, from on-time arrivals to spotless finishes.",
       author: "John Smith",
-      role: "Homeowner"
+      role: "Homeowner",
     },
     {
       text: "Many appreciate our transparent pricing, ensuring no hidden fees—just stunning transformations. Whether it's a fresh coat of paint, a unique accent wall, or a full home makeover, we bring creativity and precision to every project.",
       author: "Sarah Johnson",
-      role: "Interior Designer"
+      role: "Interior Designer",
     },
     {
       text: "Our team's reliability, efficiency, and expert craftsmanship leave homeowners thrilled with vibrant, long-lasting results. Let Dazzle Painting bring your vision to life!",
       author: "Michael Brown",
-      role: "Business Owner"
-    }
+      role: "Business Owner",
+    },
   ];
 
   useEffect(() => {
@@ -31,29 +31,24 @@ const Testimonial = () => {
 
   return (
     <div>
-      <div className="bg-[#0C4A6E] dark:bg-gray-900 py-16 md:py-24">
+      <div className="bg-gray-50 dark:bg-gray-900 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Testimonial
+          <div className="text-center mb-8 sm:mb-10 md:mb-14">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4 relative inline-block">
+              <span className="relative z-10">Testimonials</span>
+              <span className="absolute bottom-0 left-0 w-full h-3 bg-blue-500/30 dark:bg-blue-400/40 -z-0 transform -rotate-1"></span>
             </h2>
-            <p className="text-gray-300 max-w-3xl mx-auto">
-              Performed suspicion in certainty so frankness by attention pretended.
-              Newspaper or in tolerably education enjoyment. Extremity excellent.
-            </p>
+            <div className="h-1 w-24 bg-green-500 mx-auto mb-6 rounded-full"></div>
           </div>
 
           <div className="relative overflow-hidden">
-            <div 
+            <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {testimonials.map((testimonial, index) => (
-                <div 
-                  key={index}
-                  className="w-full flex-shrink-0"
-                >
-                                  <div className="bg-white dark:bg-gray-800 rounded-lg p-6 sm:p-10 md:p-16 relative max-w-5xl mx-auto shadow-2xl my-8">
+                <div key={index} className="w-full flex-shrink-0">
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-6 sm:p-10 md:p-16 relative max-w-5xl mx-auto shadow-2xl my-8">
                     <div className="text-gray-500 dark:text-gray-400 absolute top-4 sm:top-8 left-4 sm:left-8">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

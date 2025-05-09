@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Testimonial from "./testimonial";
 import ClientsSlider from "./clientsSlider";
 import { DAZZLE_PAINTING, YEARS_EXPERIENCE } from "@/constants/details";
 import Titlebar from "../../assets/titlebar.jpg";
+import ExteriorPaint from "../../assets/exteriorPaint.HEIC";
+import CPImage from "../../assets/CPImage.jpg";
+import PWImage from "../../assets/pw.jpg";
 
 const About = () => {
   const [openSection, setOpenSection] = useState(1);
@@ -420,90 +424,120 @@ const About = () => {
 
       {/* Our Domains Section */}
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-6 sm:py-8 md:py-12 lg:py-16 bg-white dark:bg-gray-900">
-        <div className="text-center mb-6 sm:mb-8 md:mb-12">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3">
-            Our Domains
+        <div className="text-center mb-8 sm:mb-10 md:mb-14">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4 relative inline-block">
+            <span className="relative z-10">Our Services</span>
+            <span className="absolute bottom-0 left-0 w-full h-3 bg-blue-500/30 dark:bg-blue-400/40 -z-0 transform -rotate-1"></span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-sm sm:text-base px-2 sm:px-4">
-            Performed suspicion in certainty so frankness by attention
-            pretended. Newspaper or in tolerably education enjoyment. Extremity
-            excellent.
+          <div className="h-1 w-24 bg-green-500 mx-auto mb-6 rounded-full"></div>
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-sm sm:text-base md:text-lg px-4 sm:px-6 leading-relaxed">
+            Explore our comprehensive range of professional painting services designed to transform your spaces with quality craftsmanship and attention to detail.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
-          {/* Domain cards - update padding and text sizes */}
-          <div className="text-center group relative p-3 sm:p-4 md:p-6 rounded-lg transition-all duration-500 cursor-pointer hover:bg-[#00A3FF] hover:-translate-y-2 hover:scale-105 shadow-lg bg-white dark:bg-gray-950 hover:shadow-[#00A3FF]/50 hover:shadow-2xl">
-            <div className="text-[100px] sm:text-[120px] md:text-[140px] lg:text-[180px] font-bold text-gray-100 dark:text-gray-900 group-hover:text-white/20 transition-colors duration-500 group-hover:scale-110">
-              01
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-7 lg:gap-8 py-4">
+          {/* Domain cards */}
+          <Link to="/interior-painting" className="block transform transition-all duration-300 hover:scale-[1.02]">
+            <div className="text-center group relative p-6 rounded-xl transition-all duration-500 cursor-pointer shadow-lg bg-white dark:bg-gray-900 hover:shadow-[#00A3FF]/40 hover:shadow-xl border border-gray-100 dark:border-gray-800 h-full flex flex-col">
+              <div className="aspect-square overflow-hidden rounded-lg mb-5 shadow-md">
+                <img
+                  src="https://images.unsplash.com/photo-1600054648630-e10e710825f6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Interior Painting"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
+                />
+              </div>
+
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3  dark:group-hover:text-gray-50 transition-colors duration-300">
+                Interior Painting
+              </h3>
+              <div className="h-1 w-16 bg-green-500 mx-auto mb-4 group-hover:w-24 group-hover:bg-blue-500   transition-all duration-500 rounded-full"></div>
+              <p  className="text-gray-600 dark:text-gray-300 group-hover:text-black/90 transition-colors duration-300 text-base mt-auto">
+                Professional interior painting services for your home or
+                business, delivering perfect finishes and attention to detail.
+              </p>
             </div>
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 -mt-12 sm:-mt-16 md:-mt-20 group-hover:text-white transition-colors duration-500">
-              Interior Painting
-            </h3>
-            <div className="h-1 w-16 sm:w-24 bg-green-500 mx-auto mb-3 sm:mb-4 group-hover:w-28 sm:group-hover:w-36 group-hover:bg-white transition-all duration-500 group-hover:rotate-6"></div>
-            <p className="text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-500 text-sm sm:text-base md:text-lg">
-              Professional interior painting services for your home or business,
-              delivering perfect finishes and attention to detail.
-            </p>
-          </div>
+          </Link>
 
           {/* Domain 2 */}
-          <div className="text-center group relative p-4 sm:p-6 md:p-8 rounded-lg transition-all duration-500 cursor-pointer hover:bg-[#00A3FF] hover:-translate-y-2 hover:scale-105 shadow-lg bg-white dark:bg-gray-950 hover:shadow-[#00A3FF]/50 hover:shadow-2xl">
-            <div className="text-[100px] sm:text-[120px] md:text-[140px] lg:text-[180px] font-bold text-gray-100 dark:text-gray-900 group-hover:text-white/20 transition-colors duration-500 group-hover:scale-110">
-              02
+          <Link to="/exterior-painting" className="block transform transition-all duration-300 hover:scale-[1.02]">
+            <div className="text-center group relative p-6 rounded-xl transition-all duration-500 cursor-pointer shadow-lg bg-white dark:bg-gray-900 hover:shadow-[#00A3FF]/40 hover:shadow-xl border border-gray-100 dark:border-gray-800 h-full flex flex-col">
+              <div className="aspect-square overflow-hidden rounded-lg mb-5 shadow-md">
+                <img
+                  src={ExteriorPaint}
+                  alt="Exterior Painting"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3  dark:group-hover:text-gray-50 transition-colors duration-300">
+                Exterior Painting
+              </h3>
+              <div className="h-1 w-16 bg-green-500 mx-auto mb-4 group-hover:w-24 group-hover:bg-blue-500   transition-all duration-500 rounded-full"></div>
+              <p className="text-gray-600 dark:text-gray-300 group-hover:text-black/90 transition-colors duration-300 text-base mt-auto">
+                Expert exterior painting solutions that protect and beautify
+                your property while enhancing curb appeal.
+              </p>
             </div>
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 -mt-12 sm:-mt-16 md:-mt-20 group-hover:text-white transition-colors duration-500">
-              Exterior Painting
-            </h3>
-            <div className="h-1 w-16 sm:w-24 bg-green-500 mx-auto mb-3 sm:mb-4 group-hover:w-28 sm:group-hover:w-36 group-hover:bg-white transition-all duration-500 group-hover:rotate-6"></div>
-            <p className="text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-500 text-sm sm:text-base md:text-lg">
-              Expert exterior painting solutions that protect and beautify your
-              property while enhancing curb appeal.
-            </p>
-          </div>
+          </Link>
 
           {/* Domain 3 */}
-          <div className="text-center group relative p-4 sm:p-6 md:p-8 rounded-lg transition-all duration-500 cursor-pointer hover:bg-[#00A3FF] hover:-translate-y-2 hover:scale-105 shadow-lg bg-white dark:bg-gray-950 hover:shadow-[#00A3FF]/50 hover:shadow-2xl">
-            <div className="text-[100px] sm:text-[120px] md:text-[140px] lg:text-[180px] font-bold text-gray-100 dark:text-gray-900 group-hover:text-white/20 transition-colors duration-500 group-hover:scale-110">
-              03
+          <Link to="/commercial-painting" className="block transform transition-all duration-300 hover:scale-[1.02]"> 
+            <div className="text-center group relative p-6 rounded-xl transition-all duration-500 cursor-pointer shadow-lg bg-white dark:bg-gray-900 hover:shadow-[#00A3FF]/40 hover:shadow-xl border border-gray-100 dark:border-gray-800 h-full flex flex-col">
+              <div className="aspect-square overflow-hidden rounded-lg mb-5 shadow-md">
+                <img
+                  src={CPImage}
+                  alt="Commercial Painting"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3  dark:group-hover:text-gray-50 transition-colors duration-300">
+                Commercial Painting
+              </h3>
+              <div className="h-1 w-16 bg-green-500 mx-auto mb-4 group-hover:w-24 group-hover:bg-blue-500   transition-all duration-500 rounded-full"></div>
+              <p  className="text-gray-600 dark:text-gray-300 group-hover:text-black/90 transition-colors duration-300 text-base mt-auto">
+                Comprehensive commercial painting services tailored to businesses,
+                ensuring minimal disruption and maximum quality.
+              </p>
             </div>
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 -mt-12 sm:-mt-16 md:-mt-20 group-hover:text-white transition-colors duration-500">
-              Commercial Painting
-            </h3>
-            <div className="h-1 w-16 sm:w-24 bg-green-500 mx-auto mb-3 sm:mb-4 group-hover:w-28 sm:group-hover:w-36 group-hover:bg-white transition-all duration-500 group-hover:rotate-6"></div>
-            <p className="text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-500 text-sm sm:text-base md:text-lg">
-              Comprehensive commercial painting services tailored to businesses,
-              ensuring minimal disruption and maximum quality.
-            </p>
-          </div>
+          </Link>
 
           {/* Domain 4 */}
-          <div className="text-center group relative p-4 sm:p-6 md:p-8 rounded-lg transition-all duration-500 cursor-pointer hover:bg-[#00A3FF] hover:-translate-y-2 hover:scale-105 shadow-lg bg-white dark:bg-gray-950 hover:shadow-[#00A3FF]/50 hover:shadow-2xl">
-            <div className="text-[100px] sm:text-[120px] md:text-[140px] lg:text-[180px] font-bold text-gray-100 dark:text-gray-900 group-hover:text-white/20 transition-colors duration-500 group-hover:scale-110">
-              04
+          <Link to="/power-washing" className="block transform transition-all duration-300 hover:scale-[1.02]">
+            <div className="text-center group relative p-6 rounded-xl transition-all duration-500 cursor-pointer shadow-lg bg-white dark:bg-gray-900 hover:shadow-[#00A3FF]/40 hover:shadow-xl border border-gray-100 dark:border-gray-800 h-full flex flex-col">
+              <div className="aspect-square overflow-hidden rounded-lg mb-5 shadow-md">
+                <img
+                  src={PWImage}
+                  alt="Power Washing"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3  dark:group-hover:text-gray-50 transition-colors duration-300">
+                Power Washing
+              </h3>
+              <div className="h-1 w-16 bg-green-500 mx-auto mb-4 group-hover:w-24 group-hover:bg-blue-500   transition-all duration-500 rounded-full"></div>
+              <p className="text-gray-600 dark:text-gray-300 group-hover:text-black/90 transition-colors duration-300 text-base mt-auto">
+              Professional power washing removes dirt, grime, and mold from your property, restoring surfaces and boosting curb appeal.
+              </p>
             </div>
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 -mt-12 sm:-mt-16 md:-mt-20 group-hover:text-white transition-colors duration-500">
-              Residential Painting
-            </h3>
-            <div className="h-1 w-16 sm:w-24 bg-green-500 mx-auto mb-3 sm:mb-4 group-hover:w-28 sm:group-hover:w-36 group-hover:bg-white transition-all duration-500 group-hover:rotate-6"></div>
-            <p className="text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-500 text-sm sm:text-base md:text-lg">
-              Transform your home with our professional residential painting
-              services, delivering beautiful and lasting results.
-            </p>
-          </div>
+          </Link>
+         
         </div>
       </div>
 
       {/* Meet our team */}
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-8 sm:py-12 md:py-16 lg:py-24 bg-gray-50 dark:bg-gray-900">
-        <div className="text-center mb-6 sm:mb-8 md:mb-12 animate-fade-in">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3">
-            Meet Our Team
+        <div className="text-center mb-8 sm:mb-10 md:mb-14 animate-fade-in">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4 relative inline-block">
+            <span className="relative z-10">Meet Our Painting Experts</span>
+            <span className="absolute bottom-0 left-0 w-full h-3 bg-blue-500/30 dark:bg-blue-400/40 -z-0 transform -rotate-1"></span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-sm sm:text-base px-2 sm:px-4">
-            Performed suspicion in certainty so frankness by attention
-            pretended. Newspaper or in tolerably education enjoyment. Extremity
-            excellent.
+          <div className="h-1 w-24 bg-green-500 mx-auto mb-6 rounded-full"></div>
+          <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-sm sm:text-base md:text-lg px-4 sm:px-6 leading-relaxed">
+            Our skilled team of licensed painters, color consultants, and
+            surface preparation specialists is passionate about transforming
+            spaces with care and creativity. From intricate trim work to
+            flawless wall finishes, we blend technical skill with artistic
+            vision. Fully insured and EPA-certified, we stay up-to-date with the
+            latest techniques to deliver beautiful, lasting results.
           </p>
         </div>
 
@@ -604,7 +638,6 @@ const About = () => {
               </div>
             </div>
           </div>
-
         </div>
       </div>
       {/* Testimonial Section */}

@@ -11,6 +11,7 @@ var showImage = false;
 
 const Hero = () => {
   const heroRef = useRef(null);
+  const videoRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -32,6 +33,12 @@ const Hero = () => {
     return () => {
       elements.forEach((el) => observer.unobserve(el));
     };
+  }, []);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 1.5; // Set to 1.5x speed, adjust as needed
+    }
   }, []);
 
   return (
@@ -57,6 +64,7 @@ const Hero = () => {
             })}
           </div>
          <video
+            ref={videoRef}
             autoPlay
             loop
             muted

@@ -11,13 +11,6 @@ const Navbar = () => {
     setOpenDropdown(openDropdown === dropdown ? null : dropdown);
   };
 
-  // const aboutDropdown = [
-  //   "Our Story",
-  //   "Our Team",
-  //   // 'Why Choose Us',
-  //   // 'Testimonials'
-  // ];
-
   // Change the servicesDropdown array to include both display name and custom path
   const servicesDropdown = [
     { name: "Interior Painting", path: "/interior-painting" },
@@ -27,9 +20,6 @@ const Navbar = () => {
     { name: "Cabinet painting", path: "/cabinet-painting" },
     { name: "Staining ", path: "/staining" },
     { name: "Power washing", path: "/power-washing" },
-    // { name: "Residential Painting", path: "/residential-painting" },
-    // { name: 'Wallpaper Installation', path: '/wallpaper' },
-    // { name: 'Color Consultation', path: '/color-consultation' },
   ];
 
   return (
@@ -53,7 +43,7 @@ const Navbar = () => {
                 </span>
               </div>
             </Link>
-            <span className="hidden md:inline">
+            <span className="hidden sm:inline md:inline">
               &nbsp; <small><em>Fully Insured By</em></small> &nbsp;
               <img
                 src="https://www.worksafebc.com/img/worksafebc_logo.jpg"
@@ -61,12 +51,11 @@ const Navbar = () => {
                 className="inline h-6 align-middle"
               />
             </span>
-             
           </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center justify-between flex-[0.75] ml-8 lg:ml-16">
-            <div className="flex items-center space-x-4 lg:space-x-8">
+          {/* Desktop & Tablet Menu */}
+          <div className="hidden md:flex items-center justify-between flex-[0.75] ml-4 sm:ml-6 lg:ml-16">
+            <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-8">
               <Link
                 to="/home"
                 className="text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] transition-colors duration-200 font-medium"
@@ -74,50 +63,42 @@ const Navbar = () => {
                 Home
               </Link>
 
-              {/* Services Dropdown - Desktop */}
-              <div className="relative group cursor-pointer">
-                <button className="cursor-pointer flex items-center text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] transition-colors duration-200 font-medium">
-                  Services
+              {/* Services Dropdown - Desktop & Tablet */}
+              <div className="relative group">
+                <button
+                  onClick={() => handleDropdownClick("services")}
+                  className="flex items-center justify-between px-3 py-2.5 text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] transition-colors duration-200 font-medium rounded-lg  cursor-pointer"
+                >
+                  <span>Services</span>
+                  <ChevronDown
+                    className={`ml-2 h-4 w-4 transform transition-transform duration-200 ${openDropdown === "services" ? "rotate-180" : ""}`}
+                  />
                 </button>
-                <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-background dark:bg-gray-800 border border-border dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  {servicesDropdown.map((item) => (
-                    <Link
-                      key={item.name}
-                      to={item.path}
-                      className="block px-4 py-2 text-sm text-foreground hover:text-[#ff7d67] dark:text-gray-300 dark:hover:text-[#ff9d8d] hover:bg-gray-50 dark:hover:bg-gray-700"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
+                {openDropdown === "services" && (
+                  <div className="absolute left-0 mt-1 w-56 rounded-lg shadow-lg bg-background dark:bg-gray-800 border border-border dark:border-gray-700 z-50 transform transition-all duration-200 ease-out origin-top-left">
+                    {servicesDropdown.map((item) => (
+                      <Link
+                        key={item.name}
+                        to={item.path}
+                        className="block px-4 py-2.5 text-sm text-foreground hover:text-[#ff7d67] dark:text-gray-300 dark:hover:text-[#ff9d8d] hover:bg-gray-50 dark:hover:bg-gray-700 first:rounded-t-lg last:rounded-b-lg transition-colors duration-150"
+                        onClick={() => setOpenDropdown(null)}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
 
-              {/* About and Services Dropdowns */}
-              <div className="relative group cursor-pointer">
+              {/* About Us */}
+              <div>
                 <Link to="/about">
-                  {" "}
-                  <button className="cursor-pointer flex items-center text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] transition-colors duration-200 font-medium">
+                  <button className="cursor-pointer flex items-center px-2 sm:px-3 py-2 text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] transition-colors duration-200 font-medium">
                     About Us
-                    {/* <ChevronDown className="ml-1 h-4 w-4" /> */}
                   </button>
                 </Link>
-
-                {/* <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-background dark:bg-gray-800 border border-border dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  {aboutDropdown.map((item) => (
-                    <a
-                      key={item}
-                      href="#"
-                      className="block px-4 py-2 text-sm text-foreground hover:text-[#ff7d67] dark:text-gray-300 dark:hover:text-[#ff9d8d] hover:bg-gray-50 dark:hover:bg-gray-700"
-                    >
-                      {item}
-                    </a>
-                  ))}
-                </div> */}
               </div>
 
-              {/* <a href="#" className="cursor-pointer text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] transition-colors duration-200 font-medium">
-                Blog
-              </a> */}
               <Link
                 to="/contact"
                 className="text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] transition-colors duration-200 font-medium"
@@ -127,11 +108,10 @@ const Navbar = () => {
             </div>
 
             {/* Right side buttons */}
-            <div className="flex items-center space-x-4 lg:space-x-6">
+            <div className="flex items-center space-x-2 sm:space-x-4 lg:space-x-6">
               <ModeToggle />
-              <a href="tel:+16477170133" className="inline-flex items-center px-4 lg:px-6 py-2 lg:py-2.5 border-2 border-[#ff7d67] dark:border-[#ff9d8d] text-[#ff7d67] dark:text-[#ff9d8d] font-medium rounded-md hover:bg-[#ff7d67]/10 dark:hover:bg-[#ff9d8d]/10 transition-colors duration-200">
-              
-                <Phone className="h-4 w-4 mr-2" />
+              <a href="tel:+16477170133" className="inline-flex items-center px-3 sm:px-4 lg:px-6 py-2 lg:py-2.5 border-2 border-[#ff7d67] dark:border-[#ff9d8d] text-[#ff7d67] dark:text-[#ff9d8d] font-medium rounded-md hover:bg-[#ff7d67]/10 dark:hover:bg-[#ff9d8d]/10 transition-colors duration-200">
+                <Phone className="h-4 w-4 mr-1 sm:mr-2" />
                 <span className="hidden sm:inline">Call Us</span>
               </a>
             </div>
@@ -144,8 +124,7 @@ const Navbar = () => {
             <a href="tel:+16477170133" className="inline-flex items-center p-2 border-2 border-[#ff7d67] dark:border-[#ff9d8d] text-[#ff7d67] dark:text-[#ff9d8d] rounded-md hover:bg-[#ff7d67]/10 dark:hover:bg-[#ff9d8d]/10 transition-colors duration-200">
               <Phone className="h-4 w-4" />
             </a>
-            <a
-            
+            <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-[#ff7d67] dark:hover:text-[#ff9d8d] hover:bg-gray-100 dark:hover:bg-gray-800"
             >
@@ -171,14 +150,12 @@ const Navbar = () => {
                   />
                 )}
               </svg>
-            </a>
+            </button>
           </div>
 
           {/* Mobile Menu */}
           <div
-            className={`md:hidden fixed inset-0 bg-background/95 backdrop-blur-sm z-50 transition-all duration-300 ${
-              isOpen ? "opacity-100 visible" : "opacity-0 invisible"
-            }`}
+            className={`md:hidden fixed inset-0 bg-background/95 backdrop-blur-sm z-50 transition-all duration-300 ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
           >
             <div className="fixed inset-y-0 right-0 w-full max-w-sm bg-background shadow-xl">
               <div className="flex items-center justify-between p-4 border-b border-border">
@@ -192,7 +169,7 @@ const Navbar = () => {
                     <span className="text-xl font-semibold text-gray-900 dark:text-white">
                       Dazzle{" "}
                       <span className="text-[#FF69B4] dark:text-[#FF69B4]">
-                        paintings
+                        painting
                       </span>
                     </span>
                   </div>
@@ -234,9 +211,7 @@ const Navbar = () => {
                   >
                     Services
                     <ChevronDown
-                      className={`h-4 w-4 transform transition-transform ${
-                        openDropdown === "services" ? "rotate-180" : ""
-                      }`}
+                      className={`h-4 w-4 transform transition-transform ${openDropdown === "services" ? "rotate-180" : ""}`}
                     />
                   </button>
                   {openDropdown === "services" && (
@@ -270,104 +245,20 @@ const Navbar = () => {
                 >
                   Contact
                 </Link>
+                
                 {/* WorkSafeBC Logo - Only on Mobile Menu */}
-                  <div className="block md:hidden text-sm text-foreground text-center pt-4">
-                    <span className="block mb-2">
-                      <small><em>Fully Insured By</em></small>
-                    </span>
-                    <img
-                      src="https://www.worksafebc.com/img/worksafebc_logo.jpg"
-                      alt="WorksafeBC"
-                      className="mx-auto h-6"
-                    />
-                  </div>
-
-                {/* <div className="flex items-center justify-between px-3 py-4 border-t border-border mt-4">
-                  <ModeToggle />
-                  <a
-                    href="tel:+16477170133"
-                    className="inline-flex items-center px-4 py-2 border-2 border-[#ff7d67] dark:border-[#ff9d8d] text-[#ff7d67] dark:text-[#ff9d8d] font-medium rounded-md hover:bg-[#ff7d67]/10 dark:hover:bg-[#ff9d8d]/10"
-                  >
-                    <Phone className="h-4 w-4 mr-2" />
-                    Call Us
-                  </a>
-                </div> */}
+                <div className="block md:hidden text-sm text-foreground text-center pt-4">
+                  <span className="block mb-2">
+                    <small><em>Fully Insured By</em></small>
+                  </span>
+                  <img
+                    src="https://www.worksafebc.com/img/worksafebc_logo.jpg"
+                    alt="WorksafeBC"
+                    className="mx-auto h-6"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      <div
-        className={`md:hidden border-t border-border transition-all duration-200 ${
-          isOpen ? "opacity-100" : "opacity-0 hidden"
-        }`}
-      >
-        <div className="px-4 pt-2 pb-3 space-y-2">
-          <Link
-            to="/home"
-            className="block px-3 py-2 text-foreground hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 rounded-md"
-          >
-            Home
-          </Link>
-
-          {/* Mobile About Dropdown */}
-          <div className="space-y-1">
-            <Link to="/about">
-              <button className="flex items-center justify-between w-full px-3 py-2 text-foreground hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 rounded-md">
-                About Us
-              </button>
-            </Link>
-          </div>
-
-          {/* Mobile Services Dropdown */}
-          <div className="space-y-1">
-            <button
-              onClick={() => handleDropdownClick("services")}
-              className="flex items-center justify-between w-full px-3 py-2 text-foreground hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 rounded-md"
-            >
-              Services
-              <ChevronDown
-                className={`h-4 w-4 transform transition-transform ${
-                  openDropdown === "services" ? "rotate-180" : ""
-                }`}
-              />
-            </button>
-            {openDropdown === "services" && (
-              <div className="pl-4 space-y-1">
-                {servicesDropdown.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.path}
-                    className="block px-3 py-2 text-sm text-foreground hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 rounded-md"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* <a
-            href="#"
-            className="block px-3 py-2 text-foreground hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 rounded-md"
-          >
-            Blog
-          </a> */}
-          <Link
-            to="/contact"
-            className="block px-3 py-2 text-foreground hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 rounded-md"
-          >
-            Contact
-          </Link>
-
-          <div className="flex items-center justify-between px-3 py-4 border-t border-border mt-4">
-            <ModeToggle />
-            <a href="tel:+16477170133" className="inline-flex items-center px-4 py-2 border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 font-medium rounded-md hover:bg-blue-50 dark:hover:bg-blue-950">
-              <Phone className="h-4 w-4 mr-2" />
-              Contact Us
-            </a>
           </div>
         </div>
       </div>

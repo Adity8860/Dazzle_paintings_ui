@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import Slider from "./Slider";
 import { Link } from "react-router-dom";
-import home_video from "../../assets/home.mp4";
+// import home_video from "../../assets/home.mp4";
 import OldLogo from "../../assets/OldLogo.PNG";
+import BVIDEO from "../../assets/BVIDEO.mp4";
 
 var showSlider = false;
 var showVideo = true;
@@ -69,7 +70,7 @@ const Hero = () => {
             muted
             className="w-full h-full object-cover absolute top-0 left-0 z-0 brightness-60 dark:brightness-60"
           >
-            <source src={home_video} type="video/mp4" />
+            <source src={BVIDEO} type="video/mp4" />
           </video> 
           {/* Content Overlay */}
           <div className="relative z-20 h-full flex flex-col items-center justify-center text-white px-4 sm:px-6 md:px-8 text-center">

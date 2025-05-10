@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import  power_wasing_img from "../../assets/power-washing.jpg"
+import  cabinet_painting_img from "../../assets/cabinet-painting.jpeg"
+import  commercial_painting_img from "../../assets/commercial-painting.jpg"
 
 const Services = () => {
   return (
@@ -50,7 +53,7 @@ const Services = () => {
           >
             <div className="relative overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                src={cabinet_painting_img}
                 alt="Residential Exterior Painting"
                 className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-500 group-hover:scale-110 dark:brightness-90"
               />
@@ -77,7 +80,7 @@ const Services = () => {
           >
             <div className="relative overflow-hidden">
               <img
-                src="https://plus.unsplash.com/premium_photo-1661501072174-26da76dbaae3?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src={power_wasing_img}
                 alt="Power Washing Services"
                 className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-500 group-hover:scale-110 dark:brightness-90"
               />
@@ -104,7 +107,7 @@ const Services = () => {
           >
             <div className="relative overflow-hidden">
               <img
-                src="https://static.wixstatic.com/media/041b7c_96aa0d5263a3415b951e73068298607b~mv2.jpg/v1/fill/w_369,h_266,al_c,q_80,usm_0.33_1.00_0.00,enc_avif,quality_auto/Exterior_coquitlam-painting_edited.jpg"
+                src={commercial_painting_img}
                 alt="Commercial Painting"
                 className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-500 group-hover:scale-110 dark:brightness-90"
               />

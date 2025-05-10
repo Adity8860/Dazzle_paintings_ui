@@ -3,7 +3,7 @@ import Slider from "./Slider";
 import { Link } from "react-router-dom";
 // import home_video from "../../assets/home.mp4";
 import OldLogo from "../../assets/OldLogo.PNG";
-import BVIDEO from "../../assets/BVIDEO.mp4";
+import BVIDEO from "../../assets/home_fixed.mp4";
 
 var showSlider = false;
 var showVideo = true;

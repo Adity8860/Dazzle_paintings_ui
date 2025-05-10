@@ -65,7 +65,13 @@ const ClientsSlider = () => {
   return (
     <div className="w-full overflow-hidden bg-white dark:bg-gray-950 py-8">
       <div className="container mx-auto px-4">
-        <h3 className="text-2xl font-semibold text-center mb-8">Our Clients</h3>
+        <div className="text-center mb-8 sm:mb-10 md:mb-14">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4 relative inline-block">
+            <span className="relative z-10">Our Clients</span>
+            <span className="absolute bottom-0 left-0 w-full h-3 bg-blue-500/30 dark:bg-blue-400/40 -z-0 transform -rotate-1"></span>
+          </h2>
+          <div className="h-1 w-24 bg-green-500 mx-auto mb-6 rounded-full"></div>
+        </div>
 
         <div
           ref={scrollRef}

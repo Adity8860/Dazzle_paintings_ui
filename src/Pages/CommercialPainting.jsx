@@ -71,7 +71,8 @@ const CommercialPainting = () => {
 
         <div className="mb-12 text-center sm:text-left">
           <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed fade-in delay-400">
-            Revitalize your Canada area business with Dazzel Painting
+            Revitalize your Canada area business with Dazzle Painting
+  
             professional painting services! Serving{" "}
             <span className="text-green-600 font-medium">Canada, </span>, and
             surrounding areas, we specialize in transforming dull, outdated
@@ -125,7 +126,8 @@ const CommercialPainting = () => {
         <div className="max-w-7xl mx-auto px-4  sm:py-16 md:py-20 bg-gray-50 dark:bg-gray-900">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 fade-in">
-              Choose Dazzel Painting For Expert Commercial Painting
+              Choose Dazzle Painting
+   For Expert Commercial Painting
             </h2>
           </div>
 
@@ -264,7 +266,8 @@ const CommercialPainting = () => {
                 Color Consultations For Canada Commercial Painting Projects
               </h2>
               <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300">
-                Dazzel Painting offers in-depth color consultation appointments
+                Dazzle Painting
+   offers in-depth color consultation appointments
                 with one of our Canada color specialists. They will help you
                 pick out the perfect colors for the interior spaces that will
                 give you the look and feel you want.

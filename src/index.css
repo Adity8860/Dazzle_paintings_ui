@@ -101,3 +101,30 @@
     @apply bg-background text-foreground;
   }
 }
+@layer utilities {
+  .animate-marquee-left-to-right {
+    animation: marquee-left-to-right 60s linear infinite;
+  }
+
+  .animate-marquee-right-to-left {
+    animation: marquee-right-to-left 60s linear infinite;
+  }
+
+  @keyframes marquee-left-to-right {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes marquee-right-to-left {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}

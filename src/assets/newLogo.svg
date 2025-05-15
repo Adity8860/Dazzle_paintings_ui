@@ -1,20 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="40" viewBox="0 0 200 40">
-  <!-- Colored Circles -->
-  <g transform="translate(10, 20)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" class="w-full h-full">
+  <!-- Colored Circles Group -->
+  <g transform="translate(10, 20)" class="logo-circles">
     <circle cx="6" cy="0" r="6" fill="#FFA07A" />
     <circle cx="12" cy="0" r="6" fill="#8B4513" />
     <circle cx="18" cy="0" r="6" fill="#FF69B4" />
   </g>
   
-  <!-- Text Elements -->
-  <text x="35" y="23" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#1F2937" class="dark-mode-text">
+  <!-- Text Elements with better alignment -->
+  <text x="35" y="23" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#1F2937" class="dark-mode-text logo-text">
     Dazzle <tspan fill="#FF69B4">painting</tspan>
   </text>
   
-  <!-- Add this style for dark mode support -->
+  <!-- Styles for responsiveness and dark mode -->
   <style>
     @media (prefers-color-scheme: dark) {
       .dark-mode-text { fill: white; }
+    }
+    
+    /* Responsive classes */
+    .logo-circles {
+      transform-origin: left center;
+    }
+    
+    .logo-text {
+      dominant-baseline: middle;
+    }
+    
+    @media screen and (max-width: 640px) {
+      .logo-text {
+        font-size: 16px;
+      }
     }
   </style>
 </svg>

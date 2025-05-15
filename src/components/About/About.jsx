@@ -6,10 +6,52 @@ import { DAZZLE_PAINTING, YEARS_EXPERIENCE } from "@/constants/details";
 import Titlebar from "../../assets/titlebar.jpg";
 import ExteriorPaint from "../../assets/exteriorPaint.HEIC";
 import CPImage from "../../assets/CPImage.jpg";
-import PWImage from "../../assets/pw.jpg";
+import PWImage from "../../assets/pw.jpg"
+import ImageGallery from "../Gallery/ImageGallery";
+import IMG1 from "../../assets/img1.jpg"
+import IMG2 from "../../assets/img2.jpg"
+import IMG3 from "../../assets/img3.HEIC"
+import IMG4 from "../../assets/img4.HEIC"
+import IMG5 from "../../assets/img5.JPG"
+import IMG6 from "../../assets/img6.JPG"
+import IMG7 from "../../assets/img7.jpg"
+import IMG8 from "../../assets/img8.jpg"
+import IMG9 from "../../assets/img9.jpg"
+import IMG10 from "../../assets/img10.JPG"
+import IMG11 from "../../assets/img11.JPG"
+import IMG12 from "../../assets/img12.jpg"
+import IMG13 from "../../assets/img13.jpg"
+import IMG14 from "../../assets/img14.jpg"
+import IMG15 from "../../assets/img15.jpg"
+import IMG16 from "../../assets/img16.HEIC"
+
 
 const About = () => {
   const [openSection, setOpenSection] = useState(1);
+    // First row images (left to right)
+    const firstRowImages = [
+      { id: 1, src: IMG1, alt: "Gallery image 1" },
+      { id: 2, src: IMG2, alt: "Gallery image 2" },
+      { id: 3, src: IMG3, alt: "Gallery image 3" },
+      { id: 4, src: IMG4, alt: "Gallery image 4" },
+      { id: 5, src: IMG5, alt: "Gallery image 5" },
+      { id: 6, src: IMG6, alt: "Gallery image 6" },
+      { id: 7, src: IMG7, alt: "Gallery image 7" },
+      { id: 8, src: IMG8, alt: "Gallery image 8" },
+    ]
+  
+    // Second row images (right to left)
+    const secondRowImages = [
+      { id: 9, src: IMG9, alt: "Gallery image 9" },
+      { id: 10, src: IMG10, alt: "Gallery image 10" },
+      { id: 11, src: IMG11, alt: "Gallery image 11" },
+      { id: 12, src: IMG12, alt: "Gallery image 12" },
+      { id: 13, src: IMG13, alt: "Gallery image 13" },
+      { id: 14, src: IMG14, alt: "Gallery image 14" },
+      { id: 15, src: IMG15, alt: "Gallery image 15" },
+      { id: 16, src: IMG16, alt: "Gallery image 16" },
+    ]
+  
   return (
     <section className="min-h-screen dark:bg-gray-900">
       <div className="bg-white dark:bg-gray-900">
@@ -642,6 +684,26 @@ const About = () => {
       </div>
       {/* Testimonial Section */}
       <Testimonial />
+      <div className="px-20">
+        {/* <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold   dark:text-white mb-2 bg-clip-text bg-gradient-to-r from-green-500 to-green-600 text-transparent">
+            Our Work Gallery
+          </h2>
+          <p className="text-gray-600 dark:text-gray-300">Explore our latest painting projects and transformations</p>
+        </div> */}
+        <div className="text-center mb-8 sm:mb-10 md:mb-14">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4 relative inline-block">
+            <span className="relative z-10">Our Work Gallery</span>
+            <span className="absolute bottom-0 left-0 w-full h-3 bg-blue-500/30 dark:bg-blue-400/40 -z-0 transform -rotate-1"></span>
+          </h2>
+          <div className="h-1 w-24 bg-green-500 mx-auto mb-6 rounded-full"></div>
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-sm sm:text-base md:text-lg px-4 sm:px-6 leading-relaxed">
+          Explore our latest painting projects and transformations
+          </p>
+        </div>
+        <ImageGallery firstRowImages={firstRowImages} secondRowImages={secondRowImages}/>
+      </div>
+      
       <ClientsSlider />
     </section>
   );

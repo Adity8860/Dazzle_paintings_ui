@@ -3,7 +3,7 @@ import Slider from "./Slider";
 import { Link } from "react-router-dom";
 // import home_video from "../../assets/home.mp4";
 import OldLogo from "../../assets/OldLogo.PNG";
-import BVIDEO from "../../assets/home_fixed.mp4";
+import BVIDEO from "../../assets/home_fixed_new.mp4";
 
 var showSlider = false;
 var showVideo = true;
@@ -68,6 +68,7 @@ const Hero = () => {
             autoPlay
             loop
             muted
+            playsInline
             className="w-full h-full object-cover absolute top-0 left-0 z-0 brightness-60 dark:brightness-60"
           >
             <source src={BVIDEO} type="video/mp4" />

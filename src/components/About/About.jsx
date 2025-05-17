@@ -216,7 +216,7 @@ const About = () => {
                     </svg>
                   </button>
                   {openSection === 1 && (
-                    <div className="px-3 sm:px-4 pb-3 sm:pb-4 text-white text-sm sm:text-base">
+                    <div className="px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-24 pb-4 sm:pb-6 md:pb-8 lg:pb-10 xl:pb-12 2xl:pb-14 text-white text-sm sm:text-base">
                       Our team consists of experienced painters dedicated to
                       delivering flawless results, ensuring smooth finishes,
                       clean edges, and precision in every stroke.
@@ -290,7 +290,7 @@ const About = () => {
                     </svg>
                   </button>
                   {openSection === 2 && (
-                    <div className="px-4 pb-4 text-white">
+                    <div className="px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-24 pb-4 sm:pb-6 md:pb-8 lg:pb-10 xl:pb-12 2xl:pb-14 text-white">
                       We offer tailored painting solutions, including custom
                       color consultations, decorative finishes, and modern
                       interior design painting to match your vision.
@@ -364,7 +364,7 @@ const About = () => {
                     </svg>
                   </button>
                   {openSection === 3 && (
-                    <div className="px-4 pb-4 text-white">
+                    <div className="px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-24 pb-4 sm:pb-6 md:pb-8 lg:pb-10 xl:pb-12 2xl:pb-14 text-white">
                       We use premium, durable paints with eco-friendly options
                       available, ensuring long-lasting beauty while being safe
                       for your family and the environment.
@@ -437,7 +437,7 @@ const About = () => {
                     </svg>
                   </button>
                   {openSection === 4 && (
-                    <div className="px-4 pb-4 text-white">
+                    <div className="px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-24 pb-4 sm:pb-6 md:pb-8 lg:pb-10 xl:pb-12 2xl:pb-14 text-white">
                       We respect your time, providing efficient services with
                       minimal disruption to your home, completing projects on
                       schedule without compromising quality.
@@ -472,7 +472,7 @@ const About = () => {
             <span className="absolute bottom-0 left-0 w-full h-3 bg-blue-500/30 dark:bg-blue-400/40 -z-0 transform -rotate-1"></span>
           </h2>
           <div className="h-1 w-24 bg-green-500 mx-auto mb-6 rounded-full"></div>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-sm sm:text-base md:text-lg px-4 sm:px-6 leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-sm sm:text-base md:text-lg px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12 leading-relaxed">
             Explore our comprehensive range of professional painting services designed to transform your spaces with quality craftsmanship and attention to detail.
           </p>
         </div>
@@ -573,7 +573,7 @@ const About = () => {
             <span className="absolute bottom-0 left-0 w-full h-3 bg-blue-500/30 dark:bg-blue-400/40 -z-0 transform -rotate-1"></span>
           </h2>
           <div className="h-1 w-24 bg-green-500 mx-auto mb-6 rounded-full"></div>
-          <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-sm sm:text-base md:text-lg px-4 sm:px-6 leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-sm sm:text-base md:text-lg px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12 leading-relaxed">
             Our skilled team of licensed painters, color consultants, and
             surface preparation specialists is passionate about transforming
             spaces with care and creativity. From intricate trim work to
@@ -586,7 +586,7 @@ const About = () => {
         {/* Stats boxes grid - centered layout for all screen sizes */}
         <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 px-2 sm:px-4">
           {/* Stats box 1 - Heart Icon - Enhanced */}
-          <div className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)] max-w-xs mx-auto text-center relative overflow-hidden group bg-white dark:bg-gray-800/80 shadow-lg hover:shadow-xl rounded-xl p-4 sm:p-5 md:p-6 transform hover:scale-102 transition-all duration-300 border border-gray-100/80 dark:border-gray-700/50">
+          <div className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)] max-w-xs mx-auto text-center relative overflow-hidden group bg-white dark:bg-gray-800/80 shadow-lg hover:shadow-xl rounded-xl p-4 sm:p-5 md:p-6 lg:p-8 xl:p-10 2xl:p-12 transform hover:scale-102 transition-all duration-300 border border-gray-100/80 dark:border-gray-700/50">
             <div className="absolute -right-12 -top-12 w-24 h-24 rounded-full bg-red-500/10 dark:bg-red-500/5"></div>
             <div className="absolute -left-12 -bottom-12 w-24 h-24 rounded-full bg-red-500/10 dark:bg-red-500/5"></div>
             <div className="inline-flex items-center justify-center p-3 sm:p-4 rounded-full bg-red-100 dark:bg-red-900/30 mb-3 sm:mb-4 relative z-10 group-hover:scale-110 transition-transform duration-300">
@@ -616,7 +616,7 @@ const About = () => {
           </div>
 
           {/* Stats box 2 - Hand Icon - Enhanced */}
-          <div className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)] max-w-xs mx-auto text-center relative overflow-hidden group bg-white dark:bg-gray-800/80 shadow-lg hover:shadow-xl rounded-xl p-4 sm:p-5 md:p-6 transform hover:scale-102 transition-all duration-300 border border-gray-100/80 dark:border-gray-700/50">
+          <div className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)] max-w-xs mx-auto text-center relative overflow-hidden group bg-white dark:bg-gray-800/80 shadow-lg hover:shadow-xl rounded-xl p-4 sm:p-5 md:p-6 lg:p-8 xl:p-10 2xl:p-12 transform hover:scale-102 transition-all duration-300 border border-gray-100/80 dark:border-gray-700/50">
             <div className="absolute -right-12 -top-12 w-24 h-24 rounded-full bg-blue-500/10 dark:bg-blue-500/5"></div>
             <div className="absolute -left-12 -bottom-12 w-24 h-24 rounded-full bg-blue-500/10 dark:bg-blue-500/5"></div>
             <div className="inline-flex items-center justify-center p-3 sm:p-4 rounded-full bg-blue-100 dark:bg-blue-900/30 mb-3 sm:mb-4 relative z-10 group-hover:scale-110 transition-transform duration-300">
@@ -646,7 +646,7 @@ const About = () => {
           </div>
 
           {/* Stats box 3 - Education Icon - Enhanced */}
-          <div className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)] max-w-xs mx-auto text-center relative overflow-hidden group bg-white dark:bg-gray-800/80 shadow-lg hover:shadow-xl rounded-xl p-4 sm:p-5 md:p-6 transform hover:scale-102 transition-all duration-300 border border-gray-100/80 dark:border-gray-700/50">
+          <div className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)] max-w-xs mx-auto text-center relative overflow-hidden group bg-white dark:bg-gray-800/80 shadow-lg hover:shadow-xl rounded-xl p-4 sm:p-5 md:p-6 lg:p-8 xl:p-10 2xl:p-12 transform hover:scale-102 transition-all duration-300 border border-gray-100/80 dark:border-gray-700/50">
             <div className="absolute -right-12 -top-12 w-24 h-24 rounded-full bg-green-500/10 dark:bg-green-500/5"></div>
             <div className="absolute -left-12 -bottom-12 w-24 h-24 rounded-full bg-green-500/10 dark:bg-green-500/5"></div>
             <div className="inline-flex items-center justify-center p-3 sm:p-4 rounded-full bg-green-100 dark:bg-green-900/30 mb-3 sm:mb-4 relative z-10 group-hover:scale-110 transition-transform duration-300">
@@ -684,7 +684,7 @@ const About = () => {
       </div>
       {/* Testimonial Section */}
       <Testimonial />
-      <div className="px-20">
+      <div className="px-auto sm:px-2 md:px-2 lg:px-20 xl:px-24 2xl:px-28">
         {/* <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold   dark:text-white mb-2 bg-clip-text bg-gradient-to-r from-green-500 to-green-600 text-transparent">
             Our Work Gallery
@@ -697,7 +697,7 @@ const About = () => {
             <span className="absolute bottom-0 left-0 w-full h-3 bg-blue-500/30 dark:bg-blue-400/40 -z-0 transform -rotate-1"></span>
           </h2>
           <div className="h-1 w-24 bg-green-500 mx-auto mb-6 rounded-full"></div>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-sm sm:text-base md:text-lg px-4 sm:px-6 leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-sm sm:text-base md:text-lg px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12 leading-relaxed">
           Explore our latest painting projects and transformations
           </p>
         </div>

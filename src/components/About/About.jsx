@@ -11,7 +11,7 @@ import ImageGallery from "../Gallery/ImageGallery";
 import IMG1 from "../../assets/img1.jpg"
 import IMG2 from "../../assets/img2.jpg"
 import IMG3 from "../../assets/img3.HEIC"
-import IMG4 from "../../assets/img4.HEIC"
+import IMG4 from "../../assets/EPImage.jpg"
 import IMG5 from "../../assets/img5.JPG"
 import IMG6 from "../../assets/img6.JPG"
 import IMG7 from "../../assets/img7.jpg"
